@@ -34,60 +34,60 @@ let SignInForm = props => {
     </div>
     <div className="field">
       <div className="control">
-        <label className="label">State</label>
+        {/* <label className="label">State</label> */}
         <div className="select">
-          <Field className="input" name="position" component="select">
+          <Field className="input" name="state" component="select" label="state" >
             <option />
-            <option value="">Alabama</option>
-            <option value="">Alaska</option>
-            <option value="">Arizona</option>
-            <option value="">Arkansas</option>
-            <option value="">California</option>
-            <option value="">Colorado</option>
-            <option value="">Connecticut</option>
-            <option value="">Delaware</option>
-            <option value="">Florida</option>
-            <option value="">Georgia</option>
-            <option value="">Hawaii</option>
-            <option value="">Idaho</option>
-            <option value="">Illinois</option>
-            <option val ue="">Indiana</option>
-            <option value="">Iowa</option>
-            <option value="">Kansas</option>
-            <option value="">Kentucky</option>
-            <option value="">Louisiana</option>
-            <option value="">Maine</option>
-            <option value="">Maryland</option>
-            <option value="">Massachusetts</option>
-            <option value="">Michigan</option>
-            <option value="">Minnesota</option>
-            <option value="">Mississippi</option>
-            <option value="">Missouri</option>
-            <option value="">Montana</option>
-            <option value="">Nebraska</option>
-            <option value="">Nevada</option>
-            <option value="">New Hampshire</option>
-            <option value="">New Jersey</option>
-            <option value="">New Mexico</option>
-            <option value="">New York</option>
-            <option value="">North Carolina</option>
-            <option value="">North Dakota</option>
-            <option value="">Ohio</option>
-            <option value="">Oklahoma</option>
-            <option value="">Oregon</option>
-            <option value="">Pennsylvania</option>
-            <option value="">Rhode Island</option>
-            <option value="">South Carolina</option>
-            <option value="">South Dakota</option>
-            <option value="">Tennessee</option>
-            <option value="">Texas</option>
-            <option value="">Utah</option>
-            <option value="">Vermont</option>
-            <option value="">Virginia</option>
-            <option value="">Washington</option>
-            <option value="">West Virginia</option>
-            <option value="">Wisconsin</option>
-            <option value="">Wyoming</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
           </Field>
         </div>
       </div>
@@ -111,11 +111,11 @@ let SignInForm = props => {
         <div className="select">
           <Field className="input" name="position" component="select">
             <option />
-            <option value="">Bartender</option>
-            <option value="">Server</option>
-            <option value="">Security</option>
-            <option value="">Sales</option>
-            <option value="">Promo Model</option>
+            <option value="Bartender">Bartender</option>
+            <option value="Server">Server</option>
+            <option value="Security">Security</option>
+            <option value="Sales">Sales</option>
+            <option value="Promo Model">Promo Model</option>
           </Field>
         </div>
       </div>
