@@ -26,12 +26,14 @@ let SignInForm = props => {
         <Field name="address" component={renderField} type="text"/>
       </div>
     </div>
+
     <div className="field">
       <div className="control">
       <label className="label">City</label>
         <Field name="city" component={renderField} type="text"/>
       </div>
     </div>
+
     <div className="field">
       <div className="control">
         {/* <label className="label">State</label> */}
@@ -110,7 +112,6 @@ let SignInForm = props => {
         <label className="label">Postion Desired</label>
         <div className="select">
           <Field className="input" name="position" component="select">
-            <option />
             <option value="Bartender">Bartender</option>
             <option value="Server">Server</option>
             <option value="Security">Security</option>
@@ -129,6 +130,7 @@ let SignInForm = props => {
           {' '}
           Male
         </label>
+        
         <label className="radio">
           <Field name="gender" component="input" type="radio" value="female" />
           {' '}
