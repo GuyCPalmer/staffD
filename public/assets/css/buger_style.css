@@ -1,0 +1,22 @@
+body {
+    font-family: 'Fredoka One', cursive;
+    background: lightblue;
+    text-align: center;
+}
+header {
+    font-size: 250%;
+    background: yellowgreen;
+}
+ul {
+    list-style: none;
+    clear: both;
+
+}
+button {
+    word-wrap: break-word;
+    margin: 1%;
+    
+}
+button:hover {
+    background-color: gray;
+}
