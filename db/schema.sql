@@ -3,6 +3,7 @@ CREATE DATABASE staffd_db;
 
 USE staffd_db;
 
+
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     name VARCHAR (45) NOT NULL,
