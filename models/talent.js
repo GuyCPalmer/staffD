@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
     var tables = sequelize.define("talent",{
         talentId: {
-            type: DataType.INT
+            type: DataType.INTEGER
         },
         name: {
             type: DataTypes.STRING,

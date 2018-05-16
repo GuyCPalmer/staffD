@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
     var tables = sequelize.define("event_owners",{
         eventOwnerId: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: 
             {
@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         phone: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         email: {
@@ -29,12 +29,8 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         address: {
-            type: DataTypes.TEXT,
+            type: DataTypes.TINYTEXT,
             allowNull: false,
-        },
-        photo: {
-            type: DataTypes.BLOB,
-            allowNull: false
         },
         eventsOwned: {
             type: DataTypes.STRING

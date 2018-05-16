@@ -17,11 +17,11 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         eventDateTimeStart: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             allowNull: false
         },
         eventDateTimeEnd: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             allowNull: false
         },
         locationAddress: {
@@ -32,7 +32,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.TEXT
         },
         onsiteContact: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
 
