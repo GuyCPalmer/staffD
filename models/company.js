@@ -1,3 +1,3 @@
-render: function() {
-    console.log('rendering  bot editor)
-}
+// render: function() {
+//     console.log('rendering  bot editor)
+// }
