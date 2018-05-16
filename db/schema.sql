@@ -4,6 +4,7 @@ CREATE DATABASE staffd_db;
 
 USE staffd_db;
 
+
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     name VARCHAR (45) NOT NULL,
@@ -13,7 +14,7 @@ CREATE TABLE talent (
     socSec INT NOT NULL,
     driverLic BOOLEAN,
     driverLicNum INT,
-    tabc BOOLEAN
+    tabc BOOLEAN,
     tabcNum INT,
     photo BLOB NOT NULL,
     otherFiles BLOB,
@@ -23,7 +24,7 @@ CREATE TABLE talent (
     invitationsAvail VARCHAR(300),
     currentEvents VARCHAR(300),
     previousEvents VARCHAR(300),
-    PRIMARY KEY(id)
+    PRIMARY KEY(talentId)
 
 );
 
@@ -36,7 +37,8 @@ CREATE TABLE event_owners (
     photo BLOB NOT NULL,
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),
-    invConfirmed VARCHAR (300)
+    invConfirmed VARCHAR (300),
+    PRIMARY KEY(eventOwnerId)
 );
 
 CREATE TABLE events (
@@ -49,6 +51,7 @@ CREATE TABLE events (
     onsiteContact INT,
     staffd BOOLEAN,
     invitationsSent VARCHAR (300),
-    invConfirmed VARCHAR (300)
+    invConfirmed VARCHAR (300),
+    PRIMARY KEY(eventId)
 
 );
