@@ -1,55 +1,16 @@
-DROP DATABASE IF EXISTS  staffd_db;
-CREATE DATABASE staffd_db;
+module.exports = function(sequelize, Sequelize) {
 
-USE staffd_db;
+	var User = sequelize.define('user', {
+		id: { autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER},
+		firstname: { type: Sequelize.STRING,notEmpty: true},
+		lastname: { type: Sequelize.STRING,notEmpty: true},
+		username: {type:Sequelize.TEXT},
+		about : {type:Sequelize.TEXT},
+		email: { type:Sequelize.STRING, validate: {isEmail:true} },
+		password : {type: Sequelize.STRING,allowNull: false }, 
+		last_login: {type: Sequelize.DATE},
+        status: {type: Sequelize.ENUM('active','inactive'),defaultValue:'active' }
+});
 
-CREATE TABLE talent (
-    talentId INT (10) AUTO_INCREMENT NOT NULL,
-    name VARCHAR (45) NOT NULL,
-    phone INT NOT NULL,
-    email VARCHAR (50) NOT NULL,
-    address TINYTEXT NOT NULL,
-    socSec INT NOT NULL,
-    driverLic BOOLEAN,
-    driverLicNum INT,
-    tabc BOOLEAN,
-    tabcNum INT,
-    photo BLOB NOT NULL,
-    otherFiles BLOB,
-    type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
-    bio TEXT,
-    rating INT,
-    invitationsAvail VARCHAR(300),
-    currentEvents VARCHAR(300),
-    previousEvents VARCHAR(300),
-    PRIMARY KEY(talentId)
-
-);
-
-CREATE TABLE event_owners (
-    eventOwnerId INT (10) AUTO_INCREMENT NOT NULL,
-    eventOwner VARCHAR (45) NOT NULL,
-    phone INT NOT NULL,
-    email VARCHAR (50) NOT NULL,
-    address TINYTEXT NOT NULL,
-    photo BLOB NOT NULL,
-    eventsOwned VARCHAR (300),
-    invitationsSent VARCHAR (300),
-    invConfirmed VARCHAR (300),
-    PRIMARY KEY(eventOwnerId)
-);
-
-CREATE TABLE events (
-    eventId INT (10) AUTO_INCREMENT NOT NULL,
-    eventOwner VARCHAR (45) NOT NULL,
-    eventDateTimeStart DATETIME,
-    eventDateTimeEnd DATETIME,
-    locationAddress TINYTEXT NOT NULL,
-    locationSpecialInst MEDIUMTEXT,
-    onsiteContact INT,
-    staffd BOOLEAN,
-    invitationsSent VARCHAR (300),
-    invConfirmed VARCHAR (300),
-    PRIMARY KEY(eventId)
-
-);
+	return User;
+};
