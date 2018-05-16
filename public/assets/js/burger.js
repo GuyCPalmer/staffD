@@ -15,7 +15,7 @@ $(function(){
 
           }
         );
-  });///change-devoured
+  });//change-devoured
 
   $(".create-burgers").on("submit",function (event){
     event.preventDefault();
