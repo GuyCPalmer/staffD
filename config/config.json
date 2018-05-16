@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "root",
-=======
-    "password": "",
->>>>>>> 5516344c2ee1d5e1d429e37886360c0b35b6b0ab
     "database": "staffd_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
