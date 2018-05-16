@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes){
-    var tables = sequelize.define("event_owners",{
+    var event_owners = sequelize.define("event_owners",{
         eventOwnerId: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -29,7 +29,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         address: {
-            type: DataTypes.TINYTEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         eventsOwned: {
@@ -49,5 +49,5 @@ module.exports = function(sequelize, DataTypes){
 {
     timestamps: false
 });
-    return eventOwners;
+    return event_owners;
 };

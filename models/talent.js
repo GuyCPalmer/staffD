@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
-    var tables = sequelize.define("talent",{
+    var talent = sequelize.define("talent",{
         talentId: {
-            type: DataType.INTEGER
+            type: DataTypes.INTEGER
         },
         name: {
             type: DataTypes.STRING,
@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         address: {
-            type: DataTypes.TINYTEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         socSec: {
@@ -45,7 +45,7 @@ module.exports = function(sequelize, DataTypes){
         },
 
         type: {
-            type: DataTypes.SET,
+            type: DataTypes.STRING,
             allowNull: false
         },
         bio: {
