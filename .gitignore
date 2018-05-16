@@ -60,4 +60,6 @@ typings/
 .env
 
 client_secret.json
+#package-lock
+package-lock.json
 

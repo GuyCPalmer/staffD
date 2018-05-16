@@ -6,19 +6,17 @@ USE staffd_db;
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     name VARCHAR (45) NOT NULL,
-    phone INT NOT NULL,
+    phone INTEGER(15) NOT NULL,
     email VARCHAR (50) NOT NULL,
     address TINYTEXT NOT NULL,
-    socSec INT NOT NULL,
+    socSec INTEGER(12) NOT NULL,
     driverLic BOOLEAN,
     driverLicNum INT,
     tabc BOOLEAN,
-    tabcNum INT,
-    photo BLOB NOT NULL,
-    otherFiles BLOB,
-    type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
+    tabcNum INTEGER(20),
+    jobType SET('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
     bio TEXT,
-    rating INT,
+    rating INTEGER(10),
     invitationsAvail VARCHAR(300),
     currentEvents VARCHAR(300),
     previousEvents VARCHAR(300),
@@ -27,26 +25,26 @@ CREATE TABLE talent (
 );
 
 CREATE TABLE event_owners (
-    eventOwnerId INT (10) AUTO_INCREMENT NOT NULL,
+    eventOwnerId INTEGER (10) AUTO_INCREMENT NOT NULL,
     eventOwner VARCHAR (45) NOT NULL,
-    phone INT NOT NULL,
+    phone INTEGER NOT NULL,
     email VARCHAR (50) NOT NULL,
     address TINYTEXT NOT NULL,
-    photo BLOB NOT NULL,
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
     PRIMARY KEY(eventOwnerId)
 );
 
+
 CREATE TABLE events (
-    eventId INT (10) AUTO_INCREMENT NOT NULL,
+    eventId INTEGER (10) AUTO_INCREMENT NOT NULL,
     eventOwner VARCHAR (45) NOT NULL,
     eventDateTimeStart DATETIME,
     eventDateTimeEnd DATETIME,
-    locationAddress TINYTEXT NOT NULL,
-    locationSpecialInst MEDIUMTEXT,
-    onsiteContact INT,
+    locationAddress TEXT NOT NULL,
+    locationSpecialInst TEXT,
+    onsiteContact INTEGER,
     staffd BOOLEAN,
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
