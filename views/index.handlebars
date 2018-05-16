@@ -7,33 +7,7 @@
     <div class="col-5">
       <h2> Burger to EAT! get working skinny</h2>
 
-      <ul>
-        {{#each burger}}
-          {{#unless devoured}}
-            <li>
-              {{name}}
-              <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}" >Eat da Burgar</button>
-            </li>
-          {{/unless}}
-        {{/each}}
-      </ul>
-    </div>
-
-
-    <div class="col-5">
-        <h2>Burger EATEN, you fatty</h2>
-
-        <ul>
-          {{#each burger}}
-            {{#if devoured}}
-              <li>
-                {{name}}
-                <button class="delete-burger" data-id="{{id}}" data-newdevoured="{{devoured}}" >Throw up</button>
-              </li>
-            {{/if}}
-          {{/each}}
-        </ul>
-    </div>
+     
 
   </div>
 
