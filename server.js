@@ -25,6 +25,9 @@ app.set('view engine', 'handlebars');
     res.send('Welcome to Passport with Sequelize');
 });*/
 
+//Static Files
+app.use(express.static(__dirname + "/public"));
+
 //Models
 var models = require("./models");
 
