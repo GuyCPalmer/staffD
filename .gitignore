@@ -59,7 +59,14 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 client_secret.json
+=======
+<<<<<<< HEAD
+package-lock.json
+=======
+>>>>>>> 9437c9e7b8efc4eafee49de5135c7a073ea47fae
 #package-lock
 package-lock.json
 
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
