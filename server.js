@@ -56,12 +56,3 @@ app.listen(5000, function (err) {
     }
 
 });
-
-app.listen(5000, function (err) {
-    if (!err) {
-        console.log("Site is live at 5000");
-    } else {
-        console.log(err);
-    }
-
-});
