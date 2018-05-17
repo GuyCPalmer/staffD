@@ -52,5 +52,4 @@ CREATE TABLE events (
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
     PRIMARY KEY(eventId)
-
 );
