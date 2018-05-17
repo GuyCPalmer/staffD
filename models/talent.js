@@ -24,7 +24,7 @@ module.exports = function(sequelize, Sequelize){
             }
         },
         address: {
-            type: Sequelize.TINYTEXT,
+            type: Sequelize.STRING,
             allowNull: false,
         },
         socSec: {
