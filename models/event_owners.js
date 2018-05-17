@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Sequelize){
-    var eventOwners = sequelize.define("event_owners",{
+    var event_owners = sequelize.define("event_owners",{
         eventOwnerId: {
             type: Sequelize.INTEGER,
             allowNull: false,
@@ -29,7 +29,7 @@ module.exports = function(sequelize, Sequelize){
             }
         },
         address: {
-            type: Sequelize.TINYTEXT,
+            type: Sequelize.STRING,
             allowNull: false,
         },
         eventsOwned: {

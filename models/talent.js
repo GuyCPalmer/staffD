@@ -1,7 +1,7 @@
 module.exports = function(sequelize, Sequelize){
     var talent = sequelize.define("talent",{
         talentId: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
         name: {
             type: Sequelize.STRING,
@@ -24,7 +24,7 @@ module.exports = function(sequelize, Sequelize){
             }
         },
         address: {
-            type: Sequelize.TINYTEXT,
+            type: Sequelize.STRING,
             allowNull: false,
         },
         socSec: {
@@ -45,11 +45,11 @@ module.exports = function(sequelize, Sequelize){
         },
 
         type: {
-            type: Sequelize.SET,
+            type: Sequelize.STRING,
             allowNull: false
         },
         bio: {
-            type: Sequelize.TEXT
+            type: Sequelize.STRING
         },
         rating: {
             type: Sequelize.INTEGER
