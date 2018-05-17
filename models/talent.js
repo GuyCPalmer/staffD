@@ -1,10 +1,10 @@
-module.exports = function(sequelize, DataTypes){
-    var tables = sequelize.define("talent",{
+module.exports = function(sequelize, Sequelize){
+    var talent = sequelize.define("talent",{
         talentId: {
             type: DataType.INTEGER
         },
         name: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false,
             validate: 
             {
@@ -12,11 +12,11 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         email: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false,
             validate: 
             {
@@ -24,44 +24,44 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         address: {
-            type: DataTypes.TINYTEXT,
+            type: Sequelize.TINYTEXT,
             allowNull: false,
         },
         socSec: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         driverLic: {
-            type: DataTypes.BOOLEAN,
+            type: Sequelize.BOOLEAN,
         },
         driverLicNum: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
         tabc: {
-            type: DataTypes.BOOLEAN
+            type: Sequelize.BOOLEAN
         },
         tabcNum: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
 
         type: {
-            type: DataTypes.SET,
+            type: Sequelize.SET,
             allowNull: false
         },
         bio: {
-            type: DataTypes.TEXT
+            type: Sequelize.TEXT
         },
         rating: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
         invitationsAvail: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         currentEvents: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         previousEvents: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
 
 
@@ -72,7 +72,7 @@ module.exports = function(sequelize, DataTypes){
     tableName: "talent"
 },
 {
-    timestamps: false
+    timestamps: true
 });
     return talent;
 };
