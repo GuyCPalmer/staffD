@@ -16,12 +16,16 @@ CREATE TABLE talent (
     tabc BOOLEAN,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e3ed2fd254c45b1449f104ffea8e5d9b896aa744
+=======
+>>>>>>> 26ffd8fd000f11c64b91e841ed70c78618e45dbb
     tabcNum INT,
     photo BLOB NOT NULL,
     otherFiles BLOB,
     type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     tabcNum INTEGER(20),
@@ -29,6 +33,8 @@ CREATE TABLE talent (
 >>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
 =======
 >>>>>>> e3ed2fd254c45b1449f104ffea8e5d9b896aa744
+=======
+>>>>>>> 26ffd8fd000f11c64b91e841ed70c78618e45dbb
     bio TEXT,
     rating INT,
     invitationsAvail VARCHAR(300),
@@ -65,10 +71,13 @@ CREATE TABLE events (
     PRIMARY KEY(eventId)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
 =======
 
 >>>>>>> e3ed2fd254c45b1449f104ffea8e5d9b896aa744
+=======
+>>>>>>> 26ffd8fd000f11c64b91e841ed70c78618e45dbb
 );
