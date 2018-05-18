@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 var exports = module.exports = {};
-=======
-var exports = module.exports = {}
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
 
 
 exports.signup = function(req,res){

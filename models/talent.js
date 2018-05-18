@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-module.exports = function(sequelize, DataType){
-    var talent = sequelize.define("talent", {
-=======
 module.exports = function(sequelize, DataTypes){
-    var tables = sequelize.define("talent",{
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
+    var talent = sequelize.define("talent", {
         talentId: {
-            type: DataType.INTEGER
+            type: DataTypes.INTEGER
         },
-        name: {
-<<<<<<< HEAD
-            type: DataType.STRING,
-=======
+        talentName: {
             type: DataTypes.STRING,
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
@@ -21,67 +12,19 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         phone: {
-<<<<<<< HEAD
-            type: DataType.INTEGER,
-            allowNull: false
-        },
-        email: {
-            type: DataType.STRING,
-=======
             type: DataTypes.INTEGER,
             allowNull: false
         },
         email: {
             type: DataTypes.STRING,
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
                 len: [1,140]
             }
         },
-        address: {
-<<<<<<< HEAD
-            type: DataType.TEXT,
-            allowNull: false,
-        },
-        socSec: {
-            type: DataType.INTEGER,
-            allowNull: false
-        },
-        driverLic: {
-            type: DataType.BOOLEAN,
-        },
-        driverLicNum: {
-            type: DataType.INTEGER
-        },
-        tabc: {
-            type: DataType.BOOLEAN
-        },
-        tabcNum: {
-            type: DataType.INTEGER
-        },
-
-        type: {
-            type: DataType.SET,
-            allowNull: false
-        },
-        bio: {
-            type: DataType.TEXT
-        },
-        rating: {
-            type: DataType.INTEGER
-        },
-        invitationsAvail: {
-            type: DataType.STRING
-        },
-        currentEvents: {
-            type: DataType.STRING
-        },
-        previousEvents: {
-            type: DataType.STRING
-=======
-            type: DataTypes.TINYTEXT,
+        talentAddress: {
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         socSec: {
@@ -119,7 +62,6 @@ module.exports = function(sequelize, DataTypes){
         },
         previousEvents: {
             type: DataTypes.STRING
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
         },
 
 
@@ -130,11 +72,7 @@ module.exports = function(sequelize, DataTypes){
     tableName: "talent"
 },
 {
-<<<<<<< HEAD
     timestamps: true
-=======
-    timestamps: false
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
 });
     return talent;
 };

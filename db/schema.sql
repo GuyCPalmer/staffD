@@ -6,10 +6,10 @@ USE staffd_db;
 
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
-    name VARCHAR (45) NOT NULL,
+    talentName VARCHAR (45) NOT NULL,
     phone INTEGER(15) NOT NULL,
     email VARCHAR (50) NOT NULL,
-    address TINYTEXT NOT NULL,
+    talentAddress TINYTEXT NOT NULL,
     socSec INTEGER(12) NOT NULL,
     driverLic BOOLEAN,
     driverLicNum INT,
@@ -30,7 +30,7 @@ CREATE TABLE event_owners (
     eventOwner VARCHAR (45) NOT NULL,
     phone INTEGER NOT NULL,
     email VARCHAR (50) NOT NULL,
-    address TINYTEXT NOT NULL,
+    ownerAddress TINYTEXT NOT NULL,
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
