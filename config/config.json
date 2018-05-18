@@ -1,37 +1,22 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "",
     "database": "staffd_db",
     "host": "127.0.0.1",
-=======
-    "password": "root",
-    "database": "staffd_db",
-    "host": "localhost",
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "",
-<<<<<<< HEAD
     "database": "staffd_db",
-=======
-    "database": "database_test",
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "root",
-    "database": "staffd_db",
-=======
     "password": "",
-    "database": "database_production",
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
+    "database": "staffd_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

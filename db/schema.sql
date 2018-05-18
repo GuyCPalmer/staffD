@@ -6,19 +6,11 @@ USE staffd_db;
 
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
-<<<<<<< HEAD
     talentName VARCHAR (45) NOT NULL,
     phone INTEGER(15) NOT NULL,
     email VARCHAR (50) NOT NULL,
-    talentAddress TINYTEXT NOT NULL,
+    talentAddress TEXT NOT NULL,
     socSec INTEGER(12) NOT NULL,
-=======
-    name VARCHAR (45) NOT NULL,
-    phone INT NOT NULL,
-    email VARCHAR (50) NOT NULL,
-    address TINYTEXT NOT NULL,
-    socSec INT NOT NULL,
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
     driverLic BOOLEAN,
     driverLicNum INT,
     tabc BOOLEAN,
@@ -40,12 +32,7 @@ CREATE TABLE event_owners (
     eventOwner VARCHAR (45) NOT NULL,
     phone INT NOT NULL,
     email VARCHAR (50) NOT NULL,
-<<<<<<< HEAD
-    ownerAddress TINYTEXT NOT NULL,
-=======
-    address TINYTEXT NOT NULL,
-    photo BLOB NOT NULL,
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
+    ownerAddress TEXT NOT NULL,
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
