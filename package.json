@@ -1,7 +1,7 @@
 {
-  "name": "burger",
+  "name": "staffd",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node Express Handlebars",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/PierceMor/burgerEating.git"
   },
-  "author": "",
+  "author": "JPennington",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PierceMor/burgerEating/issues"
@@ -28,5 +28,13 @@
     "mysql2": "^1.5.3",
     "path": "^0.12.7",
     "sequelize": "^4.37.7"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "staffing",
+    "node",
+    "express",
+    "passport",
+    "handlebars"
+  ]
 }
