@@ -11,19 +11,10 @@ router.get("/", function (req, res) {
 
 router.get("/userProfile", function(req, res) {
     res.render("userProfile");
-<<<<<<< HEAD
 });
 
 router.get("/index", function(req, res) {
     res.render("index");
-=======
-    // console.log(req.body);
-    // console.log(res);
-});
-
-router.get("/index", function(req, res) {
-    res.render("layouts/main");
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
 });
 
 router.get("/home", function (req, res) {
@@ -54,8 +45,4 @@ router.get("/contact", function (req, res) {
     res.render("contact");
 });
 
-<<<<<<< HEAD
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc

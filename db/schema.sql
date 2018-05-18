@@ -17,7 +17,7 @@ CREATE TABLE talent (
     tabcNum INT,
     photo BLOB NOT NULL,
     otherFiles BLOB,
-    type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
+    jobType TEXT NOT NULL,
     bio TEXT,
     rating INT,
     invitationsAvail VARCHAR(300),

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 module.exports = function(sequelize, DataType){
 
-=======
-module.exports = function(sequelize, DataTypes){
->>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
     var events = sequelize.define("events",{
         eventId: {
             type: DataType.STRING,
