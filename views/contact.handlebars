@@ -30,7 +30,7 @@
                         <div class="modal-content">
                             <p>PIERCE PIERCE PEIRCE PERICEEPRICCEPIERWPI FQSHAGJLAERJG</p>
                         </div>
-                            <div class="modal-footer">
+                        <div class="modal-footer">
                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                         </div>
                     </div>
@@ -52,6 +52,16 @@
                 </div>
                 <div class="card-action">
                     <a href="https://github.com/Duck126">Github</a>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Info</a>
+
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <p>PIERCE PIERCE PEIRCE PERICEEPRICCEPIERWPI FQSHAGJLAERJG</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,6 +80,16 @@
                 </div>
                 <div class="card-action">
                     <a href="https://github.com/GuyCPalmer">Github</a>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Info</a>
+
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <p>PIERCE PIERCE PEIRCE PERICEEPRICCEPIERWPI FQSHAGJLAERJG</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,8 +108,33 @@
                 </div>
                 <div class="card-action">
                     <a href="https://github.com/jwrenpenn">Github</a>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Info</a>
+
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <p>PIERCE PIERCE PEIRCE PERICEEPRICCEPIERWPI FQSHAGJLAERJG</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('.modal').modal();
+    });
+        
+</script>
