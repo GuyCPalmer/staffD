@@ -41,3 +41,13 @@
       bottom: 10%;
   }
 
+  .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+      color: #9d1de7;
+  }
+  
+  .btn-flat {
+      font-weight: bold;
+  }
+
+  
+

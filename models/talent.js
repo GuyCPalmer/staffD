@@ -1,15 +1,16 @@
-module.exports = function(sequelize, DataTypes){
-    var talent = sequelize.define("talent",{
+module.exports = function (sequelize, DataTypes) {
+    var talent = sequelize.define("talent", {
         talentId: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true
         },
-        name: {
+        talentName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
+            validate:
+                {
+                    len: [1, 140]
+                }
         },
         phone: {
             type: DataTypes.INTEGER,
@@ -18,12 +19,12 @@ module.exports = function(sequelize, DataTypes){
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
+            validate:
+                {
+                    len: [1, 140]
+                }
         },
-        address: {
+        talentAddress: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -44,12 +45,12 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.INTEGER
         },
 
-        type: {
+        jobType: {
             type: DataTypes.STRING,
             allowNull: false
         },
         bio: {
-            type: DataTypes.TEXT
+            type: DataTypes.STRING
         },
         rating: {
             type: DataTypes.INTEGER
@@ -63,16 +64,24 @@ module.exports = function(sequelize, DataTypes){
         previousEvents: {
             type: DataTypes.STRING
         },
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        } 
 
 
-        
+
     },
-{
-    freezeTableName: true,
-    tableName: "talent"
-},
-{
-    timestamps: false
-});
+        {
+            freezeTableName: true,
+            tableName: "talent"
+        },
+        {
+            timestamps: true
+        });
     return talent;
 };
