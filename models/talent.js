@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = function(sequelize, DataTypes){
     var talent = sequelize.define("talent", {
         talentId: {
@@ -5,6 +6,15 @@ module.exports = function(sequelize, DataTypes){
         },
         talentName: {
             type: DataTypes.STRING,
+=======
+module.exports = function(sequelize, Sequelize){
+    var talent = sequelize.define("talent",{
+        talentId: {
+            type: Sequelize.INTEGER
+        },
+        name: {
+            type: Sequelize.STRING,
+>>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
             allowNull: false,
             validate: 
             {
@@ -12,56 +22,69 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         email: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false,
             validate: 
             {
                 len: [1,140]
             }
         },
+<<<<<<< HEAD
         talentAddress: {
             type: DataTypes.STRING,
+=======
+        address: {
+            type: Sequelize.STRING,
+>>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
             allowNull: false,
         },
         socSec: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         driverLic: {
-            type: DataTypes.BOOLEAN,
+            type: Sequelize.BOOLEAN,
         },
         driverLicNum: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
         tabc: {
-            type: DataTypes.BOOLEAN
+            type: Sequelize.BOOLEAN
         },
         tabcNum: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
 
         type: {
+<<<<<<< HEAD
             type: DataTypes.STRING,
             allowNull: false
         },
         bio: {
             type: DataTypes.STRING
+=======
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        bio: {
+            type: Sequelize.STRING
+>>>>>>> f9cf6b2a530d6456643ada6d5b3ecf3c02027ccc
         },
         rating: {
-            type: DataTypes.INTEGER
+            type: Sequelize.INTEGER
         },
         invitationsAvail: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         currentEvents: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
         previousEvents: {
-            type: DataTypes.STRING
+            type: Sequelize.STRING
         },
 
 
