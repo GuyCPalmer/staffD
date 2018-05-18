@@ -59,10 +59,14 @@
                     </div>
                 </div>
 
-                    {{input type="checkbox" name="TABC License" id="tabc"}}
-                    <label for="tabc">TABC License Number</label>
-                    <input type="text" id="tabc" name="TABC License Number">
-
+               <div class="row">
+                    <div class="input-field col s12">
+                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
+                        <input id="tabc" type="text" class="validate">
+                        <label for="tabc">TABC License Number</label>
+                    </div>
+                </div>
+                
                     {{!-- for uploading Photos --}}
                     {{!-- <script id="file-upload-template" type="textx-handlebars-template">
                         <li class="removable_row">
