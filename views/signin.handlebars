@@ -1,0 +1,45 @@
+<h1>
+    Login/Signup
+</h1>
+
+<div class="container">
+<div class="row">
+
+    {{!-- separator --}}
+    <div class="col-2"></div>
+
+    <div class="col-3">
+        <form class="loginCompany">
+            <div class="form-group">
+                    <label for="companyUser">Company:</label>
+                    <input type="text" id="companyUser" name='Company Name'>
+                    <label for="companyPassword">Password</label>
+                    <input type="text" id="companyPW" name="Password" >
+                <button type="button" class="companyLogin">Login</button>
+                <a href="./compSignup.handlebars" class="button">New Company</a>
+            </div>
+
+        </form>
+    </div>
+
+    {{!-- separator --}}
+    <div class="col-2"></div>
+
+    <div class="col-3">
+        <form class="loginTalent">
+            <div class="form-group">
+                    <label for="talentUser">Talent:</label>
+                    <input type="text" id="talentUser" name="Talent Name" >
+                    <label for="talentPW">Password</label>
+                    <input type="text" id="talentPW" name="Password" >
+                <button type="button" class="talentLogin">Login</button>
+                <a href="./talentSignup.handlebars" class="button">Fresh Talent</a>
+            </div>
+        </form>
+    </div>
+
+    {{!-- separator --}}
+    <div class="col-2"></div>
+
+</div>
+</div>
