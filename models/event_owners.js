@@ -1,7 +1,7 @@
-module.exports = function(sequelize, Sequelize){
-    var event_owners = sequelize.define("event_owners",{
+module.exports = function(sequelize, DataType){
+    var eventOwners = sequelize.define("event_owners",{
         eventOwnerId: {
-            type: Sequelize.INTEGER,
+            type: DataType.INTEGER,
             allowNull: false,
             validate: 
             {
@@ -9,7 +9,7 @@ module.exports = function(sequelize, Sequelize){
             }
         },
         eventOwner: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false,
             validate: 
             {
@@ -17,11 +17,11 @@ module.exports = function(sequelize, Sequelize){
             }
         },
         phone: {
-            type: Sequelize.INTEGER,
+            type: DataType.INTEGER,
             allowNull: false
         },
         email: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false,
             validate: 
             {
@@ -29,21 +29,21 @@ module.exports = function(sequelize, Sequelize){
             }
         },
         coordinator: {
-            type: Sequelize.STRING,
+            type: DataType.STRING,
             allowNull: false,
         },
         ownerAddress: {
-            type: Sequelize.STRING,
+            type: DataType.TEXT,
             allowNull: false,
         },
         eventsOwned: {
-            type: Sequelize.STRING
+            type: DataType.STRING
         },
         invitationsSent: {
-            type: Sequelize.STRING
+            type: DataType.STRING
         },
         invConfirmed: {
-            type: Sequelize.STRING
+            type: DataType.STRING
         },      
     },
 {
@@ -53,5 +53,5 @@ module.exports = function(sequelize, Sequelize){
 {
     timestamps: true
 });
-    return event_owners;
+    return eventOwners;
 };

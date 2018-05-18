@@ -1,7 +1,9 @@
-module.exports = function(sequelize, DataTypes){
+
+module.exports = function(sequelize, DataType){
+
     var events = sequelize.define("events",{
         eventId: {
-            type: DataTypes.STRING,
+            type: DataType.STRING,
             allowNull: false,
             validate: 
             {
@@ -9,7 +11,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         eventOwner: {
-            type: DataTypes.STRING,
+            type: DataType.STRING,
             allowNull: false,
             validate: 
             {
@@ -17,33 +19,32 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         eventDateTimeStart: {
-            type: DataTypes.DATE,
+            type: DataType.DATE,
             allowNull: false
         },
         eventDateTimeEnd: {
-            type: DataTypes.DATE,
+            type: DataType.DATE,
             allowNull: false
         },
         locationAddress: {
-            type: DataTypes.TEXT,
+            type: DataType.STRING,
             allowNull: false,
         },
         locationSpecialInst: {
-            type: DataTypes.TEXT
+            type: DataType.STRING
         },
         onsiteContact: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             allowNull: false
         },
-
         staffd: {
-            type: DataTypes.BOOLEAN
+            type: DataType.BOOLEAN
         },
         invitationsSent: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         invConfirmed: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },      
     },
 {

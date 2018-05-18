@@ -3,20 +3,20 @@
     "username": "root",
     "password": "root",
     "database": "staffd_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "",
-    "database": "database_test",
+    "database": "staffd_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "",
-    "database": "database_production",
+    "database": "staffd_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

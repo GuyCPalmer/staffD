@@ -6,63 +6,68 @@
 
     <div class="col s3"></div>
 
-    <form class="col s12" id='compSignupForm' >
+    <form class="col s12" id='compSignupForm'>
         <div class="form-group">
-            
+
 
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="ex: Staffd" id="newCompany" type="text" class="validate">
+                    <input placeholder="ex: Staffd" id="newCompany" type="text" autocomplete='organization' class="validate">
                     <label for="newCompany">Your Company Name</label>
+
                 </div>
-                    <div class="input-field col s6">
-                    <input id="coordinatorName" type="text" class="validate">
+                <div class="input-field col s6">
+                    <input id="coordinatorName" autocomplete='name' type="text" class="validate">
                     <label for="coordinatorName">Event Coordinator Name
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="purchasing" type="text" class="validate">
-                    <label for="purchasing">Purchasing Contact</label>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="companyPhone" type="text" class="validate">
-                    <label for="companyPhone">Primary Phone Number</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="purchasing" type="text" class="validate">
+                        <label for="purchasing">Purchasing Contact</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="comAddress" type="text" class="validate">
-                    <label for="comAddress">Company Address</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="companyPhone" autocomplete='tel' type="text" class="validate">
+                        <label for="companyPhone">Primary Phone Number</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                <input id="comEmail" type="email" class="validate">
-                <label for="comEmail">Email</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="comAddress" autocomplete='address-line1' type="text" class="validate">
+                        <label for="comAddress">Company Address</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>Picture</span>
-                    <input type="file">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="comEmail" type="email" autocomplete='email' class="validate">
+                        <label for="comEmail">Email</label>
+                    </div>
                 </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" id="comPic" type="text">
-                </div>
-            </div>
+                {{!-- PICTURE NEEDS TO BE ORGANIZED --}} {{!--
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Picture</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" id="comPic" type="text">
+                    </div>
+                </div> --}}
 
-            <a class="waves-effect waves-light btn">button</a>
-        </div>
+                <button class="btn waves-effect waves-light" id='compSignupForm' type="submit" name="action">
+                    Submit
+                </button>
+            </div>
     </form>
 
 
     <div class="col s3"></div>
 
-</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

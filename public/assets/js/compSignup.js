@@ -1,15 +1,17 @@
 $(document).ready(function(){
 
+    console.log('ugawewlfhawluifhahgaijgokdgpoiadg;joshgjphpgo;ugawewlfhawluifhahgaijgokdgpoiadgugawewlfhawluifhahgaijgokdgpoiadgugawewlfhawluifhahgaijgokdgpoiadgugawewlfhawluifhahgaijgokdgpoiadgugawewlfhawluifhahgaijgokdgpoiadgugawewlfhawluifhahgaijgokdgpoiadgapd;hgj');
 //inserting in for the new data fields
 var newCompany = $('#newCompany');
 var coordinatorName = $("#coordinatorName");
 var purchasing = $('#purchasing');
 var companyPhone = $('#companyPhone');
 var comEmail = $('#comEmail');
-var comPic = $('#comPic');
+// var comPic = $('#comPic');
 var comAddress = $('#comAddress');
 
-$(document).on("submit", "#compSignupForm", insertComp);
+console.log("SHUTSHUTSHUTSUHSTHUSTUHST");
+
 
 function insertComp(){
 event.preventDefault();
@@ -21,7 +23,11 @@ var event_owners = {
     ownerAddress: comAddress.val().trim()
     };
 
-    $.post('/api/')
-};//
+    $.post('/api/eventOwners', event_owners);
+
+    console.log(req.body);
+}//
 
 });//end of document.ready
+
+
