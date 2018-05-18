@@ -13,7 +13,11 @@ module.exports = {
         driverLicNum: 88888888,
         tabc: true,
         tabcNum: 9999999999999,
-        type: 'Bartender',
+        jobBar: true,
+        jobServer: false,
+        jobSales: true,
+        jobModel: false,
+        jobSecurity: false,
         bio: 'I like dogs. I like tending bar.',
         rating: 4
 
