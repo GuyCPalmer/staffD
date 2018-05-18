@@ -69,15 +69,3 @@ CREATE TABLE events (
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
     PRIMARY KEY(eventId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
-=======
-
->>>>>>> e3ed2fd254c45b1449f104ffea8e5d9b896aa744
-=======
->>>>>>> 26ffd8fd000f11c64b91e841ed70c78618e45dbb
-);
