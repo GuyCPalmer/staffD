@@ -4,41 +4,65 @@
 
 <div class="container">
 
-    <div class="col-3"></div>
+    <div class="col s3"></div>
 
-    <div class="col-6">
-        <form class="newCompany">
-            <div class="form-group">
-                
-                <label for="newCompany">Your Company Name: </label>
-                <input type="text" id="newCompany" name="Company Name">
+    <form class="col s12" id='compSignupForm' >
+        <div class="form-group">
+            
 
-                <label for="coordinatorName">Event Coordinator Contact</label>
-                <input type="text" id="coordinatorName" name="Coordinator Name">
-
-                <label for="purchasing">Purchasing Contact</label>
-                <input type="text" id="purchasing" name="Purchasing Contact">
-
-                <label for="phone">Primary Phone Number</label>
-                <input type="text" id="companyPhone" name="X-(XXX)XXX-XXXX">
-
-                <label for="comEmail">Primary Email Address</label>
-                <input type="text" id="comEmail" name="Email">
-
-                {{!-- Not entirely Sure what should be going here --}}
-                <label for="events_owned">Previous Events:</label>
-                <input type="text" id="events_owned" name="Previous Events">
-
-                <label for="invitations_sent">Invitations Sent</label>
-                <input type="text" id="invitations_sent" name="Invitations Sent">
-
-                {{input type="checkbox" name="Confirmed" id="confirmed"}}
-
-                {{!-- need to add a photo input field --}}
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="ex: Staffd" id="newCompany" type="text" class="validate">
+                    <label for="newCompany">Your Company Name</label>
+                </div>
+                    <div class="input-field col s6">
+                    <input id="coordinatorName" type="text" class="validate">
+                    <label for="coordinatorName">Event Coordinator Name
             </div>
-        </form>
-    </div>
 
-    <div class="col-3"></div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="purchasing" type="text" class="validate">
+                    <label for="purchasing">Purchasing Contact</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="companyPhone" type="text" class="validate">
+                    <label for="companyPhone">Primary Phone Number</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="comAddress" type="text" class="validate">
+                    <label for="comAddress">Company Address</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="comEmail" type="email" class="validate">
+                <label for="comEmail">Email</label>
+                </div>
+            </div>
+
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Picture</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" id="comPic" type="text">
+                </div>
+            </div>
+
+            <a class="waves-effect waves-light btn">button</a>
+        </div>
+    </form>
+
+
+    <div class="col s3"></div>
 
 </div>

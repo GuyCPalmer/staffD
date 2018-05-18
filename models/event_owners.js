@@ -28,7 +28,11 @@ module.exports = function(sequelize, Sequelize){
                 len: [1,140]
             }
         },
-        address: {
+        coordinator: {
+            type: Sequelize.STRING,
+            allowNull: false,
+        },
+        ownerAddress: {
             type: Sequelize.STRING,
             allowNull: false,
         },
