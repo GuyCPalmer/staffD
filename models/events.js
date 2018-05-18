@@ -1,4 +1,3 @@
-
 module.exports = function(sequelize, DataType){
 
     var events = sequelize.define("events",{

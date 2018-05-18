@@ -28,6 +28,10 @@ module.exports = function(sequelize, DataType){
                 len: [1,140]
             }
         },
+        coordinator: {
+            type: DataType.STRING,
+            allowNull: false
+        },
         ownerAddress: {
             type: DataType.TEXT,
             allowNull: false,
