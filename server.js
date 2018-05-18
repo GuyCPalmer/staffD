@@ -1,7 +1,7 @@
 const express = require('express'),
     app = express(),
     passport = require('passport'),
-    auth = require('./auth'),
+    auth = require('./routes/auth'),
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session');
 
@@ -17,11 +17,13 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
     if (req.session.token) {
+        //if logged in
         res.cookie('token', req.session.token);
         res.json({
             status: 'session cookie set'
         });
     } else {
+        //if not logged in
         res.cookie('token', '');
         res.json({
             status: 'session cookie not set'
