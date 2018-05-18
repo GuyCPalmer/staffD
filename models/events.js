@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 
 module.exports = function(sequelize, DataType){
 
     var events = sequelize.define("events",{
         eventId: {
             type: DataType.STRING,
+=======
+module.exports = function(sequelize, DataTypes){
+    var tables = sequelize.define("events",{
+        eventId: {
+            type: DataTypes.STRING,
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
@@ -11,7 +18,11 @@ module.exports = function(sequelize, DataType){
             }
         },
         eventOwner: {
+<<<<<<< HEAD
             type: DataType.STRING,
+=======
+            type: DataTypes.STRING,
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
@@ -19,6 +30,7 @@ module.exports = function(sequelize, DataType){
             }
         },
         eventDateTimeStart: {
+<<<<<<< HEAD
             type: DataType.DATE,
             allowNull: false
         },
@@ -45,6 +57,35 @@ module.exports = function(sequelize, DataType){
         },
         invConfirmed: {
             type: DataType.STRING
+=======
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        eventDateTimeEnd: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        locationAddress: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        locationSpecialInst: {
+            type: DataTypes.TEXT
+        },
+        onsiteContact: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+
+        staffd: {
+            type: DataTypes.BOOLEAN
+        },
+        invitationsSent: {
+            type: DataTypes.STRING
+        },
+        invConfirmed: {
+            type: DataTypes.STRING
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
         },      
     },
 {
@@ -52,7 +93,11 @@ module.exports = function(sequelize, DataType){
     tableName: "events"
 },
 {
+<<<<<<< HEAD
     timestamps: true
+=======
+    timestamps: false
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
 });
     return events;
 };

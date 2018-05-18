@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 module.exports = function(sequelize, DataType){
     var eventOwners = sequelize.define("event_owners",{
         eventOwnerId: {
             type: DataType.INTEGER,
+=======
+module.exports = function(sequelize, DataTypes){
+    var tables = sequelize.define("event_owners",{
+        eventOwnerId: {
+            type: DataTypes.INTEGER,
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
@@ -9,7 +16,11 @@ module.exports = function(sequelize, DataType){
             }
         },
         eventOwner: {
+<<<<<<< HEAD
             type: DataType.STRING,
+=======
+            type: DataTypes.STRING,
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
@@ -17,11 +28,19 @@ module.exports = function(sequelize, DataType){
             }
         },
         phone: {
+<<<<<<< HEAD
             type: DataType.INTEGER,
             allowNull: false
         },
         email: {
             type: DataType.STRING,
+=======
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        email: {
+            type: DataTypes.STRING,
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
             allowNull: false,
             validate: 
             {
@@ -29,6 +48,7 @@ module.exports = function(sequelize, DataType){
             }
         },
         address: {
+<<<<<<< HEAD
             type: DataType.TEXT,
             allowNull: false,
         },
@@ -40,6 +60,19 @@ module.exports = function(sequelize, DataType){
         },
         invConfirmed: {
             type: DataType.STRING
+=======
+            type: DataTypes.TINYTEXT,
+            allowNull: false,
+        },
+        eventsOwned: {
+            type: DataTypes.STRING
+        },
+        invitationsSent: {
+            type: DataTypes.STRING
+        },
+        invConfirmed: {
+            type: DataTypes.STRING
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
         },      
     },
 {
@@ -47,7 +80,11 @@ module.exports = function(sequelize, DataType){
     tableName: "event_owners"
 },
 {
+<<<<<<< HEAD
     timestamps: true
+=======
+    timestamps: false
+>>>>>>> cce95fb11fb031c717b42a1e7ee2aaa48fc3e855
 });
     return eventOwners;
 };
