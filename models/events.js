@@ -27,11 +27,11 @@ module.exports = function(sequelize, DataType){
             allowNull: false
         },
         locationAddress: {
-            type: DataType.TEXT,
+            type: DataType.STRING,
             allowNull: false,
         },
         locationSpecialInst: {
-            type: DataType.TEXT
+            type: DataType.STRING
         },
         onsiteContact: {
             type: DataType.INTEGER,

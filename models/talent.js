@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         talentAddress: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         socSec: {
@@ -45,11 +45,11 @@ module.exports = function(sequelize, DataTypes){
         },
 
         type: {
-            type: DataTypes.SET,
+            type: DataTypes.STRING,
             allowNull: false
         },
         bio: {
-            type: DataTypes.TEXT
+            type: DataTypes.STRING
         },
         rating: {
             type: DataTypes.INTEGER
