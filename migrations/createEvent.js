@@ -1,21 +1,16 @@
-module.exports = function(sequelize, DataType){
 
-    var events = sequelize.define("events",{
+
+'use strict';
+module.exports = {
+  up: function(queryInterface, DataTypes) {
+    return queryInterface.createTable('events', {
         eventId: {
             type: DataType.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
         },
         eventOwner: {
             type: DataType.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
         },
         eventDateTimeStart: {
             type: DataType.DATE,
@@ -45,13 +40,9 @@ module.exports = function(sequelize, DataType){
         invConfirmed: {
             type: DataType.STRING
         },      
-    },
-{
-    freezeTableName: true,
-    tableName: "events"
-},
-{
-    timestamps: true
-});
-    return events;
+   });
+  },
+  down: function(queryInterface, Sequelize) {
+    return queryInterface.dropTable('event_owners');
+  }
 };

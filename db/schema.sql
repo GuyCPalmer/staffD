@@ -30,8 +30,10 @@ CREATE TABLE talent (
 CREATE TABLE event_owners (
     eventOwnerId INT (10) AUTO_INCREMENT NOT NULL,
     eventOwner VARCHAR (45) NOT NULL,
+    purchasingContact VARCHAR (45) NOT NULL,
     phone INT NOT NULL,
     email VARCHAR (50) NOT NULL,
+    coordinator VARCHAR (45) NOT NULL,
     ownerAddress TEXT NOT NULL,
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),

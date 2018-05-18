@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataType){
         },
         coordinator: {
             type: DataType.STRING,
-            allowNull: false,
+            allowNull: false
         },
         ownerAddress: {
             type: DataType.TEXT,

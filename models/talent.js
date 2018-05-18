@@ -44,9 +44,24 @@ module.exports = function (sequelize, DataTypes) {
         tabcNum: {
             type: DataTypes.INTEGER
         },
-
-        jobType: {
-            type: DataTypes.STRING,
+        jobBar: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobServer: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobSales: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobModel: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobSecurity: {
+            type: DataTypes.BOOLEAN,
             allowNull: false
         },
         bio: {
