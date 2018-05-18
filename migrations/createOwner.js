@@ -1,64 +1,43 @@
 /////just started editing from a template///
 
-
 'use strict';
-
 module.exports = {
-  up: function (queryInterface, DataType) {
-    return queryInterface.createTable(
-      'members',
-      {
-        createdAt: Sequelize.DATE,
-        updatedAt: Sequelize.DATE,
-        id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
-          autoIncrement: true
-        },
-        name: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        password: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        email: Sequelize.STRING
-      })
-      .then(() => queryInterface.createTable(
-        'memberEmailVerificationToken',
-        {
-          createdAt: Sequelize.DATE,
-          updatedAt: Sequelize.DATE,
-          expires_at: Sequelize.DATE,
-          id: {
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-          },
-          value: {
-            type: Sequelize.STRING,
+  up: function(queryInterface, Sequelize) {
+    return queryInterface.createTable('event_owners', {
+      eventOwnerId: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataType.INTEGER
+      },
+      eventOwner: {
+        type: DataType.STRING,
+        allowNull: false,
+      },
+      phone: {
+        type: DataType.INTEGER,
             allowNull: false
-          }, 
-          has_been_used: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
-          }, 
-          memberId: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'members',
-                key: 'id'
-            },
-            onUpdate: 'cascade',
-            onDelete: 'cascade'
-          }
-        }
-      ));
+      },
+      coordinator: {
+        type: DataType.STRING,
+        allowNull: false
+    },
+    ownerAddress: {
+        type: DataType.TEXT,
+        allowNull: false,
+    },
+    eventsOwned: {
+        type: DataType.STRING
+    },
+    invitationsSent: {
+        type: DataType.STRING
+    },
+    invConfirmed: {
+        type: DataType.STRING
+    },      
+   });
   },
-
-  down: function (queryInterface, Sequelize) {
-    return queryInterface.dropTable('memberEmailVerificationToken')
-      .then(() => queryInterface.dropTable('members'));
+  down: function(queryInterface, Sequelize) {
+    return queryInterface.dropTable('event_owners');
   }
 };

@@ -1,61 +1,68 @@
+/////just started editing from a template///
+
+
 'use strict';
-
 module.exports = {
-  up: function (queryInterface, Sequelize) {
-    return queryInterface.createTable(
-      'members',
-      {
-        createdAt: Sequelize.DATE,
-        updatedAt: Sequelize.DATE,
-        id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
-          autoIncrement: true
-        },
-        name: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        password: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        email: Sequelize.STRING
-      })
-      .then(() => queryInterface.createTable(
-        'memberEmailVerificationToken',
-        {
-          createdAt: Sequelize.DATE,
-          updatedAt: Sequelize.DATE,
-          expires_at: Sequelize.DATE,
-          id: {
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-          },
-          value: {
-            type: Sequelize.STRING,
-            allowNull: false
-          }, 
-          has_been_used: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
-          }, 
-          memberId: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'members',
-                key: 'id'
-            },
-            onUpdate: 'cascade',
-            onDelete: 'cascade'
-          }
-        }
-      ));
-  },
+  up: function(queryInterface, DataTypes) {
+    return queryInterface.createTable('event_owners', {
+      talentId: {
+        type: DataTypes.INTEGER
+    },
+    talentName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    phone: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    talentAddress: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    socSec: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    driverLic: {
+        type: DataTypes.BOOLEAN,
+    },
+    driverLicNum: {
+        type: DataTypes.INTEGER
+    },
+    tabc: {
+        type: DataTypes.BOOLEAN
+    },
+    tabcNum: {
+        type: DataTypes.INTEGER
+    },
 
-  down: function (queryInterface, Sequelize) {
-    return queryInterface.dropTable('memberEmailVerificationToken')
-      .then(() => queryInterface.dropTable('members'));
+    type: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    bio: {
+        type: DataTypes.STRING
+    },
+    rating: {
+        type: DataTypes.INTEGER
+    },
+    invitationsAvail: {
+        type: DataTypes.STRING
+    },
+    currentEvents: {
+        type: DataTypes.STRING
+    },
+    previousEvents: {
+        type: DataTypes.STRING
+    },      
+   });
+  },
+  down: function(queryInterface, Sequelize) {
+    return queryInterface.dropTable('event_owners');
   }
 };
