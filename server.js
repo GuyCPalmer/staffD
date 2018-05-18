@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
             status: 'session cookie set'
         });
     } else {
-        res.cookie('token', '')
+        res.cookie('token', '');
         res.json({
             status: 'session cookie not set'
         });
