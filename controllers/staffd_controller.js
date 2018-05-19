@@ -10,14 +10,18 @@ router.get("/signin", function (req, res) {
 });
 
 router.get("/userProfile", function (req, res) {
-    res.render("userProfile");
+    res.render("userProfile", { layout: 'homemain.handlebars' });
 });
 
 router.get("/index", function (req, res) {
-    res.render("index");
+    res.render("index", { layout: 'homemain.handlebars' });
 });
 
 router.get("/", function (req, res) {
+    res.render("home", { layout: 'homemain.handlebars' });
+});
+
+router.get("/home", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
@@ -46,15 +50,15 @@ router.get("/hire", function (req, res, err) {
 });
 
 router.get("/newEvent", function (req, res) {
-    res.render("newEvent");
+    res.render("newEvent", { layout: 'main.handlebars' });
 });
 
 router.get("/eventList", function (req, res) {
-    res.render("eventList");
+    res.render("eventList", { layout: 'main.handlebars' });
 });
 
 router.get("/contact", function (req, res) {
-    res.render("contact");
+    res.render("contact", {layout: "homemain.handlebars"});
 });
 
 router.get("/signupChoose", function (req, res) {

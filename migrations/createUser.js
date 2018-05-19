@@ -1,7 +1,5 @@
 /////just started editing from a template///
 
-
-'use strict';
 module.exports = {
   up: function(queryInterface, DataTypes) {
     return queryInterface.createTable('event_owners', {

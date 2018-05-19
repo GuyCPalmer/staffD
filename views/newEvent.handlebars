@@ -1,10 +1,79 @@
-<h1>New Event Creation</h1>
+<html>
+ 
+  <body style="min-width: 300px">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="well well-lg text-center">
+          <span id="show_calendar_arrow" class="glyphicon glyphicon-chevron-down hidden-sm hidden-md hidden-lg"></span>
+          <span id="prev_year_arrow" class="glyphicon glyphicon-arrow-left"></span>
+          <span id="prev_month_arrow" class="glyphicon glyphicon-chevron-left"></span>
+          <span id="current_month_year"></span>
+          <span id="next_month_arrow" class="glyphicon glyphicon-chevron-right"></span>
+          <span id="next_year_arrow" class="glyphicon glyphicon-arrow-right"></span>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-10">
-            <div id="calendar"></div>
+          <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#task_modal">
+            Add Event
+          </button>
         </div>
+      </div>
+      <div class="row">
+        <div id="content">
+          <div id="cal_container" class="col-sm-7 col-xs-12 hidden-xs">
+            <div id="cal_div">
+              <div id="cal_days">
+                <span class="cal_days">Sun</span>
+                <span class="cal_days">Mon</span>
+                <span class="cal_days">Tue</span>
+                <span class="cal_days">Wed</span>
+                <span class="cal_days">Thu</span>
+                <span class="cal_days">Fri</span>
+                <span class="cal_days">Sat</span>
+              </div>
+              <div id="cal_dates">
+                
+              </div>
+            </div>
+            <div class="well well-sm hidden-sm hidden-md hidden-lg text-center" id="hide-calendar">Hide Calendar</div>
+          </div>
+          <div id="task_lists" class="col-sm-5 col-xs-12">
+            <div> Upcoming Events </div>
+            <ul id="list-grp" class="list-group">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="task_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Event Details</h4>
+            </div>
+            <div class="modal-body">
+            <p>Type of Event:</p>
+              <input type="text" id="task-title" style="width: 100%">
+              
+            <p>Date of Event:</p>
+              <input type="date" id="task-date" style="width: 100%">
+           
+              <p>Start Time:</p>
+                <input type="text" id="task-title" style="width: 100%">
+
+             <p>End Time:</p>
+                <input type="text" id="task-title" style="width: 100%">
+
+            <p>Location:</p>
+                <input type="text" id="task-title" style="width: 100%">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="save_task">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<!--<script src="../assets/js/calendar.js" type="text/javascript"></script>-->
+  </body>
+</html>
+

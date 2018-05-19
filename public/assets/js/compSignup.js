@@ -9,9 +9,6 @@ $(document).ready(function(){
     // var comPic = $('#comPic');
     var comAddress = $('#comAddress');
 
-    console.log("SHUTSHUTSHUTSUHSTHUSTUHST");
-
-
     function insertComp(){
     event.preventDefault();
     var event_owners = {
@@ -25,7 +22,7 @@ $(document).ready(function(){
         $.post('/api/eventOwners', event_owners);
 
         console.log(req.body);
-    }//
+    }
 
 });//end of document.ready
 
