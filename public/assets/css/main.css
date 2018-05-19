@@ -9,9 +9,18 @@
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
     height: 100%;
  }
+
+ ul {
+  list-style-type: none;
+}
+
+li {
+  height: 0;
+  color:#9d1de7;
+}
   /* Add a gray background color and some padding to the footer */
   footer {
-    position: relative;
+    position: fixed;
     height: 45px;
     bottom: 0px;
     left: 0px;
