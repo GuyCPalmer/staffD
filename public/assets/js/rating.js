@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var $star_rating = $('.star-rating .fa');
 
 var SetRatingStar = function() {
