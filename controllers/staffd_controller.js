@@ -13,11 +13,7 @@ router.get("/userProfile", function (req, res) {
     res.render("userProfile");
 });
 
-<<<<<<< HEAD
 router.get("/index", function (req, res) {
-=======
-router.get("/index", function(req, res) {
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
     res.render("index");
 });
 

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-module.exports = function(sequelize, DataType){
-
-    var events = sequelize.define("events",{
-        eventId: {
-            type: DataType.STRING,
-=======
 module.exports = function(sequelize, DataTypes){
     var events = sequelize.define("events",{
         eventId: {
             type: DataTypes.STRING,
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
             allowNull: false,
             validate: 
             {
@@ -17,11 +9,7 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         eventOwner: {
-<<<<<<< HEAD
-            type: DataType.STRING,
-=======
             type: DataTypes.STRING,
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
             allowNull: false,
             validate: 
             {
@@ -29,24 +17,6 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         eventDateTimeStart: {
-<<<<<<< HEAD
-            type: DataType.DATE,
-            allowNull: false
-        },
-        eventDateTimeEnd: {
-            type: DataType.DATE,
-            allowNull: false
-        },
-        locationAddress: {
-            type: DataType.STRING,
-            allowNull: false,
-        },
-        locationSpecialInst: {
-            type: DataType.STRING
-        },
-        onsiteContact: {
-            type: DataType.INTEGER,
-=======
             type: DataTypes.DATE,
             allowNull: false
         },
@@ -63,19 +33,9 @@ module.exports = function(sequelize, DataTypes){
         },
         onsiteContact: {
             type: DataTypes.INTEGER,
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
             allowNull: false
         },
         staffd: {
-<<<<<<< HEAD
-            type: DataType.BOOLEAN
-        },
-        invitationsSent: {
-            type: DataType.STRING
-        },
-        invConfirmed: {
-            type: DataType.STRING
-=======
             type: DataTypes.BOOLEAN
         },
         invitationsSent: {
@@ -83,7 +43,6 @@ module.exports = function(sequelize, DataTypes){
         },
         invConfirmed: {
             type: DataTypes.STRING
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
         },      
     },
 {
