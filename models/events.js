@@ -1,12 +1,9 @@
 module.exports = function(sequelize, DataTypes){
     var events = sequelize.define("events",{
         eventId: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         eventOwner: {
             type: DataTypes.STRING,

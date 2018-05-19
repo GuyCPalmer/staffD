@@ -9,68 +9,72 @@
   
 <div class="container">
 
-        {{!-- separator --}}
-    <div class="col s2"></div>
 
 
-    <div class="col-8">
-    <form class="col s12" id='newTalentForm'>
-            <div class="form-group">
+
+
+    <form class="col s12" id='newTalent'>
+
+        <div class="form-group">
+            <div class="row">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="ex: Jon Doe" id="talentName" type="text" autocomplete='name' class="validate">
+                            <label for="talentName">Your Full Name</label>
+                        </div> 
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="X-(XXX)XXX-XXXX" id="talentPhone" type="number" autocomplete='tel' class="validate">
+                            <label for="talentPhone">Your Phone Number</label>
+                        </div>
+                    </div>
+
                 <div class="row">
-
-                <div class="input-field col s12">
-                    <input placeholder="ex: Jon Doe" id="newTalent" type="text" autocomplete='name' class="validate">
-                    <label for="newTalent">Your Full Name</label>
-                </div>
-
-                <div class="input-field col s12">
-                    <input placeholder="X-(XXX)XXX-XXXX" id="talentPhone" type="text" autocomplete='tel' class="validate">
-                    <label for="talentPhone">Your Phone Number</label>
-                </div>
-
-               <div class="row">
-                    <div class="input-field col s12">
-                        <input id="talentEmail" type="email" autocomplete='email' class="validate">
-                        <label for="talentEmail">Email Address</label>
+                        <div class="input-field col s12">
+                            <input id="talentEmail" type="email" autocomplete='email' class="validate">
+                            <label for="talentEmail">Email Address</label>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Address" autocomplete='address-line1' type="text" class="validate">
+                            <label for="Address">Yours Address</label>
+                        </div>
+                    </div>
 
                 <div class="row">
-                    <div class="input-field col s12">
-                        <input id="Address" autocomplete='address-line1' type="text" class="validate">
-                        <label for="Address">Yours Address</label>
+                        <div class="input-field col s12">
+                            <input id="SSN" type="number" class="validate">
+                            <label for="SSN">Your Social Security Number</label>
+                        </div>
                     </div>
-                </div>
 
-               <div class="row">
-                    <div class="input-field col s12">
-                        <input id="SSN" type="text" class="validate">
-                        <label for="SSN">Your Social Security Number</label>
+                <div class="row">
+                        <div class="input-field col s12">
+                            {{input type="checkbox" name="Drivers_license" id="drivers"}}
+                            <input id="dlNumber" type="text" class="validate">
+                            <label for="dlNumber">Driver License Number</label>
+                        </div>
                     </div>
-                </div>
 
-               <div class="row">
-                    <div class="input-field col s12">
-                        <input id="SSN" type="text" class="validate">
-                        <label for="SSN">Your Social Security Number</label>
+                <div class="row">
+                        <div class="input-field col s12">
+                            {{input type="checkbox" name="Drivers_license" id="drivers"}}
+                            <input id="tabc" type="text" class="validate">
+                            <label for="tabc">TABC License Number</label>
+                        </div>
                     </div>
-                </div>
-
-               <div class="row">
-                    <div class="input-field col s12">
-                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
-                        <input id="dlNumber" type="text" class="validate">
-                        <label for="dlNumber">Driver License Number</label>
-                    </div>
-                </div>
-
-               <div class="row">
-                    <div class="input-field col s12">
-                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
-                        <input id="tabc" type="text" class="validate">
-                        <label for="tabc">TABC License Number</label>
-                    </div>
-                </div>
                 
                     {{!-- for uploading Photos --}}
                     {{!-- <script id="file-upload-template" type="textx-handlebars-template">
@@ -91,7 +95,7 @@
                     {{input type="checkbox" name="Security" id="Security"}}
                     {{input type="checkbox" name="Sales" id="Sales"}}
 
-                      <div class="row">
+                    <div class="row">
                         <form class="col s12">
                             <div class="row">
                                 <div class="input-field col s12">
@@ -103,15 +107,20 @@
                     </div>
 
 
+                    <div class="row">  
+                        <button id="makeTalent" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                  
                 </div>
             </div>
         </form>
+  
+
+
     </div>
 
-        {{!-- separator --}}
-    <div class="col-2"></div>
-    </div>
 </div>
-  <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-            
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

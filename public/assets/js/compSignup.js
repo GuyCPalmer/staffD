@@ -9,19 +9,22 @@ $(document).ready(function(){
     // var comPic = $('#comPic');
     var comAddress = $('#comAddress');
 
-    function insertComp(){
+    $(document).on('click', '#makeComp', insertComp);
+
+
+function insertComp(){
     event.preventDefault();
     var event_owners = {
         eventOwner: newCompany.val().trim(),
-        phone: companyPhone.va().trim(),
+        purchasing: purchasing.val().trim(),
+        phone: companyPhone.val().trim(),
         email: comEmail.val().trim(),
         coordinator: coordinatorName.val().trim(),
         ownerAddress: comAddress.val().trim()
         };
 
-        $.post('/api/eventOwners', event_owners);
+        $.post('/api/event_owners', event_owners);
 
-        console.log(req.body);
     }
 
 });//end of document.ready
