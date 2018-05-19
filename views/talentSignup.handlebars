@@ -3,62 +3,95 @@
 </h1>
 
 <div class="container">
-    <div class="row">
 
         {{!-- separator --}}
-    <div class="col-2"></div>
+    <div class="col s2"></div>
 
 
     <div class="col-8">
-        <form class="newTalent">
+    <form class="col s12" id='newTalent'>
             <div class="form-group">
+                <div class="row">
 
-                <label for="newTalent">Your Name</label>
-                <input type="text" id="newTalent" name="Your Name">
+                <div class="input-field col s12">
+                    <input placeholder="ex: Jon Doe" id="newTalent" type="text" autocomplete='name' class="validate">
+                    <label for="newTalent">Your Full Name</label>
+                </div>
 
-                <label for="talentPhone">Your Phone Number</label>
-                <input type="text" id="talentPhone" name="X-(XXX)XXX-XXXX">
+                <div class="input-field col s12">
+                    <input placeholder="X-(XXX)XXX-XXXX" id="talentPhone" type="text" autocomplete='tel' class="validate">
+                    <label for="talentPhone">Your Phone Number</label>
+                </div>
 
-                <label for="talentEmail">Your Email Address</label>
-                <input type="text" id="talentEmail" name="jon.doe@email.com">
+               <div class="row">
+                    <div class="input-field col s12">
+                        <input id="talentEmail" type="email" autocomplete='email' class="validate">
+                        <label for="talentEmail">Email</label>
+                    </div>
+                </div>
 
-                <label for="address">Your Address</label>
-                <input type="text" id="address" name="1111 Road dr. Tx. 111111">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="Address" autocomplete='address-line1' type="text" class="validate">
+                        <label for="Address">Company Address</label>
+                    </div>
+                </div>
 
-                <label for="SSN">Your Social Security Number</label>
-                <input type="text" id="SSN" name="XXX-XX-XXXX">
+               <div class="row">
+                    <div class="input-field col s12">
+                        <input id="SSN" type="text" class="validate">
+                        <label for="SSN">Your Social Security Number</label>
+                    </div>
+                </div>
 
-                {{input type="checkbox" name="Drivers_license" id="drivers"}}
-                <label for="dlNumber">Driver License Number</label>
-                <input type="text" id="dlNumber" name="Driver License Number">
+               <div class="row">
+                    <div class="input-field col s12">
+                        <input id="SSN" type="text" class="validate">
+                        <label for="SSN">Your Social Security Number</label>
+                    </div>
+                </div>
 
-                {{input type="checkbox" name="TABC License" id="tabc"}}
-                <label for="tabc">TABC License Number</label>
-                <input type="text" id="tabc" name="TABC License Number">
+               <div class="row">
+                    <div class="input-field col s12">
+                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
+                        <input id="dlNumber" type="text" class="validate">
+                        <label for="dlNumber">Driver License Number</label>
+                    </div>
+                </div>
 
-                {{!-- for uploading Photos --}}
-                <script id="file-upload-template" type="textx-handlebars-template">
-                    <li class="removable_row">
-                        <div class="file-field">
-                            <label class="photo" for="{{photo}}"><abbr title="required"></abbr> Photo</label>
-                            <input class="photo" id="{{photo}}" name="Personal Photo" type="file"/>
-                        </div>
-                    </li>
-                </script>
-                <div class="file-uploader">Photo</div>
+                    {{input type="checkbox" name="TABC License" id="tabc"}}
+                    <label for="tabc">TABC License Number</label>
+                    <input type="text" id="tabc" name="TABC License Number">
 
-                {{!-- turning this into a simply checkbox have to change it to dropdown later --}}
-                <label>Position:</label>
-                {{input type="checkbox" name="Bartender" id="Bartender"}}
-                {{input type="checkbox" name="Server" id="Server"}}
-                {{input type="checkbox" name="Promo Model" id="Promo Model"}}
-                {{input type="checkbox" name="Security" id="Security"}}
-                {{input type="checkbox" name="Sales" id="Sales"}}
+                    {{!-- for uploading Photos --}}
+                    {{!-- <script id="file-upload-template" type="textx-handlebars-template">
+                        <li class="removable_row">
+                            <div class="file-field">
+                                <label class="photo" for="{{photo}}"><abbr title="required"></abbr> Photo</label>
+                                <input class="photo" id="{{photo}}" name="Personal Photo" type="file"/>
+                            </div>
+                        </li>
+                    </script>
+                    <div class="file-uploader">Photo</div> --}}
+
+                    {{!-- turning this into a simply checkbox have to change it to dropdown later --}}
+                    <label>Position:</label>
+                    {{input type="checkbox" name="Bartender" id="Bartender"}}
+                    {{input type="checkbox" name="Server" id="Server"}}
+                    {{input type="checkbox" name="Promo Model" id="Promo Model"}}
+                    {{input type="checkbox" name="Security" id="Security"}}
+                    {{input type="checkbox" name="Sales" id="Sales"}}
+                </div>
             </div>
         </form>
     </div>
 
         {{!-- separator --}}
+<<<<<<< HEAD
     <div class="col-2"></div>
     </div>
 </div>
+=======
+    <div class="col s2"></div>
+</div>
+>>>>>>> 6ab02a484dca2b80d5be7e2932b962d299b8ea63
