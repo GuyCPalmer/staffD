@@ -56,6 +56,7 @@ app.listen(5000, function (err) {
     }
 
 });
+<<<<<<< HEAD
 
 
 
@@ -118,3 +119,5 @@ app.listen(5000, function (err) {
 // app.listen(3000, () => {
 //     console.log('Server is running on port 3000');
 // });
+=======
+>>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8

@@ -25,7 +25,7 @@ $(document).ready(function(){
         $.post('/api/eventOwners', event_owners);
 
         console.log(req.body);
-    }//
+    }
 
 });//end of document.ready
 

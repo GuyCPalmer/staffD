@@ -25,6 +25,10 @@ $(document).ready(function(){
                 //This is where the booleans \
                 bio: bio.val().trim()
             };
+
+            $.post('/api/talent', talent);
+
+            console.log(res.body);
     }
 
 });//endd of doccument

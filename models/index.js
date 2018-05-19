@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 'use strict';
+=======
+>>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
 
 var fs        = require('fs');
 var path      = require('path');
