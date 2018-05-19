@@ -10,14 +10,18 @@ router.get("/signin", function (req, res) {
 });
 
 router.get("/userProfile", function (req, res) {
-    res.render("userProfile", {layout: 'homemain.handlebars' });
+    res.render("userProfile", { layout: 'homemain.handlebars' });
 });
 
-router.get("/index", function(req, res) {
-    res.render("index");
+router.get("/index", function (req, res) {
+    res.render("index", { layout: 'homemain.handlebars' });
 });
 
 router.get("/", function (req, res) {
+    res.render("home", { layout: 'homemain.handlebars' });
+});
+
+router.get("/home", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
@@ -30,31 +34,31 @@ router.get("/compSignup", function (req, res) {
 });
 
 router.get("/hire", function (req, res, err) {
-    db.talent.findAll({}).then(function (talent_data, err) {
-        var talent_items = {
-            talent: talent_data
-        };
-        console.log(talent_items.talent[1].dataValues);
-        res.render("hire", talent_items);
+    db.talent.findAll({}).then(function (talentData, err) {
+        res.render("hire", talentData);
+        console.log(talentData, "this is the talent data");
     }).catch(err, function (err) {
         if (err) {
             console.log(err);
         } else {
             console.log("Shouldve Got you data...");
         }
-    });   
+    });
+        
+    
+    
 });
 
 router.get("/newEvent", function (req, res) {
-    res.render("newEvent");
+    res.render("newEvent", { layout: 'main.handlebars' });
 });
 
 router.get("/eventList", function (req, res) {
-    res.render("eventList");
+    res.render("eventList", { layout: 'main.handlebars' });
 });
 
 router.get("/contact", function (req, res) {
-    res.render("contact");
+    res.render("contact", {layout: "homemain.handlebars"});
 });
 
 router.get("/signupChoose", function (req, res) {
