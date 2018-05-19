@@ -10,7 +10,7 @@ router.get("/signin", function (req, res) {
 });
 
 router.get("/userProfile", function (req, res) {
-    res.render("userProfile");
+    res.render("userProfile", {layout: 'homemain.handlebars' });
 });
 
 router.get("/index", function(req, res) {
