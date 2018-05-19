@@ -2,23 +2,26 @@
     Company Sign-up.
 </h1>
 
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
 <div class="container">
 
-    <div class="col s3"></div>
 
     <form class="col s12" id='compSignupForm'>
         <div class="form-group">
 
-
             <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="ex: Staffd" id="newCompany" type="text" autocomplete='organization' class="validate">
-                    <label for="newCompany">Your Company Name</label>
-                </div>
-
-                <div class="input-field col s6">
-                    <input id="coordinatorName" autocomplete='name' type="text" class="validate">
-                    <label for="coordinatorName">Event Coordinator Name
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="ex: Staffd" id="newCompany" type="text" autocomplete='organization' class="validate">
+                        <label for="newCompany">Your Company Name</label>
+                    </div>
+               
+                    <div class="input-field col s6">
+                        <input id="coordinatorName" autocomplete='name' type="text" class="validate">
+                        <label for="coordinatorName">Event Coordinator Name
+                    </div>
                 </div>
 
                 <div class="row">
@@ -58,16 +61,16 @@
                         <input class="file-path validate" id="comPic" type="text">
                     </div>
                 </div> --}}
-
-                <button class="btn waves-effect waves-light" id='compSignupForm' type="submit" name="action">
+            <div class="row">
+                <button class="btn waves-effect waves-light" id='makeComp' type="submit" name="action">
                     Submit
                 </button>
             </div>
+        </div>
     </form>
+</div>
 
 
-    <div class="col s3"></div>
-
-    </div>
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

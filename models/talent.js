@@ -2,15 +2,15 @@ module.exports = function(sequelize, DataTypes){
     var talent = sequelize.define("talent",{
         talentId: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         talentName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate:
-                {
-                    len: [1, 140]
-                }
+            validate: {
+                len: [1,140]
+            }
         },
         phone: {
             type: DataTypes.INTEGER,
@@ -87,9 +87,6 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.DATE,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
         } 
-
-
-
     },
         {
             freezeTableName: true,

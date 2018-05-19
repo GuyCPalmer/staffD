@@ -41,6 +41,7 @@ require('./config/passport/passport.js')(passport, models.user);
 var routes = require("./controllers/staffd_controller.js");
 
 app.use("/", routes);
+require("./controllers/api_controller.js")(app);
 //Sync Database
 models.sequelize.sync().then(function () {
     console.log('Nice! Database looks fine');
