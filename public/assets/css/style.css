@@ -2,14 +2,23 @@
   .navbar {
     margin-bottom: 50px;
     border-radius: 0;
-    background-color: white;
+    background-color: black
   }
   
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
  }
+
+ ul {
+   list-style-type: none;
+ }
+
+ li {
+   height: 0;
+   color:#9d1de7;
+ }
   /* Add a gray background color and some padding to the footer */
-  footer {
+footer {
     position: relative;
     height: 45px;
     bottom: 0px;
@@ -23,6 +32,10 @@
     background-color: #9d1de7;
     padding: 25px;
     border-top: solid 1px black;
+  }
+
+  div.span3.well {
+    display: inline-block;
   }
 
 /* star rating CSS*/
@@ -52,8 +65,6 @@
   transform: rotateX(0deg);
   text-shadow: 0 0 30px #ffc;
 }
-<<<<<<< HEAD
-=======
 
 /*calendar*/
 #header {
@@ -111,4 +122,3 @@ input {
 .btn-primary {
   background-color:#9d1de7;
 }
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
