@@ -21,9 +21,5 @@ exports.logout = function(req,res){
   req.session.destroy(function(err) {
   res.redirect('/');
   });
-<<<<<<< HEAD
-};
-=======
 
-}
->>>>>>> 4e14ed2f9ce15b97dac6abb3afc18411cdb0aef8
+};

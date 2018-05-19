@@ -1,6 +1,6 @@
 
 
-'use strict';
+
 module.exports = {
   up: function(queryInterface, DataTypes) {
     return queryInterface.createTable('events', {

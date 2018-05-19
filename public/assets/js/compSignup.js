@@ -9,9 +9,6 @@ $(document).ready(function(){
     // var comPic = $('#comPic');
     var comAddress = $('#comAddress');
 
-    console.log("SHUTSHUTSHUTSUHSTHUSTUHST");
-
-
     function insertComp(){
     event.preventDefault();
     var event_owners = {
