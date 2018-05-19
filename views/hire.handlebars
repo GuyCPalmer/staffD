@@ -1,3 +1,8 @@
+<link rel="stylesheet" type="text/css" src="public/assets/css/style.css" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="rating.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <div class="container text-center">
     <h1>Talent</h1>
   </div>
@@ -8,6 +13,14 @@
         <center>
         <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="https://image.ibb.co/mSw20c/IMG_4138.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
         <h3>Guy Palmer</h3>
+         <div class="star-rating">
+        <span class="fa fa-star-o" data-rating="1"></span>
+        <span class="fa fa-star-o" data-rating="2"></span>
+        <span class="fa fa-star-o" data-rating="3"></span>
+        <span class="fa fa-star-o" data-rating="4"></span>
+        <span class="fa fa-star-o" data-rating="5"></span>
+        <input type="hidden" name="whatever1" class="rating-value" value="">
+                    </div>
         <em>View My Profile</em>
 		</center>  
     </div>
@@ -24,13 +37,18 @@
                     <center>
                     <img src="https://image.ibb.co/mSw20c/IMG_4138.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
                     <h3 class="media-heading">Guy Palmer <small>Austin, TX</small></h3>
-                    <div id="rating">
-                        <span>?</span>
-                        <span>?</span>
-                        <span>?</span>
-                        <span>?</span>
-                        <span>?</span>
-                        </div>
+                    <div class="rating">
+                        <div class="col-lg-12">
+      <div class="star-rating">
+        <span class="fa fa-star-o" data-rating="1"></span>
+        <span class="fa fa-star-o" data-rating="2"></span>
+        <span class="fa fa-star-o" data-rating="3"></span>
+        <span class="fa fa-star-o" data-rating="4"></span>
+        <span class="fa fa-star-o" data-rating="5"></span>
+        <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                    </div>
+
+
                     <span><strong>Hire me as: </strong></span>
                         <span class="label label-warning">Bartender</span>
                         <span class="label label-info">Promo Model</span>
