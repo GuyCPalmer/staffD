@@ -1,3 +1,5 @@
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -56,4 +58,10 @@ typings/
 
 # dotenv environment variables file
 .env
+
+
+=======
+#package-lock
+package-lock.json
+
 

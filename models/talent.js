@@ -1,78 +1,99 @@
-module.exports = function(sequelize, Sequelize){
+module.exports = function(sequelize, DataTypes){
     var talent = sequelize.define("talent",{
         talentId: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
-        name: {
-            type: Sequelize.STRING,
+        talentName: {
+            type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
+            validate: {
                 len: [1,140]
             }
         },
         phone: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         email: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
+            validate:
+                {
+                    len: [1, 140]
+                }
         },
-        address: {
-            type: Sequelize.STRING,
+        talentAddress: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
         socSec: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         driverLic: {
-            type: Sequelize.BOOLEAN,
+            type: DataTypes.BOOLEAN,
         },
         driverLicNum: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         tabc: {
-            type: Sequelize.BOOLEAN
+            type: DataTypes.BOOLEAN
         },
         tabcNum: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
-
-        type: {
-            type: Sequelize.STRING,
+        jobBar: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobServer: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobSales: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobModel: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobSecurity: {
+            type: DataTypes.BOOLEAN,
             allowNull: false
         },
         bio: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         rating: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         invitationsAvail: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         currentEvents: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         previousEvents: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
-
-
-        
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        } 
     },
-{
-    freezeTableName: true,
-    tableName: "talent"
-},
-{
-    timestamps: true
-});
+        {
+            freezeTableName: true,
+            tableName: "talent"
+        },
+        {
+            timestamps: true
+        });
     return talent;
 };
