@@ -14,16 +14,21 @@ CREATE TABLE talent (
     driverLic BOOLEAN,
     driverLicNum INTEGER (20),
     tabc BOOLEAN,
+<<<<<<< HEAD
     photo BLOB NOT NULL,
     otherFiles BLOB,
     type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
     tabcNum INTEGER(20),
     jobType SET('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
+=======
+    tabcNum INT,
+>>>>>>> 4ca86c8ccc45c4eae8ae52c52e687835722fbf64
     jobBar BOOLEAN,
     jobServer BOOLEAN,
     jobSales BOOLEAN,
     jobModel BOOLEAN,
     jobSecurity BOOLEAN,
+<<<<<<< HEAD
     tabcNum INTEGER (20),
     photo BLOB NOT NULL,
     otherFiles BLOB,
@@ -32,6 +37,8 @@ CREATE TABLE talent (
     jobSales BOOLEAN NOT NULL,
     jobModel BOOLEAN NOT NULL,
     jobSecurity BOOLEAN NOT NULL,
+=======
+>>>>>>> 4ca86c8ccc45c4eae8ae52c52e687835722fbf64
     bio TEXT,
     rating INT,
     invitationsAvail VARCHAR(300),
