@@ -1,13 +1,14 @@
 module.exports = function(sequelize, DataTypes){
     var talent = sequelize.define("talent",{
         talentId: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
-        name: {
+        talentName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
+            validate: {
                 len: [1,140]
             }
         },
@@ -18,12 +19,12 @@ module.exports = function(sequelize, DataTypes){
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
+            validate:
+                {
+                    len: [1, 140]
+                }
         },
-        address: {
+        talentAddress: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -43,13 +44,28 @@ module.exports = function(sequelize, DataTypes){
         tabcNum: {
             type: DataTypes.INTEGER
         },
-
-        type: {
-            type: DataTypes.STRING,
+        jobBar: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobServer: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobSales: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobModel: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        jobSecurity: {
+            type: DataTypes.BOOLEAN,
             allowNull: false
         },
         bio: {
-            type: DataTypes.TEXT
+            type: DataTypes.STRING
         },
         rating: {
             type: DataTypes.INTEGER
@@ -63,16 +79,21 @@ module.exports = function(sequelize, DataTypes){
         previousEvents: {
             type: DataTypes.STRING
         },
-
-
-        
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        } 
     },
-{
-    freezeTableName: true,
-    tableName: "talent"
-},
-{
-    timestamps: false
-});
+        {
+            freezeTableName: true,
+            tableName: "talent"
+        },
+        {
+            timestamps: true
+        });
     return talent;
 };

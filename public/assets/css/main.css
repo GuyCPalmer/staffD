@@ -7,6 +7,7 @@
   
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
+    height: 100%;
  }
   /* Add a gray background color and some padding to the footer */
   footer {
@@ -40,4 +41,14 @@
       background-color: #9d1de7;
       bottom: 10%;
   }
+
+  .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+      color: #9d1de7;
+  }
+  
+  .btn-flat {
+      font-weight: bold;
+  }
+
+  
 

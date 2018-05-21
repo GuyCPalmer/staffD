@@ -25,4 +25,87 @@
     border-top: solid 1px black;
   }
 
+/* star rating CSS*/
+#rating {
+  text-align: center;
+  perspective: 250px;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+ 
+#rating span {
+  cursor: pointer;
+  font-size: 50px;
+  padding: 0 10px;
+  color: #fff;
+  opacity: .5;
+  transition: all 150ms;
+  display: inline-block;
+  transform: rotateX(45deg);
+  transform-origin: center bottom;
+}
+ 
+#rating span.hover {
+  color: #ff0;
+  opacity: 1;
+  transform: rotateX(0deg);
+  text-shadow: 0 0 30px #ffc;
+}
 
+/*calendar*/
+#header {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#cal_days {
+  width: 100%;
+  display: table;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+.cal_days {
+  display: table-cell;
+  width: 14.28%;
+  padding: 5px;
+}
+
+#cal_dates {
+  width: 100%;
+  display: table;
+}
+
+
+.cal_dates {
+  display: table-cell;
+  width: 14.28%;
+  float: left;
+  height: 40px;
+  text-align: right;
+  padding: 10px;
+}
+
+.cal_dates:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+.disable-span, .disable-span:hover {
+  color: #bbbbbb; 
+}
+
+input {
+  margin: 10px 0px 10px 0px;
+}
+  
+.has-task {
+  background-color:lightgrey;
+}
+
+.btn-primary {
+  background-color:#9d1de7;
+}
