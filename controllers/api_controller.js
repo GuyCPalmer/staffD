@@ -31,7 +31,7 @@ module.exports = function(app) {
             jobBar: req.body.jobBar,
             jobServer: req.body.jobServer,
             jobSales: req.body.jobSales,
-            jobModel: req.body.jobModal,
+            jobModel: req.body.jobModel,
             jobSecurity: req.body.jobSecurity,
             bio: req.body.bio
 
@@ -53,60 +53,60 @@ module.exports = function(app) {
         });
     });
 
-
-    //get talent to display on the hire page, run get request based on "staff my event: type"
-    app.get("/api/posts/category/:jobBar", function(req, res) {
-        db.talent.findAll({
-          where: {
-            jobBar: req.params.true
-          }
-        })
-          .then(function(dbTalent) {
-            res.json(dbTalent);
+        //get talent to display on the hire page, run get request based on "staff my event: type"
+        app.get("/api/posts/category/:jobBar", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
           });
-      });
-
-    app.get("/api/posts/category/:jobServer", function(req, res) {
-        db.talent.findAll({
-          where: {
-            jobBar: req.params.true
-          }
-        })
-          .then(function(dbTalent) {
-            res.json(dbTalent);
+    
+        app.get("/api/posts/category/:jobServer", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
           });
-      });
-
-    app.get("/api/posts/category/:jobSales", function(req, res) {
-        db.talent.findAll({
-          where: {
-            jobBar: req.params.true
-          }
-        })
-          .then(function(dbTalent) {
-            res.json(dbTalent);
+    
+        app.get("/api/posts/category/:jobSales", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
           });
-      });
-
-    app.get("/api/posts/category/:jobModel", function(req, res) {
-        db.talent.findAll({
-          where: {
-            jobBar: req.params.true
-          }
-        })
-          .then(function(dbTalent) {
-            res.json(dbTalent);
+    
+        app.get("/api/posts/category/:jobModel", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
           });
-      });
-
-    app.get("/api/posts/category/:jobSecurity", function(req, res) {
-        db.talent.findAll({
-          where: {
-            jobBar: req.params.true
-          }
-        })
-          .then(function(dbTalent) {
-            res.json(dbTalent);
+    
+        app.get("/api/posts/category/:jobSecurity", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
           });
-      });
+    
 };

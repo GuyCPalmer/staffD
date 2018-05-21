@@ -2,15 +2,24 @@
   .navbar {
     margin-bottom: 50px;
     border-radius: 0;
-    background-color: white;
+    background-color: black
   }
   
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
  }
+
+ ul {
+   list-style-type: none;
+ }
+
+ li {
+   height: 0;
+   color:#9d1de7;
+ }
   /* Add a gray background color and some padding to the footer */
-  footer {
-    position: fixed;
+footer {
+    position: relative;
     height: 45px;
     bottom: 0px;
     left: 0px;
@@ -25,7 +34,18 @@
     border-top: solid 1px black;
   }
 
+  div.span3.well {
+    display: inline-block;
+  }
+
 /* star rating CSS*/
+  .star-rating {
+    line-height:32px;
+    font-size:1.25em;
+  }
+  
+  .star-rating .fa-star{color: yellow;}
+
 #rating {
   text-align: center;
   perspective: 250px;
@@ -53,3 +73,59 @@
   text-shadow: 0 0 30px #ffc;
 }
 
+/*calendar*/
+#header {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#cal_days {
+  width: 100%;
+  display: table;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+.cal_days {
+  display: table-cell;
+  width: 14.28%;
+  padding: 5px;
+}
+
+#cal_dates {
+  width: 100%;
+  display: table;
+}
+
+
+.cal_dates {
+  display: table-cell;
+  width: 14.28%;
+  float: left;
+  height: 40px;
+  text-align: right;
+  padding: 10px;
+}
+
+.cal_dates:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+.disable-span, .disable-span:hover {
+  color: #bbbbbb; 
+}
+
+input {
+  margin: 10px 0px 10px 0px;
+}
+  
+.has-task {
+  background-color:lightgrey;
+}
+
+.btn-primary {
+  background-color:#9d1de7;
+}

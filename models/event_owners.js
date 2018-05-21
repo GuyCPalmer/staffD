@@ -1,15 +1,20 @@
-module.exports = function(sequelize, DataType){
-    var eventOwners = sequelize.define("event_owners",{
+module.exports = function(sequelize, DataTypes){
+    var event_owners = sequelize.define("event_owners",{
         eventOwnerId: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        eventOwner: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: 
             {
                 len: [1,140]
             }
         },
-        eventOwner: {
-            type: DataType.STRING,
+        purchasingContact: {
+            type:  DataTypes.STRING,
             allowNull: false,
             validate: 
             {
@@ -17,11 +22,11 @@ module.exports = function(sequelize, DataType){
             }
         },
         phone: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         email: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: 
             {
@@ -29,29 +34,41 @@ module.exports = function(sequelize, DataType){
             }
         },
         coordinator: {
-            type: DataType.STRING,
-            allowNull: false
+            type:  DataTypes.STRING,
+            allowNull: false,
+            validate: 
+            {
+                len: [1,140]
+            }
         },
         ownerAddress: {
-            type: DataType.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         eventsOwned: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         invitationsSent: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         invConfirmed: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },      
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        } 
     },
-{
-    freezeTableName: true,
-    tableName: "event_owners"
-},
-{
-    timestamps: true
-});
-    return eventOwners;
+        {
+            freezeTableName: true,
+            tableName: "event_owners"
+        },
+        {
+            timestamps: true
+        });
+    return event_owners;
 };

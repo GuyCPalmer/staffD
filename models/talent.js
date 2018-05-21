@@ -1,13 +1,14 @@
 module.exports = function(sequelize, DataTypes){
-    var talent = sequelize.define("talent", {
+    var talent = sequelize.define("talent",{
         talentId: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         talentName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
+            validate: {
                 len: [1,140]
             }
         },
@@ -18,10 +19,10 @@ module.exports = function(sequelize, DataTypes){
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: 
-            {
-                len: [1,140]
-            }
+            validate:
+                {
+                    len: [1, 140]
+                }
         },
         talentAddress: {
             type: DataTypes.STRING,
@@ -78,16 +79,21 @@ module.exports = function(sequelize, DataTypes){
         previousEvents: {
             type: DataTypes.STRING
         },
-
-
-        
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        } 
     },
-{
-    freezeTableName: true,
-    tableName: "talent"
-},
-{
-    timestamps: true
-});
+        {
+            freezeTableName: true,
+            tableName: "talent"
+        },
+        {
+            timestamps: true
+        });
     return talent;
 };

@@ -32,7 +32,7 @@ app.use(express.static(__dirname + "/public"));
 var models = require("./models");
 
 //Routes
-var authRoute = require('./routes/auth.js')(app, passport);
+// var authRoute = require('./routes/auth.js')(app, passport);
 
 //load passport strategies
 require('./config/passport/passport.js')(passport, models.user);
@@ -41,6 +41,9 @@ require('./config/passport/passport.js')(passport, models.user);
 var routes = require("./controllers/staffd_controller.js");
 
 app.use("/", routes);
+
+require("./controllers/api_controller.js")(app);
+
 //Sync Database
 models.sequelize.sync().then(function () {
     console.log('Nice! Database looks fine');
@@ -56,7 +59,3 @@ app.listen(5000, function (err) {
     }
 
 });
-
-
-
-

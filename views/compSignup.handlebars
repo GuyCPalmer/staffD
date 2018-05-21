@@ -2,43 +2,77 @@
     Company Sign-up.
 </h1>
 
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
 <div class="container">
 
-    <div class="col-3"></div>
 
-    <div class="col-6">
-        <form class="newCompany">
-            <div class="form-group">
-                
-                <label for="newCompany">Your Company Name: </label>
-                <input type="text" id="newCompany" name="Company Name">
+    <form class="col s12" id='compSignupForm'>
+        <div class="form-group">
 
-                <label for="coordinatorName">Event Coordinator Contact</label>
-                <input type="text" id="coordinatorName" name="Coordinator Name">
+            <div class="row">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="ex: Staffd" id="newCompany" type="text" autocomplete='organization' class="validate">
+                        <label for="newCompany">Your Company Name</label>
+                    </div>
+               
+                    <div class="input-field col s6">
+                        <input id="coordinatorName" autocomplete='name' type="text" class="validate">
+                        <label for="coordinatorName">Event Coordinator Name
+                    </div>
+                </div>
 
-                <label for="purchasing">Purchasing Contact</label>
-                <input type="text" id="purchasing" name="Purchasing Contact">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="purchasing" type="text" class="validate">
+                        <label for="purchasing">Purchasing Contact</label>
+                    </div>
+                </div>
 
-                <label for="phone">Primary Phone Number</label>
-                <input type="text" id="companyPhone" name="X-(XXX)XXX-XXXX">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="companyPhone" autocomplete='tel' type="text" class="validate">
+                        <label for="companyPhone">Primary Phone Number</label>
+                    </div>
+                </div>
 
-                <label for="comEmail">Primary Email Address</label>
-                <input type="text" id="comEmail" name="Email">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="comAddress" autocomplete='address-line1' type="text" class="validate">
+                        <label for="comAddress">Company Address</label>
+                    </div>
+                </div>
 
-                {{!-- Not entirely Sure what should be going here --}}
-                <label for="events_owned">Previous Events:</label>
-                <input type="text" id="events_owned" name="Previous Events">
-
-                <label for="invitations_sent">Invitations Sent</label>
-                <input type="text" id="invitations_sent" name="Invitations Sent">
-
-                {{input type="checkbox" name="Confirmed" id="confirmed"}}
-
-                {{!-- need to add a photo input field --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="comEmail" type="email" autocomplete='email' class="validate">
+                        <label for="comEmail">Email</label>
+                    </div>
+                </div>
+                {{!-- PICTURE NEEDS TO BE ORGANIZED --}} {{!--
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Picture</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" id="comPic" type="text">
+                    </div>
+                </div> --}}
+            <div class="row">
+                <button class="btn waves-effect waves-light" id='makeComp' type="submit" name="action">
+                    Submit
+                </button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
-    <div class="col-3"></div>
 
 </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
