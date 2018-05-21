@@ -1,9 +1,37 @@
-<h1>User Profile</h1>
+<h1>My Main Page</h1>
 
-<div class="media">
-  <img class="mr-3" src="https://loremflickr.com/200/200" alt="Generic placeholder image">
-  <div class="media-body">
-    <h4 class="mt-0">User Name</h4>
-    User Info
+<div class="container">
+
+  <div class="row">
+
+    {{!-- this is the users face n stuff --}}
+    <div class="col s5">
+      <div class="card">
+        <h5 class="center-align">
+          Profile Picture
+        </h5>
+        <div class="card-image">
+          <img src="../assets/images/pierce.jpg" alt="Pic of your Lame Face">
+        </div>
+      </div>
+    </div>
+
+    <div class="col s7">
+      <div class="card">
+        <h3 class="center-align">
+          Your Events
+        </h3>
+        {{#each Events}}
+        {{/each}}
+      </div>
+    </div>
+
+  </div> 
+
+  <div class="row">
+
   </div>
+
 </div>
+
+<script src="../assets/js/eventList.js"  type="text/javascript" ></script>

@@ -1,63 +1,99 @@
- <h1>
+<h2 class='z-depth-3'>
     Talent Sign-Up
-</h1>
-
-<div class="container">
-
-        {{!-- separator --}}
-    <div class="col s2"></div>
+</h2>
 
 
-    <div class="col-8">
+<!-- Compiled and minified CSS -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
+
+
+<div class="container userForm z-depth-3">
+
     <form class="col s12" id='newTalent'>
-            <div class="form-group">
+
+        <div class="form-group">
+            <div class="row">
+
                 <div class="row">
-
-                <div class="input-field col s12">
-                    <input placeholder="" id="newTalent" type="text" autocomplete='name' class="validate">
-                    <label for="newTalent">Your Full Name</label>
+                    <div class="input-field col s12">
+                        <input placeholder="ex: Jon Doe" id="talentName" type="text" autocomplete='name' class="validate">
+                        <label for="talentName">Your Full Name</label>
+                    </div>
                 </div>
 
-                <div class="input-field col s12">
-                    <input placeholder="" id="talentPhone" type="text" autocomplete='tel' class="validate">
-                    <label for="talentPhone">Your Phone Number</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
                 </div>
 
-               <div class="row">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="X-(XXX)XXX-XXXX" id="talentPhone" type="number" autocomplete='tel' class="validate">
+                        <label for="talentPhone">Your Phone Number</label>
+                    </div>
+                </div>
+
+                <div class="row">
                     <div class="input-field col s12">
                         <input id="talentEmail" type="email" autocomplete='email' class="validate">
-                        <label for="talentEmail">Email</label>
+                        <label for="talentEmail">Email Address</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="Address" autocomplete='address-line1' type="text" class="validate">
-                        <label for="Address">Company Address</label>
+                        <label for="Address">Current Address</label>
                     </div>
                 </div>
 
-               <div class="row">
+                <div class="row">
                     <div class="input-field col s12">
-                        <input id="SSN" type="text" class="validate">
+                        <input id="SSN" type="number" class="validate">
                         <label for="SSN">Your Social Security Number</label>
                     </div>
                 </div>
 
-               <div class="row">
+                <div class="row">
                     <div class="input-field col s12">
-                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
-                        <input id="dlNumber" type="text" class="validate">
+                        <p class="job">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" name="drivers" id="drivers" />
+                                <span>Drivers License |</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="dlNumber" type="number" class="validate">
                         <label for="dlNumber">Driver License Number</label>
                     </div>
                 </div>
 
-                    {{input type="checkbox" name="TABC License" id="tabc"}}
-                    <label for="tabc">TABC License Number</label>
-                    <input type="text" id="tabc" name="TABC License Number">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <p class="job">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" name="tabcL" id="tabcL" />
+                                <span>TABC License |</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
 
-                    {{!-- for uploading Photos --}}
-                    {{!-- <script id="file-upload-template" type="textx-handlebars-template">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="tabcNum" type="text" class="validate">
+                        <label for="tabcNum">TABC License Number</label>
+                    </div>
+                </div>
+
+                {{!-- for uploading Photos --}} {{!--
+                <script id="file-upload-template" type="textx-handlebars-template">
                         <li class="removable_row">
                             <div class="file-field">
                                 <label class="photo" for="{{photo}}"><abbr title="required"></abbr> Photo</label>
@@ -65,22 +101,75 @@
                             </div>
                         </li>
                     </script>
-                    <div class="file-uploader">Photo</div> --}}
+                <div class="file-uploader">Photo</div> --}} {{!-- turning this into a simply checkbox have to change it to dropdown later --}}
+                <label>Position:</label>
 
-                    {{!-- turning this into a simply checkbox have to change it to dropdown later --}}
-                    <label>Position:</label>
-                    {{input type="checkbox" name="Bartender" id="Bartender"}}
-                    {{input type="checkbox" name="Server" id="Server"}}
-                    {{input type="checkbox" name="Promo Model" id="Promo Model"}}
-                    {{input type="checkbox" name="Security" id="Security"}}
-                    {{input type="checkbox" name="Sales" id="Sales"}}
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <p class="job">
+                                <label>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Bartender" id="Bartender" />
+                                    <span>Bartender |</span>
+                                </label>
+                            </p>
+                            <p class="job">
+                                <label>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Server" id="Server" />
+                                    <span>Server |</span>
+                                </label>
+                            </p>
+                            <p class="job">
+                                <label>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="promoModel" id="promoModel" />
+                                    <span>Promo Model |</span>
+                                </label>
+                            </p>
+                            <p class="job">
+                                <label>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Security" id="Security" />
+                                    <span>Security |</span>
+                                </label>
+                            </p>
+                            <p class="job">
+                                <label>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Sales" id="Sales" />
+                                    <span>Sales |</span>
+                                </label>
+                            </p>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </form>
-    </div>
 
-        {{!-- separator --}}
-    <div class="col-2"></div>
-    </div>
+
+                <div class="row bio">
+                    <label>Bio: </label>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="bio" class="materialize-textarea"></textarea>
+                                <label for="bio">Let us know a little about yourself:
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="row">
+                    <button id="makeTalent" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
 </div>
 
+</div>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

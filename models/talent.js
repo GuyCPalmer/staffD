@@ -87,10 +87,6 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.DATE,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
         } 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
     },
         {
             freezeTableName: true,
