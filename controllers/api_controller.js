@@ -31,7 +31,7 @@ module.exports = function(app) {
             jobBar: req.body.jobBar,
             jobServer: req.body.jobServer,
             jobSales: req.body.jobSales,
-            jobModel: req.body.jobModal,
+            jobModel: req.body.jobModel,
             jobSecurity: req.body.jobSecurity,
             bio: req.body.bio
 

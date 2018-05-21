@@ -6,10 +6,16 @@ $(document).ready(function(){
     var address = $('#Address');
     var SSN = $('#SSN');
     var dlNumber = $('#dlNumber');
-    var tabc = $('#tabc');
+    var dL = $('#drivers');
+    var tabcL = $('#tabcL');
+    var tabc = $('#tabcNum');
     //need to input function for boulean
     var bio = $('#bio');
-    var tbar= $('#')
+    var tbar= $('#Bartender');
+    var tserver= $('#Server');
+    var tpromo= $('#promoModel');
+    var tsecurity= $('#Security');
+    var tsales= $('#Sales');
 
     function checker(event){
         event.preventDefault();
@@ -25,15 +31,15 @@ $(document).ready(function(){
                 email: talentEmail.val().trim(),
                 talentAddress: address.val().trim(),
                 socSec: SSN.val().trim(),
-                driverLic: true,
+                driverLic: dL.is(':checked'),
                 driverLicNum: dlNumber.val().trim(),
-                tabc: true,
+                tabc: tabcL.is(':checked'),
                 tabcNum: tabc.val().trim(),
-                jobBar: true,
-                jobServer: true,
-                jobSales: true,
-                jobModal: true,
-                jobSecurity: true,
+                jobBar: tbar.is(':checked'),
+                jobServer: tserver.is(':checked'),
+                jobSales: tsales.is(':checked'),
+                jobModel: tpromo.is(':checked'),
+                jobSecurity: tsales.is(':checked'),
 
                 //This is where the booleans \
                 bio: bio.val().trim()

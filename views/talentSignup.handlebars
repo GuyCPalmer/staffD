@@ -1,13 +1,13 @@
-<h1>
+<h2 class='z-depth-3'>
     Talent Sign-Up
-</h1>
+</h2>
 
 
 <!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 
 
-<div class="container">
+<div class="container userForm z-depth-3">
 
     <form class="col s12" id='newTalent'>
 
@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="Address" autocomplete='address-line1' type="text" class="validate">
-                        <label for="Address">Yours Address</label>
+                        <label for="Address">Current Address</label>
                     </div>
                 </div>
 
@@ -58,17 +58,37 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
-                        <input id="dlNumber" type="text" class="validate">
+                        <p class="job">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" name="drivers" id="drivers" />
+                                <span>Drivers License |</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="dlNumber" type="number" class="validate">
                         <label for="dlNumber">Driver License Number</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        {{input type="checkbox" name="Drivers_license" id="drivers"}}
-                        <input id="tabc" type="text" class="validate">
-                        <label for="tabc">TABC License Number</label>
+                        <p class="job">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" name="tabcL" id="tabcL" />
+                                <span>TABC License |</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="tabcNum" type="text" class="validate">
+                        <label for="tabcNum">TABC License Number</label>
                     </div>
                 </div>
 
@@ -95,25 +115,25 @@
                             </p>
                             <p class="job">
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" name="Server" id="Server"/>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Server" id="Server" />
                                     <span>Server |</span>
                                 </label>
                             </p>
                             <p class="job">
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" name="Promo Model" id="Promo Model" />
+                                    <input type="checkbox" class="filled-in" checked="checked" name="promoModel" id="promoModel" />
                                     <span>Promo Model |</span>
                                 </label>
                             </p>
                             <p class="job">
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" name="Security" id="Security"/>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Security" id="Security" />
                                     <span>Security |</span>
                                 </label>
                             </p>
                             <p class="job">
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" name="Sales" id="Sales"/>
+                                    <input type="checkbox" class="filled-in" checked="checked" name="Sales" id="Sales" />
                                     <span>Sales |</span>
                                 </label>
                             </p>
@@ -121,7 +141,9 @@
                     </form>
                 </div>
 
-                <div class="row">
+
+                <div class="row bio">
+                    <label>Bio: </label>
                     <form class="col s12">
                         <div class="row">
                             <div class="input-field col s12">
