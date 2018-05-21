@@ -24,7 +24,6 @@ function insertComp(){
         };
 
         $.post('/api/event_owners', event_owners);
-
     }
 
 });//end of document.ready
