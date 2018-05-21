@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
 var $star_rating = $('.star-rating .fa');
 
 var SetRatingStar = function() {

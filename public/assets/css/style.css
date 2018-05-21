@@ -2,15 +2,24 @@
   .navbar {
     margin-bottom: 50px;
     border-radius: 0;
-    background-color: white;
+    background-color: black
   }
   
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
  }
+
+ ul {
+   list-style-type: none;
+ }
+
+ li {
+   height: 0;
+   color:#9d1de7;
+ }
   /* Add a gray background color and some padding to the footer */
-  footer {
-    position: fixed;
+footer {
+    position: relative;
     height: 45px;
     bottom: 0px;
     left: 0px;
@@ -25,6 +34,10 @@
     border-top: solid 1px black;
   }
 
+  div.span3.well {
+    display: inline-block;
+  }
+
 /* star rating CSS*/
   .star-rating {
     line-height:32px;
@@ -33,6 +46,32 @@
   
   .star-rating .fa-star{color: yellow;}
 
+#rating {
+  text-align: center;
+  perspective: 250px;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+ 
+#rating span {
+  cursor: pointer;
+  font-size: 50px;
+  padding: 0 10px;
+  color: #fff;
+  opacity: .5;
+  transition: all 150ms;
+  display: inline-block;
+  transform: rotateX(45deg);
+  transform-origin: center bottom;
+}
+ 
+#rating span.hover {
+  color: #ff0;
+  opacity: 1;
+  transform: rotateX(0deg);
+  text-shadow: 0 0 30px #ffc;
+}
 
 /*calendar*/
 #header {
@@ -74,7 +113,10 @@
   background-color: #dddddd;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
 
 .disable-span, .disable-span:hover {
   color: #bbbbbb; 

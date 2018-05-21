@@ -1,6 +1,6 @@
 
 
-'use strict';
+
 module.exports = {
   up: function(queryInterface, DataTypes) {
     return queryInterface.createTable('events', {
@@ -43,6 +43,6 @@ module.exports = {
    });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('event_owners');
+    return queryInterface.dropTable('events');
   }
 };

@@ -1,10 +1,8 @@
 /////just started editing from a template///
 
-
-'use strict';
 module.exports = {
   up: function(queryInterface, DataTypes) {
-    return queryInterface.createTable('event_owners', {
+    return queryInterface.createTable('talent', {
       talentId: {
         type: DataTypes.INTEGER
     },
@@ -78,6 +76,6 @@ module.exports = {
    });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('event_owners');
+    return queryInterface.dropTable('talent');
   }
 };

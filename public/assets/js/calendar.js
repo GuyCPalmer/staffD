@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
 var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 var DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
@@ -307,6 +310,7 @@ function getLS(key) {
 
 function setLS(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
+<<<<<<< HEAD
 }
 =======
 $(document).ready(function () {
@@ -385,3 +389,6 @@ $(document).ready(function () {
 });
 
 >>>>>>> 6ab02a484dca2b80d5be7e2932b962d299b8ea63
+=======
+}
+>>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
