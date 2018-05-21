@@ -11,7 +11,7 @@
  }
   /* Add a gray background color and some padding to the footer */
   footer {
-    position: relative;
+    position: fixed;
     height: 45px;
     bottom: 0px;
     left: 0px;
