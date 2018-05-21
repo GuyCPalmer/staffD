@@ -52,5 +52,61 @@ module.exports = function(app) {
             res.json(dbComp);
         });
     });
+
+        //get talent to display on the hire page, run get request based on "staff my event: type"
+        app.get("/api/posts/category/:jobBar", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/posts/category/:jobServer", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/posts/category/:jobSales", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/posts/category/:jobModel", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/posts/category/:jobSecurity", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
     
 };
