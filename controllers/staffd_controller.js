@@ -34,19 +34,18 @@ router.get("/compSignup", function (req, res) {
 });
 
 router.get("/hire", function (req, res, err) {
-    db.talent.findAll({}).then(function (talentData, err) {
-        res.render("hire", talentData);
-        console.log(talentData, "this is the talent data");
+    db.talent.findAll({}).then(function (talent_data, err) {
+        var talent_items = {
+            talent: talent_data
+        };
+        res.render("hire", talent_items);
     }).catch(err, function (err) {
         if (err) {
             console.log(err);
         } else {
             console.log("Shouldve Got you data...");
         }
-    });
-        
-    
-    
+    });   
 });
 
 router.get("/newEvent", function (req, res) {
