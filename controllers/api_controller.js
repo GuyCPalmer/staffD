@@ -5,6 +5,18 @@ var app = express.Router();
 var db = require("../models");
 
 module.exports = function(app) {
+
+    app.get("/api/events/", function (req, res) {
+        console.log("apiControl", req.body);
+        db.events.findAll({})
+            .then(function (eventData, err) {
+                if(err){
+                    console.log(err, "Couldn't get Event Data");
+                }
+                res.json(eventData);
+            });
+    });
+
     app.post('/api/talent', function(req, res){
         db.talent.create({
             talentName: req.body.talentName,
@@ -19,7 +31,7 @@ module.exports = function(app) {
             jobBar: req.body.jobBar,
             jobServer: req.body.jobServer,
             jobSales: req.body.jobSales,
-            jobModel: req.body.jobModal,
+            jobModel: req.body.jobModel,
             jobSecurity: req.body.jobSecurity,
             bio: req.body.bio
 
@@ -27,8 +39,6 @@ module.exports = function(app) {
             res.json(dbTalent);
         });
     });
-
-
 
     app.post('/api/event_owners', function(req,res){
         db.event_owners.create({
@@ -42,4 +52,5 @@ module.exports = function(app) {
             res.json(dbComp);
         });
     });
+    
 };
