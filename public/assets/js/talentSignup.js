@@ -9,6 +9,7 @@ $(document).ready(function(){
     var tabc = $('#tabc');
     //need to input function for boulean
     var bio = $('#bio');
+    var tbar= $('#')
 
     function checker(event){
         event.preventDefault();
