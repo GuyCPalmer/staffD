@@ -10,11 +10,11 @@
     height: 100%;
  }
 
- ul {
+ ul.talent {
   list-style-type: none;
 }
 
-li {
+li.talent {
   height: 0;
   color:#9d1de7;
 }
@@ -36,9 +36,7 @@ li {
   }
 
   .slider {
-    width: 160%;
-    margin-left: -30%;
-    margin-top: -6.9%;
+    margin-top: -5.5%;
   }
 
   .slider .indicators {
@@ -52,12 +50,22 @@ li {
   }
 
   .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-      color: #9d1de7;
+      color: white;
   }
   
   .btn-flat {
       font-weight: bold;
+      background-color: #9d1de7;
+      z-index: 0;
   }
 
+
+  .card.horizontal {
+    margin-bottom: 5%;
+    width: 46.25%;
+    margin-left: 2.5%;
+    display: inline-flex;
+    
+  }
   
 
