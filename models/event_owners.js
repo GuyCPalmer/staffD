@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-module.exports = function(sequelize, DataType){
-    var eventOwners = sequelize.define("event_owners",{
-        eventOwnerId: {
-            type: DataType.INTEGER,
-=======
 module.exports = function(sequelize, DataTypes){
     var event_owners = sequelize.define("event_owners",{
         eventOwnerId: {
@@ -13,20 +7,14 @@ module.exports = function(sequelize, DataTypes){
         },
         eventOwner: {
             type: DataTypes.STRING,
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
             allowNull: false,
             validate: 
             {
                 len: [1,140]
             }
         },
-<<<<<<< HEAD
-        eventOwner: {
-            type: DataType.STRING,
-=======
         purchasingContact: {
             type:  DataTypes.STRING,
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
             allowNull: false,
             validate: 
             {
@@ -34,13 +22,6 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         phone: {
-<<<<<<< HEAD
-            type: DataType.INTEGER,
-            allowNull: false
-        },
-        email: {
-            type: DataType.STRING,
-=======
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -54,31 +35,12 @@ module.exports = function(sequelize, DataTypes){
         },
         coordinator: {
             type:  DataTypes.STRING,
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
             allowNull: false,
             validate: 
             {
                 len: [1,140]
             }
         },
-<<<<<<< HEAD
-        coordinator: {
-            type: DataType.STRING,
-            allowNull: false
-        },
-        ownerAddress: {
-            type: DataType.TEXT,
-            allowNull: false,
-        },
-        eventsOwned: {
-            type: DataType.STRING
-        },
-        invitationsSent: {
-            type: DataType.STRING
-        },
-        invConfirmed: {
-            type: DataType.STRING
-=======
         ownerAddress: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -91,7 +53,6 @@ module.exports = function(sequelize, DataTypes){
         },
         invConfirmed: {
             type: DataTypes.STRING
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
         },      
         createdAt: {
             type: DataTypes.DATE,
@@ -102,16 +63,6 @@ module.exports = function(sequelize, DataTypes){
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
         } 
     },
-<<<<<<< HEAD
-{
-    freezeTableName: true,
-    tableName: "event_owners"
-},
-{
-    timestamps: false
-});
-    return eventOwners;
-=======
         {
             freezeTableName: true,
             tableName: "event_owners"
@@ -120,5 +71,4 @@ module.exports = function(sequelize, DataTypes){
             timestamps: true
         });
     return event_owners;
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
 };

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports = function(sequelize, DataType){
 
     var events = sequelize.define("events",{
@@ -12,7 +11,6 @@ module.exports = function(sequelize, DataType){
         },
         eventOwner: {
             type: DataType.STRING,
-=======
 module.exports = function(sequelize, DataTypes){
     var events = sequelize.define("events",{
         eventId: {
@@ -22,7 +20,6 @@ module.exports = function(sequelize, DataTypes){
         },
         eventOwner: {
             type: DataTypes.STRING,
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
             allowNull: false,
             validate: 
             {
@@ -30,7 +27,6 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         eventDateTimeStart: {
-<<<<<<< HEAD
             type: DataType.DATE,
             allowNull: false
         },
@@ -57,7 +53,6 @@ module.exports = function(sequelize, DataTypes){
         },
         invConfirmed: {
             type: DataType.STRING
-=======
             type: DataTypes.DATE,
             allowNull: false
         },
@@ -84,7 +79,6 @@ module.exports = function(sequelize, DataTypes){
         },
         invConfirmed: {
             type: DataTypes.STRING
->>>>>>> 8e94677232ffc13309626feaee76ec416b55a321
         },      
     },
 {
