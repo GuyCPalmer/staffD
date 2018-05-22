@@ -77,5 +77,9 @@ router.get("/contact", function (req, res) {
     res.render("contact", { layout: "homemain.handlebars" });
 });
 
+router.get("/dashboard", function (req, res) {
+    res.render("dashboard", { layout: "homemain.handlebars" });
+});
+
 
 module.exports = router;
