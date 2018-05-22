@@ -4,8 +4,15 @@
   <div class="media">
     <img class="mr-3" src="../assets/images/profile.jpg" alt="Generic placeholder image">
     <div class="media-body">
-      <h4 class="mt-0">{{user.email}}</h4>
+      <p>{{user.rating}}</p>
+      <p>{{user.email}}</p>
+      <p class="userJob" alt="Bartender" value="{{user.jobBar}}">Bartender</p>
+      <p class="userJob" alt="Server" value="{{user.jobServer}}">Server</p>
+      <p class="userJob" alt="Sales" value="{{user.jobSales}}">Sales</p>
+      <p class="userJob" alt="Promo Model" value="{{user.jobModel}}">Promo Model</p>
+      <p class="userJob" alt="Security" value="{{user.jobSecurity}}">Security</p>
       <p>{{user.bio}}</p>
+      <p>{{user.previousEvents}}</p>
     </div>
   </div>
 </div>

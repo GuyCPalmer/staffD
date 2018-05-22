@@ -33,7 +33,7 @@ router.get("/userProfile", function (req, res, err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve Got you data...");
+            console.log("Shouldve recieved your data...");
         }
     });
 });
@@ -60,7 +60,7 @@ router.get("/hire", function (req, res, err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve Got you data...");
+            console.log("Shouldve recieved your data...");
         }
     });
 });
