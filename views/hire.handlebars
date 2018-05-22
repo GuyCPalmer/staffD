@@ -1,7 +1,47 @@
+<label>
 
+    Position:</label>
 
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <p class="job">
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" name="Bartender" id="Bartender" />
+                    <span>Bartender |</span>
+                </label>
+            </p>
+            <p class="hireBox">
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" name="Server" id="Server" />
+                    <span>Server |</span>
+                </label>
+            </p>
+            <p class="hireBox">
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" name="promoModel" id="promoModel" />
+                    <span>Promo Model |</span>
+                </label>
+            </p>
+            <p class="hireBox">
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" name="Security" id="Security" />
+                    <span>Security |</span>
+                </label>
+            </p>
+            <p class="hireBox">
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" name="Sales" id="Sales" />
+                    <span>Sales |</span>
+                </label>
+            </p>
+            <a class="waves-effect waves-light btn" id="searchBtn">
+                <i class="material-icons right" id="searchJob">search</i>Search</a>
+        </div>
+    </form>
+</div>
 
-<ul>
+<ul class="talent">
 
     {{#each talent}} {{>talent-li/talent-util}} {{/each}}
 

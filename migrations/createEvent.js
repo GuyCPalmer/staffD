@@ -43,6 +43,6 @@ module.exports = {
    });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('event_owners');
+    return queryInterface.dropTable('events');
   }
 };

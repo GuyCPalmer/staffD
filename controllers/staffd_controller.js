@@ -9,16 +9,33 @@ router.get("/signin", function (req, res) {
     res.render("signin", { layout: 'homemain.handlebars' });
 });
 
-router.get("/userProfile", function (req, res) {
-    res.render("userProfile", { layout: 'homemain.handlebars' });
-});
-
 router.get("/index", function (req, res) {
     res.render("index", { layout: 'homemain.handlebars' });
 });
 
 router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
+});
+
+router.get("/userProfile", function (req, res, err) {
+    var userEmail = 'Duck126@hotmail.com';
+    db.talent.findOne({
+        where: {
+            email: userEmail
+        }
+    }).then(function (user_data, err) {
+        var user_info = {
+            user: user_data
+        }
+        res.render('userProfile', { layout: 'homemain.handlebars', user: user_data });
+        console.log(res);
+    }).catch(err, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Shouldve recieved your data...");
+        }
+    });
 });
 
 router.get("/home", function (req, res) {
@@ -38,15 +55,14 @@ router.get("/hire", function (req, res, err) {
         var talent_items = {
             talent: talent_data
         };
-        console.log(talent_items.talent[1].dataValues);
         res.render("hire", talent_items);
     }).catch(err, function (err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve Got you data...");
+            console.log("Shouldve recieved your data...");
         }
-    });   
+    });
 });
 
 router.get("/newEvent", function (req, res) {
@@ -58,11 +74,12 @@ router.get("/eventList", function (req, res) {
 });
 
 router.get("/contact", function (req, res) {
-    res.render("contact", {layout: "homemain.handlebars"});
+    res.render("contact", { layout: "homemain.handlebars" });
 });
 
-router.get("/signupChoose", function (req, res) {
-    res.render("signupChoose", { layout: 'homemain.handlebars' });
+router.get("/dashboard", function (req, res) {
+    res.render("dashboard", { layout: "homemain.handlebars" });
 });
+
 
 module.exports = router;

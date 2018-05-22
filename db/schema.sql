@@ -7,12 +7,12 @@ USE staffd_db;
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     talentName VARCHAR (45) NOT NULL,
-    phone INTEGER(15) NOT NULL,
+    phone INTEGER(20) NOT NULL,
     email VARCHAR (50) NOT NULL,
     talentAddress TEXT NOT NULL,
-    socSec INTEGER(12) NOT NULL,
+    socSec INTEGER(20) NOT NULL,
     driverLic BOOLEAN,
-    driverLicNum INT,
+    driverLicNum INTEGER (20),
     tabc BOOLEAN,
     tabcNum INT,
     jobBar BOOLEAN,
@@ -25,6 +25,8 @@ CREATE TABLE talent (
     invitationsAvail VARCHAR(300),
     currentEvents VARCHAR(300),
     previousEvents VARCHAR(300),
+    createdAt VARCHAR (300),
+    updatedAt VARCHAR (300),
     PRIMARY KEY(talentId)
 
 );
@@ -40,6 +42,8 @@ CREATE TABLE event_owners (
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
+    createdAt VARCHAR (300),
+    updatedAt VARCHAR (300),
     PRIMARY KEY(eventOwnerId)
 );
 
@@ -54,5 +58,16 @@ CREATE TABLE events (
     staffd BOOLEAN,
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
+    createdAt VARCHAR (300),
+    updatedAt VARCHAR (300),
     PRIMARY KEY(eventId)
+);
+
+CREATE TABLE invites (
+    inviteId INT (10) AUTO_INCREMENT NOT NULL,
+    currentUserEmail VARCHAR (45) NOT NULL,
+    selectedUserEmail VARCHAR (45) NOT NULL,
+    eventIdInvited VARCHAR (15) NOT NULL,
+    inviteMessage MEDIUMTEXT,
+    PRIMARY KEY(inviteId)
 );

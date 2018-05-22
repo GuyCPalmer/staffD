@@ -10,11 +10,11 @@
     height: 100%;
  }
 
- ul {
+ ul.talent {
   list-style-type: none;
 }
 
-li {
+li.talent {
   height: 0;
   color:#9d1de7;
 }
@@ -36,9 +36,7 @@ li {
   }
 
   .slider {
-    width: 160%;
-    margin-left: -30%;
-    margin-top: -6.9%;
+    margin-top: -4%;
   }
 
   .slider .indicators {
@@ -52,12 +50,107 @@ li {
   }
 
   .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-      color: #9d1de7;
+      color: white;
   }
   
   .btn-flat {
       font-weight: bold;
+      background-color: #9d1de7;
+      z-index: 0;
   }
 
+
+  .card.horizontal {
+    margin-bottom: 5%;
+    width: 46.25%;
+    margin-left: 2.5%;
+    display: inline-flex;
+    
+  }
+
+  .job {
+    display: inline;
+    margin: 5px 5px 10px 10px;
+  }
+
+  .hireBox {
+    display: inline;
+    margin: 5px 5px 10px 10px;
+  }
+
+  .searchBtn {
+    margin-left: 25px;
+  }
+
+  .userForm {
+    background-color: black;
+    opacity: .75; 
+    margin-bottom: 15%;
+    border-radius: 5px;
+  }
+
+  [type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid #9d1de7;
+    background-color: #9d1de7;
+  }
+
+.btn{
+  background-color: #9d1de7;
+}
+
+h2 {
+  color: #9d1de7;
+  text-align: center;
+  background-color: black;
+  opacity: .75;
+  border-radius: 5px;
+}
+
+
+.col .row {
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div .row .bio {
+  border-style: solid;
+  border-color: #9e9e9e;
+  border-width: 2px;
+  padding-left: 4px;
+  border-radius: 3px;
+}
+
+input[type=text].valid:not(.browser-default){
+  border-bottom-color: #9d1de7;
+}
+
+.profileInfo {
+  background-color: black;
+  opacity: .75;
+  border-radius: 5px;
+}
+
+.userInfo {
+  color: white;
+}
   
+.profileImage {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 2px;
+}
+
+.modal-content {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
 
