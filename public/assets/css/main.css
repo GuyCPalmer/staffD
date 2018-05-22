@@ -73,6 +73,15 @@ li.talent {
     margin: 5px 5px 10px 10px;
   }
 
+  .hireBox {
+    display: inline;
+    margin: 5px 5px 10px 10px;
+  }
+
+  .searchBtn {
+    margin-left: 25px;
+  }
+
   .userForm {
     background-color: black;
     opacity: .75; 
@@ -117,10 +126,31 @@ div .row .bio {
   border-radius: 3px;
 }
 
-
-
 input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
+
+.profileInfo {
+  background-color: black;
+  opacity: .75;
+  border-radius: 5px;
+}
+
+.userInfo {
+  color: white;
+}
   
+.profileImage {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 2px;
+}
+
+.modal-content {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
 
