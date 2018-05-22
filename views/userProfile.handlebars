@@ -1,17 +1,13 @@
-<h1>Main page for the Talent</h1>
 
 <div class="container">
-
-<div class="row">
-
-  {{!-- this is the users face n stuff --}}
-  <div class="col s3"></div>
-  <div class="col s9"></div>
-
-</div> 
-
-<div class="row">
-  
+  <h2>{{user.talentName}}</h2>
+  <div class="media">
+    <img class="mr-3" src="../assets/images/profile.jpg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h4 class="mt-0">{{user.email}}</h4>
+      <p>{{user.bio}}</p>
+    </div>
+  </div>
 </div>
 
 </div>
