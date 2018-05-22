@@ -7,26 +7,21 @@ USE staffd_db;
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     talentName VARCHAR (45) NOT NULL,
-    phone INTEGER(15) NOT NULL,
+    phone INTEGER(20) NOT NULL,
     email VARCHAR (50) NOT NULL,
     talentAddress TEXT NOT NULL,
-    socSec INTEGER(12) NOT NULL,
+    socSec INTEGER(20) NOT NULL,
     driverLic BOOLEAN,
-    driverLicNum INT,
+    driverLicNum INTEGER (20),
     tabc BOOLEAN,
-    tabcNum INT,
-    photo VARCHAR NOT NULL,
-    otherFiles VARCHAR,
+    tabcNum INTEGER (20),
+    photo BLOB NOT NULL,
+    otherFiles BLOB,
     jobBar BOOLEAN NOT NULL,
     jobServer BOOLEAN NOT NULL,
     jobSales BOOLEAN NOT NULL,
     jobModel BOOLEAN NOT NULL,
     jobSecurity BOOLEAN NOT NULL,
-    photo BLOB NOT NULL,
-    otherFiles BLOB,
-    type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
-    tabcNum INTEGER(20),
-    jobType SET('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
     bio TEXT,
     rating INT,
     invitationsAvail VARCHAR(300),
@@ -63,3 +58,30 @@ CREATE TABLE events (
     invConfirmed VARCHAR (300),
     PRIMARY KEY(eventId)
 );
+
+CREATE TABLE invites (
+    inviteId INT (10) AUTO_INCREMENT NOT NULL,
+    currentUserEmail VARCHAR (45) NOT NULL,
+    selectedUserEmail VARCHAR (45) NOT NULL,
+    eventIdInvited INTEGER (15) NOT NULL,
+    inviteMessage MEDIUMTEXT,
+    PRIMARY KEY(inviteId)
+);
+
+CREATE TABLE users (
+    id int(10) unsigned NOT NULL AUTO_INCREMENT,
+    username VARCHAR(20) DEFAULT NULL,
+    email VARCHAR(100) DEFAULT NULL,
+    password VARBINARY(60) DEFAULT NULL,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    passwordResetToken VARCHAR(255) DEFAULT NULL,
+    passwordResetExpires DATETIME DEFAULT NULL,
+    emailConfirmationToken VARCHAR(255) DEFAULT NULL,
+    isEmailConfirmed INTEGER(1) DEFAULT '0',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `users_username_unique` (`username`),
+    UNIQUE KEY `users_email_unique` (`email`)
+);
+
+ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;

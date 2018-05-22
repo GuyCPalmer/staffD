@@ -3,16 +3,16 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('talent', [{
-        talentId: '',
+        talentId: '555555',
         talentName: 'J Doe',
-        phone: 5122222222,
+        phone: 51255555,
         email: 'demo@demo.com',
         talentAddress: "999 Ugly Road, Austin, Tx 78777",
-        socSec: 3334445555,
+        socSec: 3334445,
         driverLic: true,
-        driverLicNum: 88888888,
+        driverLicNum: 888888,
         tabc: true,
-        tabcNum: 9999999999999,
+        tabcNum: 9999999,
         jobBar: true,
         jobServer: false,
         jobSales: true,
