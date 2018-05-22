@@ -38,6 +38,8 @@ CREATE TABLE talent (
     invitationsAvail VARCHAR(300),
     currentEvents VARCHAR(300),
     previousEvents VARCHAR(300),
+    createdAt VARCHAR (300),
+    updatedAt VARCHAR (300),
     PRIMARY KEY(talentId)
 
 );
@@ -53,6 +55,8 @@ CREATE TABLE event_owners (
     eventsOwned VARCHAR (300),
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
+    createdAt VARCHAR (300),
+    updatedAt VARCHAR (300),
     PRIMARY KEY(eventOwnerId)
 );
 
@@ -67,6 +71,8 @@ CREATE TABLE events (
     staffd BOOLEAN,
     invitationsSent VARCHAR (300),
     invConfirmed VARCHAR (300),
+    createdAt VARCHAR (300),
+    updatedAt VARCHAR (300),
     PRIMARY KEY(eventId)
 );
 
