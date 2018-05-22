@@ -40,7 +40,15 @@ module.exports = function(sequelize, DataTypes){
         },
         invConfirmed: {
             type: DataTypes.STRING
-        },      
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        }      
     },
 {
     freezeTableName: true,
