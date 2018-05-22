@@ -7,10 +7,10 @@ USE staffd_db;
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     talentName VARCHAR (45) NOT NULL,
-    phone INTEGER(20) NOT NULL,
+    phone VARCHAR NOT NULL,
     email VARCHAR (50) NOT NULL,
     talentAddress TEXT NOT NULL,
-    socSec INTEGER(20) NOT NULL,
+    socSec VARCHAR(50) NOT NULL,
     driverLic BOOLEAN,
     driverLicNum INTEGER (20),
     tabc BOOLEAN,
