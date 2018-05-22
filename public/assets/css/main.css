@@ -180,6 +180,9 @@ input[type=text].valid:not(.browser-default){
 .profile-usermenu {
   margin-top: 30px;
 }
+a:link {
+  color: white;
+}
 
 .profile-usermenu ul li {
   border-bottom: 1px solid #f0f4f7;
