@@ -1,309 +1,149 @@
-var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-var DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+<main id="content" class="content" role="main">
+    <div id="toast-container" ng-class="[config.position, config.animation]" class="toast-top-right"><!----></div>
+    
+    <div class="tab-content">
+  <div class="tab-pane">
+    <section class="widget">
+      <div ng-controller="EventsController as vm">
+        <!----><div ng-include="'templates/events/index.html'"><!----><div ng-if="!vm.loading &amp;&amp; vm.step" class="" style="">
+  <h2 class="events-header" ng-hide="vm.step.step == 'review' || vm.step.step == '0' || vm.step.step == 'template_name'" aria-hidden="false">STEP 2: Create a New Event</h2>
+  <h2 class="events-header ng-hide" ng-hide="vm.step.step == 'review' || (vm.step.step != '0' &amp;&amp; vm.step.step != 'template_name')" aria-hidden="true">Create a New Event</h2>
+  <h2 class="events-header ng-hide" ng-show="vm.step.step == 'review'" ng-switch="vm.eventModel.status" aria-hidden="true">
+    <!----><span ng-if="vm.entry_type != 'template'">
+      <!---->
+      <!----><span ng-if="vm.eventModel.status != 'draft'">Event Info</span><!---->
+    </span><!---->
+    <!---->
+  </h2>
 
-var Calendar = function () {
-  var date = new Date();
-  this.currentMonth = date.getMonth();
-  this.currentYear = date.getFullYear();
+  <!----><div ng-include="vm.step.template" class="" style=""><div class="general-wrapper">
+  <div class="form-group form-group-lg name-holder" ng-class="{'has-error': vm.eventModelErrors.title}">
+    <input type="text" ng-model="vm.eventModel.title" class="form-control ng-pristine ng-valid ng-empty ng-touched" placeholder="Enter Event Name *" aria-invalid="false" style="">
+    <!---->
+  </div>
+  <h4 class="text-center">Event Type (select one)</h4>
+  <div class="row event-type-list">
+    <!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail active" style="">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/2/medium_beverage_models.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>On-Site Promo</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/6/medium_swim_suit_models.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>Swim Suit Models</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail" style="">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/5/medium_offsite.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>Off-Site Promo</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail" style="">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/1/medium_atmosphere_models.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>Atmosphere Models</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/3/medium_commercial_print.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>Commercial / Print</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/7/medium_trade_show_models.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>Trade Show Models</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail coming-soon">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/8/medium_translator.jpg&quot;);"></div>
+        <div class="label-holder">
+          <p>Translator</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail coming-soon">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/9/medium_go_media.png&quot;);"></div>
+        <div class="label-holder">
+          <p>Go Media</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail coming-soon">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/10/medium_bartenders.png&quot;);"></div>
+        <div class="label-holder">
+          <p>Bartenders</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail coming-soon">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/11/medium_go_go_dancers.png&quot;);"></div>
+        <div class="label-holder">
+          <p>Go Go Dancers</p>
+        </div>
+      </div>
+    </div><!----><div class="col-md-4 col-lg-3 col-xs-12 col-sm-6" ng-repeat="eventType in vm.eventTypes">
+      <div ng-click="vm.chooseEventType(eventType)" ng-class="['thumbnail', {active: vm.eventModel.event_type_id === eventType.id}, {'coming-soon': eventType.coming_soon}]" role="button" tabindex="0" class="thumbnail coming-soon">
+        <div class="image" background-image="eventType.image.medium.url" style="background-image: url(&quot;https://promogo-content-us.s3.amazonaws.com/event_type/image/12/medium_djs.png&quot;);"></div>
+        <div class="label-holder">
+          <p>DJ's</p>
+        </div>
+      </div>
+    </div><!---->
+  </div>
+</div></div>
 
-}
+  <!----><div ng-if="vm.mode !== 'show' || vm.step.step === 'review'" class="events-navigation" ng-class="{'no-border': vm.step.step == 'review'}">
+    <div class="row">
+      <div ng-show="vm.step.step === 'review' &amp;&amp; vm.eventModel.status === 'draft' &amp;&amp; vm.entry_type != 'template'" aria-hidden="true" class="ng-hide">
+        <div class="col-md-4 col-md-offset-2 col-xs-12">
+          <a ng-click="vm.saveAsDraft()" ng-disabled="!vm.getPrevStep()" class="btn btn-navigation btn-prev btn-mobile-full">Save as Draft</a>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <a ng-click="vm.submit()" ng-disabled="!vm.canSubmit()" class="btn btn-navigation btn-next btn-mobile-full" disabled="disabled">Submit Direct To Promogo</a>
+        </div>
+      </div>
+      <div ng-show="vm.step.step === 'review' &amp;&amp; vm.entry_type == 'template'" aria-hidden="true" class="ng-hide">
+        <div class="save-template-block">
+          <a ng-click="vm.saveTemplate()" ng-disabled="!vm.getPrevStep()" class="btn btn-navigation">Save Template</a>
+        </div>
+      </div>
+      <div ng-hide="vm.step.step == 'review'" aria-hidden="false" class="">
+        <div class="col-md-4 col-md-offset-1 col-xs-6">
+          <a ng-click="vm.prevStep()" ng-disabled="!vm.getPrevStep()" class="btn btn-navigation btn-prev"><i class="fa fa-lg fa-caret-left"></i>Back</a>
+        </div>
+        <div class="col-md-2 hidden-sm hidden-xs">
+          <div class="progress" value="vm.percent">
+  <div class="progress-bar" ng-class="type &amp;&amp; 'progress-bar-' + type" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (percent < 100 ? percent : 100) + '%'}" aria-valuetext="23%" aria-labelledby="progressbar" ng-transclude="" style="width: 23%;"></div>
+</div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <a ng-click="vm.submit()" ng-disabled="!vm.canSubmit()" class="btn btn-navigation btn-next" disabled="disabled">Continue<i class="fa fa-lg fa-caret-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div><!---->
+  <!---->
+</div><!---->
+<!----></div>
+        <input type="hidden" name="" id="referrer" value="https://go.promogo.io/events?status=pending" autocomplete="off">
+        <input type="hidden" name="" id="action" value="" autocomplete="off">
 
-Calendar.prototype.nextMonth = function () {
-  if (this.currentMonth == 11) {
-    this.currentYear++;
-    this.currentMonth = 0;
-  } else {
-    this.currentMonth++;
-  }
-  this.showCurrentCalendar();
-  console.log('ls - ' + JSON.stringify(getLS('taskList')))
-}
-
-Calendar.prototype.prevMonth = function () {
-  if (this.currentMonth == 0) {
-    this.currentYear--;
-    this.currentMonth = 11;
-  } else {
-    this.currentMonth--;
-  }
-  this.showCurrentCalendar();
-}
-
-Calendar.prototype.nextYear = function () {
-  this.currentYear++;
-  this.showCurrentCalendar();
-}
-
-Calendar.prototype.prevYear = function () {
-  this.currentYear--;
-  this.showCurrentCalendar();
-}
-
-Calendar.prototype.showCurrentCalendar = function () {
-  // alert(this.currentYear + ' ' +  this.currentMonth)
-  this.buildCalendar(this.currentYear, this.currentMonth);
-}
-
-Calendar.prototype.buildCalendar = function (year, month) {
-  // alert(year, month);
-  var date = new Date(); // ISSUE here
-  var dateToday = date.getDate(); // ISSUE here
-  document.getElementById('current_month_year').innerHTML = MONTHS[month] + ' ' + year;
-
-  var firstDayOfMonth = new Date(year, month, 1).getDay();
-  var lastDateofMonth = new Date(year, month + 1, 0).getDate();
-  var lastDateofLastMonth;
-  if (month === 0) {
-    lastDateofLastMonth = new Date(year - 1, 11, 0).getDate()
-  } else {
-    lastDateofLastMonth = new Date(year, month, 0).getDate();
-  }
-
-  var calDatesDiv = document.getElementById('cal_dates');
-  var dateSpans = '';
-
-  var spanid = '', spanClass = '';
-  var lastMonthDatesCount = lastDateofLastMonth - firstDayOfMonth;
-  var checkDate;
-  var ls = getLS('taskList');
-  var idDate;
-  if (lastMonthDatesCount < lastDateofLastMonth) {
-    for (var j = lastMonthDatesCount + 1; j <= lastDateofLastMonth; j++) {
-      idDate = year + '-' + (month) + '-' + j;
-      if (month < 9){
-        checkDate = year + '' + '0' + (month) + '' + j;
-      }
-      console.log('last month ' + checkDate);
-
-      spanid = 'future_' + idDate;
-      spanClass = ls[checkDate] === undefined ? 'cal_dates disable-span' : 'cal_dates disable-span has-task'
-      dateSpans += '<span id="' + spanid + '" class="' + spanClass + '">' + j + '</span>'
-    }
-  }
-
-  for (var i = 1; i <= lastDateofMonth; i++) {
-    idDate = year + '-' + (month + 1) + '-' + i;
-    if (month < 9)
-      checkDate = year + '' + '0' + (month + 1) + '' + i;
-    spanid = 'future_' + idDate;
-    // console.log('date' + checkDate + ' ' + ls[checkDate])
-    spanClass = ls[checkDate] === undefined ? "cal_dates" : "cal_dates has-task"; //dateToday <= i ? "cal_dates" : "cal_dates disable-span"
-    dateSpans += '<span id="' + spanid + '" class="' + spanClass + '">' + i + '</span>'
-  }
-
-  calDatesDiv.innerHTML = dateSpans;
-}
-
-window.onload = function () {
-  // localStorage.setItem('check', 'hello');
-  // localStorage.removeItem('taskList');
-  if (localStorage.getItem('taskList') == null) {
-    localStorage.setItem('taskList', JSON.stringify({}));
-  }
-  // alert(localStorage.getItem('taskList').jdjdjdj)
-  // alert('lS' + JSON.parse(localStorage.getItem('taskList')).hello);
-  var calendar = new Calendar({
-    root: 'cal_div',
-  });
-
-  // alert('hi')
-
-  calendar.showCurrentCalendar();
-
-  disablePastDates();
-  buildTaskList(getLS('taskList'));
-
-  document.getElementById('show_calendar_arrow').onclick = function () {
-    console.log('show_calendar_arrow called');
-    var newClass = document.getElementById('cal_container').className
-    console.log(newClass, newClass.indexOf('hidden-xs'));
-    // console.log(newClass.splice(19, 'hidden-xs'.length, 'visible-xs'))
-    if (newClass.indexOf('hidden-xs') !== -1) {
-      newClass = newClass.replace('hidden-xs', '');
-    }
-
-    document.getElementById('cal_container').className = newClass;
-    console.log(newClass, newClass.indexOf('hidden-xs'));
-  }
-
-  document.getElementById('hide-calendar').onclick = function () {
-    var newClass = document.getElementById('cal_container').className
-    newClass = newClass.concat('hidden-xs');
-    document.getElementById('cal_container').className = newClass;
-  }
-
-  document.getElementById('next_month_arrow').onclick = function () {
-    // alert('onclick')
-    calendar.nextMonth();
-  }
-
-  document.getElementById('next_year_arrow').onclick = function () {
-    calendar.nextYear();
-  }
-
-  document.getElementById('prev_month_arrow').onclick = function () {
-    // alert('onclick')
-    calendar.prevMonth();
-  }
-
-  document.getElementById('prev_year_arrow').onclick = function () {
-    calendar.prevYear();
-  }
-
-  document.getElementById('cal_dates').onclick = function (e) {
-    var elemIdDate = e.target.id.split('_')[1].split('-');
-    var dateT = new Date();
-    console.log('has-task ' + e.target.className.indexOf('has-task'));
-
-    console.log('cal-dte ' + elemIdDate[0] >= dateT.getFullYear() && elemIdDate[1] == dateT.getMonth() && elemIdDate[2] >= dateT.getDate());
-    if(e.target.className.indexOf('has-task') !== -1) {
-      editTask(e.target.id, getLS('taskList'));
-      return true;
-    } else if (( elemIdDate[0] >= dateT.getFullYear() && elemIdDate[1] > dateT.getMonth() ) ||
-      (elemIdDate[0] >= dateT.getFullYear() && elemIdDate[1] == dateT.getMonth() && elemIdDate[2] >= dateT.getDate())) {
-      console.log('in last ' + e.target.id)
-      $('#task_modal').modal('show');
-      var taskDate = e.target.id.split('_')[1];
-      var dateUpdate = taskDate.split('-');
-      console.log('dateUpdate ' + typeof dateUpdate[1])
-      // dateUpdate[1] = ;
-      if(+dateUpdate[1] < 9) {
-        // dateUpdate[1] = '0' + (+dateUpdate[1] + 1)
-        dateUpdate[1] = '0' + dateUpdate[1]
-      }
-      taskDate = dateUpdate.join('-');
-      console.log(taskDate);
-      document.getElementById('task-title').value = '';
-      document.getElementById('task-date').value = taskDate;
-      return true;
-    } else {
-      return false;
-    }
-
-  }
-
-  document.getElementById('save_task').onclick = function () {
-    var title = document.getElementById('task-title').value;
-    var date = document.getElementById('task-date').value;
-    // alert(title.value + ' ' + date.value)
-    saveTask(title, date);
-    calendar.showCurrentCalendar();
-  }
-
-  document.getElementById('list-grp').onclick = function (e) {
-    var ls = getLS('taskList');
-    if (e.target.id.indexOf('edit') !== -1) {
-      editTask(e.target.id, ls)
-
-      // $('#task_modal').modal('show');
-      // var taskDate = e.target.id.split('_')[1];
-      // var taskToEdit = taskDate.split('-').join('');
-      // console.log('task to edit', e.target.id)
-      // console.log('ls', JSON.stringify(ls))
-      // document.getElementById('task-title').value = ls[taskToEdit].title;
-      // document.getElementById('task-date').value = taskDate;
-      // document.getElementById('task-date').disabled= true;
-    } else {
-      var taskDate = e.target.id.split('_')[1];
-      var taskToDel = taskDate.split('-').join('');
-      delete ls[taskToDel];
-      setLS('taskList', ls);
-      buildTaskList(getLS('taskList'));
-    }
-    calendar.showCurrentCalendar();
-  }
-
-}
-
-function editTask(id, ls) {
-  console.log('edittask' + JSON.stringify(ls));
-  $('#task_modal').modal('show');
-  var taskDate = id.split('_')[1];
-  var taskToEdit = taskDate.split('-');
-  if(taskToEdit[1] < 10 && taskToEdit[1].length < 2) {
-    taskToEdit[1] = '0' + taskToEdit[1]
-  } 
-  taskToEdit = taskToEdit.join('');
-  console.log('task to edit', id)
-  console.log('ls', taskToEdit)
-  console.log('ls', ls[taskToEdit])
-  document.getElementById('task-title').value = ls[taskToEdit].title;
-  document.getElementById('task-date').value = ls[taskToEdit].date;
-  document.getElementById('task-date').disabled= true;
-}
-
-function saveTask(title, date) {
-  var obj = {
-    title: title,
-    date: date
-  }
-
-  var dateJoin = date.split('-').join('');
-  // console.log(dateArr.join(''));
-  console.log(JSON.stringify(obj));
-  var taskList = getLS('taskList');
-  console.log(JSON.stringify(taskList));
-  taskList[dateJoin] = obj;
-  // if(taskList.hasOwnProperty(dateArr[0])) {
-  //   if(taskList[dateArr[0]].hasOwnProperty[dateArr[1]]) {
-  //     taskList[dateArr[0]][dateArr[1]][dateArr[2]] = obj; // Check for undefined.
-  //   }  
-  // } else {
-  //   taskList[dateArr[0]] = {}
-  // }
-  // alert(JSON.stringify(taskList[dateArr[0]][dateArr[1]][dateArr[2]]));
-  setLS('taskList', taskList);
-  // alert('saved')
-  document.getElementById('task-title').value = '';
-  document.getElementById('task-date').value = '';
-  $('#task_modal').modal('hide');
-  // console.log(Object.keys(taskList));
-
-  buildTaskList(getLS('taskList'));
-}
+      </div>
+    </section>
+  </div>
+</div>
 
 
-function disablePastDates() {
-  var input = document.getElementById("task-date");
-  var today = new Date();
-  // Set month and day to string to add leading 0
-  var day = new String(today.getDate());
-  var mon = new String(today.getMonth() + 1); //January is 0!
-  var yr = today.getFullYear();
-
-  if (day.length < 2) {
-    day = "0" + day;
-  }
-  if (mon.length < 2) {
-    mon = "0" + mon;
-  }
-
-  var date = new String(yr + '-' + mon + '-' + day);
-
-  input.disabled = false;
-  input.setAttribute('min', date);
-}
-
-
-function buildTaskList(taskList) {
-  var ul = document.getElementById('list-grp');
-  var child = '';
-  for (key in taskList) {
-    child += '<li id="' + taskList[key].date + '" class="list-group-item">'
-      + taskList[key].date + ' ' + taskList[key].title
-      + '<span id="del_' + taskList[key].date + '"class="badge">&times;</span> \
-                <span id="edit_' + taskList[key].date + '"class="badge">Edit</span> \
-              </li>'
-  }
-
-  ul.innerHTML = child;
-
-}
-
-function getLS(key) {
-  return JSON.parse(localStorage.getItem(key))
-}
-
-function setLS(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
-}
+  </main>
