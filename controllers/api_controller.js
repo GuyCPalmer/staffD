@@ -17,7 +17,7 @@ module.exports = function (app) {
       });
   });
 
-  app.post("/api/events", function(req, res){
+  app.post("/api/events", function (req, res) {
     db.events.create({
       eventOwner: req.body.eventOwner,
       eventDateTimeStart: req.body.eventDateTimeStart,
@@ -25,7 +25,7 @@ module.exports = function (app) {
       locationAddress: req.body.locationAddress,
       locationSpecialInst: req.body.locationSpecialInst,
       onsiteContact: req.body.onsiteContact
-    }).then(function(dbevents){
+    }).then(function (dbevents) {
       res.json(dbevents);
     });
   });
@@ -81,10 +81,11 @@ module.exports = function (app) {
   app.get("/api/talent/jobServer", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobBar: 1
       }
     })
       .then(function (dbTalent) {
+        
         res.json(dbTalent);
       });
   });
@@ -92,7 +93,7 @@ module.exports = function (app) {
   app.get("/api/talent/:jobSales", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobBar: 1
       }
     })
       .then(function (dbTalent) {
@@ -103,7 +104,7 @@ module.exports = function (app) {
   app.get("/api/talent/:jobModel", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobBar: 1
       }
     })
       .then(function (dbTalent) {
@@ -114,7 +115,7 @@ module.exports = function (app) {
   app.get("/api/talent/:jobSecurity", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobBar: 1
       }
     })
       .then(function (dbTalent) {

@@ -16,6 +16,7 @@ $(document).ready(function(){
     var tpromo= $('#promoModel');
     var tsecurity= $('#Security');
     var tsales= $('#Sales');
+    var userP= $('#password');
 
     function checker(event){
         event.preventDefault();
@@ -44,6 +45,15 @@ $(document).ready(function(){
             };
 
             $.post('/api/talent', talent);
+
+            // console.log(talent.email, userP);
+
+            // firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+            //     // Handle Errors here.
+            //     var errorCode = error.code;
+            //     var errorMessage = error.message;
+            //     // ...
+            //   });
 
     }
 
