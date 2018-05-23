@@ -17,6 +17,26 @@ router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
+router.get('/dashboard', function(req, res, err){
+    var userEmail = 'Duck126@hotmail.com';
+    db.talent.findOne({
+        where: {
+            email: userEmail
+        }
+    }).then(function(user_data, err){
+        var user_info = {
+            user:user_data
+        }
+        res.render('dashboard', {layout: 'main.handlebars', user: user_data});
+    }).catch(err, function(err){
+        if (err) {
+            console.log(err);
+        } else { 
+            console.log("Shouldve Got you data");
+        }
+    });
+}); 
+
 router.get("/userProfile", function (req, res, err) {
     var userEmail = 'Duck126@hotmail.com';
     db.talent.findOne({
