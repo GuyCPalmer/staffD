@@ -67,10 +67,10 @@ module.exports = function (app) {
   });
 
   //get talent to display on the hire page, run get request based on "staff my event: type"
-  app.get("/api/talent/jobBar", function (req, res) {
+  app.get("/api/posts/category/:jobBar", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: 1
+        jobBar: req.params.true
       }
     })
       .then(function (dbTalent) {
@@ -78,7 +78,7 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/talent/jobServer", function (req, res) {
+  app.get("/api/posts/category/:jobServer", function (req, res) {
     db.talent.findAll({
       where: {
         jobBar: 1
@@ -90,7 +90,7 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/talent/:jobSales", function (req, res) {
+  app.get("/api/posts/category/:jobSales", function (req, res) {
     db.talent.findAll({
       where: {
         jobBar: 1
@@ -101,7 +101,7 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/talent/:jobModel", function (req, res) {
+  app.get("/api/posts/category/:jobModel", function (req, res) {
     db.talent.findAll({
       where: {
         jobBar: 1
@@ -112,7 +112,7 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/talent/:jobSecurity", function (req, res) {
+  app.get("/api/posts/category/:jobSecurity", function (req, res) {
     db.talent.findAll({
       where: {
         jobBar: 1

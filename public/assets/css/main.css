@@ -86,15 +86,6 @@ li.talent {
     margin: 5px 5px 10px 10px;
   }
 
-  .hireBox {
-    display: inline;
-    margin: 5px 5px 10px 10px;
-  }
-
-  .searchBtn {
-    margin-left: 25px;
-  }
-
   .userForm {
     background-color: black;
     opacity: .75; 
@@ -143,20 +134,13 @@ div .row .bio {
   border-radius: 3px;
 }
 
+
+
 input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
-
-.profileInfo {
-  background-color: black;
-  opacity: .75;
-  border-radius: 5px;
-}
-
-.userInfo {
-  color: white;
-}
   
+<<<<<<< HEAD
 .profileImage {
   border-style: solid;
   border-radius: 5px;
@@ -219,6 +203,8 @@ input[type=text].valid:not(.browser-default){
   padding: 6px 15px;
   margin-right: 15px;
 }
+=======
+>>>>>>> 13822f2d2e97b2c95f077c6138c1473b90018581
 
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;

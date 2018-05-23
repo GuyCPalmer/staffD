@@ -43,6 +43,8 @@ $(document).ready(function(){
                 jobSales: tsales.is(':checked'),
                 jobModel: tpromo.is(':checked'),
                 jobSecurity: tsales.is(':checked'),
+
+                //This is where the booleans \
                 bio: bio.val().trim()
             };
 

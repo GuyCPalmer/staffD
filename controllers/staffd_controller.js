@@ -27,6 +27,26 @@ router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
+router.get('/dashboard', function(req, res, err){
+    var userEmail = 'Duck126@hotmail.com';
+    db.talent.findOne({
+        where: {
+            email: userEmail
+        }
+    }).then(function(user_data, err){
+        var user_info = {
+            user:user_data
+        }
+        res.render('dashboard', {layout: 'main.handlebars', user: user_data});
+    }).catch(err, function(err){
+        if (err) {
+            console.log(err);
+        } else { 
+            console.log("Shouldve Got you data");
+        }
+    });
+}); 
+
 router.get("/userProfile", function (req, res, err) {
     var userEmail = 'Duck126@hotmail.com';
     db.talent.findOne({
@@ -43,7 +63,7 @@ router.get("/userProfile", function (req, res, err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve recieved your data...");
+            console.log("Shouldve Got you data...");
         }
     });
 });
@@ -70,7 +90,7 @@ router.get("/hire", function (req, res, err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve recieved your data...");
+            console.log("Shouldve Got you data...");
         }
     });
 });
@@ -87,10 +107,13 @@ router.get("/contact", function (req, res) {
     res.render("contact", { layout: "homemain.handlebars" });
 });
 
+<<<<<<< HEAD
 router.get("/dashboard", function (req, res) {
     res.render("dashboard", { layout: "homemain.handlebars" });
 });
 
 router.get('')
+=======
+>>>>>>> 13822f2d2e97b2c95f077c6138c1473b90018581
 
 module.exports = router;
