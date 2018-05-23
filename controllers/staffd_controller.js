@@ -11,6 +11,14 @@ router.get("/signin", function (req, res) {
     res.render("signin", { layout: 'signinmain.handlebars' });
 });
 
+router.get("/signinNew", function (req, res) {
+    res.render("signinNew", { layout: 'home.handlebars' });
+});
+
+router.get("/signupChoose", function (req, res) {
+    res.render("signupChoose", { layout: 'home.handlebars' });
+});
+
 router.get("/index", function (req, res) {
     res.render("index", { layout: 'homemain.handlebars' });
 });
