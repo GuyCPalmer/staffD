@@ -65,9 +65,22 @@ li.talent {
     width: 46.25%;
     margin-left: 2.5%;
     display: inline-flex;
-    
+    position: relative;
   }
 
+  #alpha {
+    margin-left: 8%;
+    width: 110%;
+  }
+
+  #beta {
+    width: 110%;
+    margin-left: 8%;    
+  }
+
+  .row {
+    padding-bottom: 10%;
+  }
   .job {
     display: inline;
     margin: 5px 5px 10px 10px;
@@ -97,6 +110,10 @@ h2 {
   border-radius: 5px;
 }
 
+h3, h5 {
+color: white;
+text-shadow: 1px 1px 1px black;
+}
 
 .col .row {
   margin-left: 0px;
