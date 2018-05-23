@@ -66,6 +66,7 @@ module.exports = function (app) {
     });
   });
 
+<<<<<<< HEAD
   //get talent to display on the hire page, run get request based on "staff my event: type"
   app.get("/api/posts/category/:jobBar", function (req, res) {
     db.talent.findAll({
@@ -123,4 +124,62 @@ module.exports = function (app) {
       });
   });
 
+=======
+        //get talent to display on the hire page, run get request based on "staff my event: type"
+        app.get("/api/talent/jobBar/:jobBar", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/talent/jobServer/:jobServer", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/talent/jobSales/:jobSales", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/talent/jobModel/:jobModel", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+        app.get("/api/talent/jobSecurity/:jobSecurity", function(req, res) {
+            db.talent.findAll({
+              where: {
+                jobBar: req.params.true
+              }
+            })
+              .then(function(dbTalent) {
+                res.json(dbTalent);
+              });
+          });
+    
+>>>>>>> f118eb89fff02fb64329a228f4bd672a14d8ccc1
 };
