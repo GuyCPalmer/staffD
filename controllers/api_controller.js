@@ -53,60 +53,110 @@ module.exports = function (app) {
     });
   });
 
-        //get talent to display on the hire page, run get request based on "staff my event: type"
-        app.get("/api/talent/jobBar/:jobBar", function(req, res) {
-            db.talent.findAll({
-              where: {
-                jobBar: req.params.true
-              }
-            })
-              .then(function(dbTalent) {
-                res.json(dbTalent);
-              });
-          });
+//app.post('api/events', function (req, res) {
+  //db.events.create({
+      //eventOwner: req.body.eventOwner,
+      //eventDateTimeStart: req.body.eventstart,
+      //eventDateTimeEnd: req.body.eventend,
+      //locationAddress: req.body.address,
+      //locationSpecialInst: req.body.instructions,
+      //onsiteContact: req.body.contact
+    //}).then(function (dbComp) {
+        //res.json(dbComp);
+    //});
+//})
+
+
+
+ //get talent to display on the hire page, run get request based on "staff my event: type"
+  app.get("/api/talent/jobBar/:jobBar", function(req, res) {
+    db.talent.findAll({
+        where: {
+          jobBar: req.params.true
+        }
+    })
+      .then(function(dbTalent) {
+          res.json(dbTalent);
+      });
+  });
     
-        app.get("/api/talent/jobServer/:jobServer", function(req, res) {
-            db.talent.findAll({
-              where: {
-                jobBar: req.params.true
-              }
-            })
-              .then(function(dbTalent) {
-                res.json(dbTalent);
-              });
-          });
+  app.get("/api/talent/jobServer/:jobServer", function(req, res) {
+    db.talent.findAll({
+        where: {
+          jobBar: req.params.true
+        }
+    })
+      .then(function(dbTalent) {
+          res.json(dbTalent);
+      });
+    });
     
-        app.get("/api/talent/jobSales/:jobSales", function(req, res) {
-            db.talent.findAll({
-              where: {
-                jobBar: req.params.true
-              }
-            })
-              .then(function(dbTalent) {
-                res.json(dbTalent);
-              });
-          });
+  app.get("/api/talent/jobSales/:jobSales", function(req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: req.params.true
+      }
+    })
+      .then(function(dbTalent) {
+        res.json(dbTalent);
+      });
+    });
     
-        app.get("/api/talent/jobModel/:jobModel", function(req, res) {
-            db.talent.findAll({
-              where: {
-                jobBar: req.params.true
-              }
-            })
-              .then(function(dbTalent) {
-                res.json(dbTalent);
-              });
-          });
+  app.get("/api/talent/jobModel/:jobModel", function(req, res) {
+    db.talent.findAll({
+      where: {
+          jobBar: req.params.true
+        }
+      })
+        .then(function(dbTalent) {
+          res.json(dbTalent);
+        });
+    });
     
-        app.get("/api/talent/jobSecurity/:jobSecurity", function(req, res) {
-            db.talent.findAll({
-              where: {
-                jobBar: req.params.true
-              }
-            })
-              .then(function(dbTalent) {
-                res.json(dbTalent);
-              });
-          });
-    
+  app.get("/api/talent/jobSecurity/:jobSecurity", function(req, res) {
+    db.talent.findAll({
+        where: {
+          jobBar: req.params.true
+        }
+      })
+        .then(function(dbTalent) {
+          res.json(dbTalent);
+        });
+    });
+
+//update and delete
+   // app.get("api/users/:userName", function(req, res) {
+     // db.users.findAll({
+       // where: {
+        //userName: 2  //email: currentUser
+    //}
+  //});
+// SELECT * FROM post WHERE authorId = 2
+
+//app.get('api/users/')
+//Post.destroy({
+  //where: {
+    //status: 'inactive' //email: currentUser
+  //}
+//});
+// DELETE FROM post WHERE status = 'inactive';
+
+
+
+
+
+//Post.update({
+  //updatedAt: null,
+//}, {
+  //where: {
+    //deletedAt: {
+      //[Op.ne]: null
+    //}
+  //}
+//});
+// UPDATE post SET updatedAt = null WHERE deletedAt NOT NULL;
+
+
+
+
 };
