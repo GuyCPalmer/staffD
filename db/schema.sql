@@ -67,7 +67,25 @@ CREATE TABLE invites (
     inviteId INT (10) AUTO_INCREMENT NOT NULL,
     currentUserEmail VARCHAR (45) NOT NULL,
     selectedUserEmail VARCHAR (45) NOT NULL,
-    eventIdInvited VARCHAR (15) NOT NULL,
+    eventIdInvited INTEGER (15) NOT NULL,
     inviteMessage MEDIUMTEXT,
     PRIMARY KEY(inviteId)
 );
+
+CREATE TABLE users (
+    id int(10) unsigned NOT NULL AUTO_INCREMENT,
+    username VARCHAR(20) DEFAULT NULL,
+    email VARCHAR(100) DEFAULT NULL,
+    password VARBINARY(60) DEFAULT NULL,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    passwordResetToken VARCHAR(255) DEFAULT NULL,
+    passwordResetExpires DATETIME DEFAULT NULL,
+    emailConfirmationToken VARCHAR(255) DEFAULT NULL,
+    isEmailConfirmed INTEGER(1) DEFAULT '0',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `users_username_unique` (`username`),
+    UNIQUE KEY `users_email_unique` (`email`)
+);
+
+ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
