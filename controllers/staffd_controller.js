@@ -107,13 +107,5 @@ router.get("/contact", function (req, res) {
     res.render("contact", { layout: "homemain.handlebars" });
 });
 
-<<<<<<< HEAD
-router.get("/dashboard", function (req, res) {
-    res.render("dashboard", { layout: "homemain.handlebars" });
-});
-
-router.get('')
-=======
->>>>>>> 13822f2d2e97b2c95f077c6138c1473b90018581
 
 module.exports = router;
