@@ -16,12 +16,15 @@ $(document).ready(function(){
     var tpromo= $('#promoModel');
     var tsecurity= $('#Security');
     var tsales= $('#Sales');
+    var userP= $('#password');
 
     function checker(event){
         event.preventDefault();
     }
 
     $(document).on('click', '#makeTalent', insertTalent);
+
+    
 
     function insertTalent(event){
             event.preventDefault();
@@ -40,14 +43,16 @@ $(document).ready(function(){
                 jobSales: tsales.is(':checked'),
                 jobModel: tpromo.is(':checked'),
                 jobSecurity: tsales.is(':checked'),
-
-                //This is where the booleans \
                 bio: bio.val().trim()
             };
 
             $.post('/api/talent', talent);
 
+         window.location.href='../signinNew';
+
     }
+
+ 
 
 
 
