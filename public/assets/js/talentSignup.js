@@ -24,6 +24,8 @@ $(document).ready(function(){
 
     $(document).on('click', '#makeTalent', insertTalent);
 
+    
+
     function insertTalent(event){
             event.preventDefault();
             var talent = {
@@ -46,16 +48,11 @@ $(document).ready(function(){
 
             $.post('/api/talent', talent);
 
-            // console.log(talent.email, userP);
-
-            // firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-            //     // Handle Errors here.
-            //     var errorCode = error.code;
-            //     var errorMessage = error.message;
-            //     // ...
-            //   });
+         window.location.href='../signinNew';
 
     }
+
+ 
 
 
 

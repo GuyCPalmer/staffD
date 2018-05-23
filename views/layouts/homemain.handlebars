@@ -29,6 +29,8 @@
 		firebase.initializeApp(config);
 	</script>
 	<script type="text/javascript">
+
+
 		initApp = function () {
 			firebase.auth().onAuthStateChanged(function (user) {
 				if (user) {
@@ -64,7 +66,7 @@
 				console.log(error);
 			});
 		};
-
+	
 		window.addEventListener('load', function () {
 			initApp()
 		});
