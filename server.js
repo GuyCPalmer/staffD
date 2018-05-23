@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 
 
+
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -35,7 +36,9 @@ var models = require("./models");
 // var authRoute = require('./routes/auth.js')(app, passport);
 
 //load passport strategies
-require('./config/passport/passport.js')(passport, models.user);
+//require('./config/passport/passport.js')(passport, models.user);
+
+
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/staffd_controller.js");

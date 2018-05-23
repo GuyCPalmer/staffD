@@ -17,6 +17,19 @@ module.exports = function (app) {
       });
   });
 
+  app.post("/api/events", function (req, res) {
+    db.events.create({
+      eventOwner: req.body.eventOwner,
+      eventDateTimeStart: req.body.eventDateTimeStart,
+      eventDateTimeEnd: req.body.eventDateTimeEnd,
+      locationAddress: req.body.locationAddress,
+      locationSpecialInst: req.body.locationSpecialInst,
+      onsiteContact: req.body.onsiteContact
+    }).then(function (dbevents) {
+      res.json(dbevents);
+    });
+  });
+
   app.post('/api/talent', function (req, res) {
     db.talent.create({
       talentName: req.body.talentName,
@@ -94,7 +107,7 @@ module.exports = function (app) {
   app.get("/api/talent/jobSales/:jobSales", function(req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobBar: 1
       }
     })
       .then(function(dbTalent) {

@@ -4,9 +4,11 @@ var router = express.Router();
 
 var db = require("../models");
 
+var authController = require('../controllers/auth_controller.js');
+
 // Create all our routes and set up logic within those routes where required.
 router.get("/signin", function (req, res) {
-    res.render("signin", { layout: 'homemain.handlebars' });
+    res.render("signin", { layout: 'signinmain.handlebars' });
 });
 
 router.get("/index", function (req, res) {
@@ -81,5 +83,6 @@ router.get("/dashboard", function (req, res) {
     res.render("dashboard", { layout: "homemain.handlebars" });
 });
 
+router.get('')
 
 module.exports = router;

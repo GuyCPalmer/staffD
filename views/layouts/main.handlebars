@@ -3,7 +3,7 @@
 {{!-- main --}}
 
 <head>
-	<title>Talent</title>
+	<title>Get Staff'd!</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Compiled and minified CSS -->
@@ -17,44 +17,99 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
-	
+	<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBfxroEmKZmOvYxbIAAzuaBs7QLChfDblQ",
+			authDomain: "staffd-51aed.firebaseapp.com",
+			databaseURL: "https://staffd-51aed.firebaseio.com",
+			projectId: "staffd-51aed",
+			storageBucket: "staffd-51aed.appspot.com",
+			messagingSenderId: "537431319396"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script type="text/javascript">
+		initApp = function () {
+			firebase.auth().onAuthStateChanged(function (user) {
+				if (user) {
+					// User is signed in.
+					var displayName = user.displayName;
+					var email = user.email;
+					var emailVerified = user.emailVerified;
+					var photoURL = user.photoURL;
+					var uid = user.uid;
+					var phoneNumber = user.phoneNumber;
+					var providerData = user.providerData;
+					user.getIdToken().then(function (accessToken) {
+						document.getElementById('sign-in-status').textContent = 'Signed in';
+						document.getElementById('sign-in').textContent = 'Sign out';
+						document.getElementById('account-details').textContent = JSON.stringify({
+							displayName: displayName,
+							email: email,
+							emailVerified: emailVerified,
+							phoneNumber: phoneNumber,
+							photoURL: photoURL,
+							uid: uid,
+							accessToken: accessToken,
+							providerData: providerData
+						}, null, '  ');
+					});
+				} else {
+					// User is signed out.
+					document.getElementById('sign-in-status').textContent = 'Signed out';
+					document.getElementById('sign-in').textContent = 'Sign in';
+					document.getElementById('account-details').textContent = 'null';
+				}
+			}, function (error) {
+				console.log(error);
+			});
+		};
+
+		window.addEventListener('load', function () {
+			initApp()
+		});
+	</script>
+
 </head>
 
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				{{!-- <span class="icon-bar"></span>
+				{{!--
+				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span> --}}
 			</button>
 		</div>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav">
-				<li class="active">
-					<a href="../home">Home</a>
-				</li>
-				<li>
-					<a href="../eventList">Manage Events</a>
-				</li>
-				<li>
-					<a href="../newEvent">New Event</a>
-				</li>
-				<li>
-					<a href="../hire">Talent </a>
-				</li>
-				<li>
-					<a href="../contact">Contact</a>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<a href="#">
-						<span class="glyphicon glyphicon-user"></span> Your Account</a>
-				</li>
-			</ul>
-		</div>
+	</div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li class="active">
+				<a href="../home">Home</a>
+			</li>
+			<li>
+				<a href="../eventList">Manage Events</a>
+			</li>
+			<li>
+				<a href="../newEvent">New Event</a>
+			</li>
+			<li>
+				<a href="../hire">Talent </a>
+			</li>
+			<li>
+				<a href="../contact">Contact</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-user"></span> Your Account</a>
+			</li>
+		</ul>
+	</div>
 	</div>
 </nav>
 

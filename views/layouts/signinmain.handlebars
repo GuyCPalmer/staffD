@@ -3,7 +3,7 @@
 {{!-- signinmain --}}
 
 <head>
-	<title>Talent</title>
+	<title>Get Staff'd!</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Compiled and minified CSS -->
@@ -15,6 +15,38 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> {{!-- signinmain --}}
+	<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBfxroEmKZmOvYxbIAAzuaBs7QLChfDblQ",
+			authDomain: "staffd-51aed.firebaseapp.com",
+			databaseURL: "https://staffd-51aed.firebaseio.com",
+			projectId: "staffd-51aed",
+			storageBucket: "staffd-51aed.appspot.com",
+			messagingSenderId: "537431319396"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+	<script type="text/javascript">
+		// FirebaseUI config.
+		var uiConfig = {
+			signInSuccessUrl: '<url-to-redirect-to-on-success>',
+			signInOptions: [
+				// Leave the lines as is for the providers you want to offer your users.
+				firebase.auth.EmailAuthProvider.PROVIDER_ID,
+			],
+			// Terms of service url.
+			tosUrl: '<your-tos-url>'
+		};
+
+		// Initialize the FirebaseUI Widget using Firebase.
+		var ui = new firebaseui.auth.AuthUI(firebase.auth());
+		// The start method will wait until the DOM is loaded.
+		ui.start('#firebaseui-auth-container', uiConfig);
+	</script>
 
 </head>
 
@@ -44,18 +76,38 @@
 </nav>
 
 
-	<body>
+<body>
 
 
-		<div class="container">
-			{{{ body }}}
-		</div>
-		
-	</body>
+	<div class="container">
+		{{{ body }}}
+	</div>
 
-	<script src="../assets/js/hire.js" type="text/javascript"></script>
-	<script src="../assets/js/compSignup.js" type="text/javascript"></script>
-	<script src="../assets/js/talentSignup.js" type="text/javascript"></script>
+</body>
+
+<script src="../assets/js/hire.js" type="text/javascript"></script>
+<script src="../assets/js/compSignup.js" type="text/javascript"></script>
+<script src="../assets/js/talentSignup.js" type="text/javascript"></script> {{!--
+<script>
+
+	var fb = document.querySelector('#userSignup');
+
+	fb.register = function () {
+		var email = fb.email;
+		var password = fb.password;
+
+		if (!email || !password) {
+			return console.log('Email and Password required');
+		}
+
+		firebase.auth().createUserWithEmailAndPassword(email, password)
+			.catch(function (error) {
+				console.log("Registered Error", error);
+
+			});
+	};
+</script> --}}
+
 
 
 
