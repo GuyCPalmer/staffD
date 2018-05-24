@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Staffed",
   "main": "server.js",
-  "engines":{
+  "engines": {
     "node": "8.9.4"
   },
   "scripts": {
