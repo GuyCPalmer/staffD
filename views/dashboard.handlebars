@@ -1,54 +1,55 @@
-
-<link rel="stylesheet" href="../assets/css/main.css">
+{{!-- <link rel="stylesheet" href="../assets/css/main.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> --}}
 
 
 <div class="container">
-    <div class="row profile">
+	<div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 				<div class="profile-usertitle">
-				    <img src="https://image.ibb.co/czMky8/templogo.png" class="img-circle" width="150px">
-					    <div class="profile-usertitle-name">
-					      {{company.name}}Avion Tequila
-					    </div>
+					<img src="https://image.ibb.co/czMky8/templogo.png" class="img-circle" width="150px">
+					<div class="profile-usertitle-name">
+						{{company.name}}Avion Tequila
+					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-				<button type="button" class="btn btn-success btn-sm">Follow</button>
-        <button type="button" class="btn btn-danger btn-sm"><a href="mailto: staffd@gmail.com">Message</a></button>
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">
+						<a href="mailto: staffd@gmail.com">Message</a>
+					</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
-					<div class="profile-usermenu">
+				<div class="profile-usermenu">
 					<ul class="nav">
 						<li class="active">
 							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>
-							Home </a>
+								<i class="glyphicon glyphicon-home"></i>
+								Home </a>
 						</li>
 						<li>
 							<a href="#">
-							<i class="glyphicon glyphicon-user"></i>
-							My Account  </a>
+								<i class="glyphicon glyphicon-user"></i>
+								My Account </a>
 						</li>
 						<li>
 							<a href="#" target="_blank">
-							<i class="glyphicon glyphicon-edit"></i>
-							Account Setting </a>
+								<i class="glyphicon glyphicon-edit"></i>
+								Account Setting </a>
 						</li>
 						<li>
 							<a href="#">
-							<i class="glyphicon glyphicon-ok"></i>
-							Menu</a>
+								<i class="glyphicon glyphicon-ok"></i>
+								Menu</a>
 						</li>
-							<li>
+						<li>
 							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>
-							Contact </a>
+								<i class="glyphicon glyphicon-flag"></i>
+								Contact </a>
 						</li>
 					</ul>
 				</div>
@@ -56,41 +57,381 @@
 			</div>
 		</div>
 		<div class="col-md-9">
-		   <div class="col-sm-4">
-                  <div class="profile-content">
-                    <img src="https://image.ibb.co/ivT2Ao/talent.png" height="110%" width="100%">
-                    <p>View our Promo Models</p>
-			            </div>
-       </div>
-        <div class="col-sm-4">
-                  <div class="profile-content">
-                    <img src="https://image.ibb.co/c0kSbT/security.png" height="110%" width="100%">
-                    <p>View our Security</p>
-			        
-			    </div>
-            </div>
-            <div class="col-sm-4">
-                 <div class="profile-content">
-                   <img src="https://image.ibb.co/d8Rpqo/bartender.png" height="" width="100%">
-                   <p>View Our Bartenders</p>
-		
-			        
-			    </div>
-            </div>
-            <div class="col-sm-4">
-                 <div class="profile-content">
-                   <img src="https://image.ibb.co/d4Ki1T/server.png" height="" width="100%">
-                   <p>View Our Servers</p>  
-			    </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="profile-content">
-                <img id="event">
-                  <img src="https://image.ibb.co/eHYkgT/book.png" height="90%" width="80%">
-                  <p>Book your event today</p>
-             </div>
-			    </div>
-            
-		</div>
-	</div>
+			<div class="col-sm-6">
+				<div class="profile-content">
+						<div class="container text-center">
+							<!-- Button trigger modal -->
 
+
+							<!-- Modal -->
+							<div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+
+										<!--The main div for carousel-->
+										<div id="carousel-modal-demo" class="carousel slide" data-ride="carousel" data-interval="2000">
+											<!-- Indicators -->
+											<ol class="carousel-indicators">
+												<li data-target="#carousel-modal-demo" data-slide-to="0" class="active"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="1"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="2"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="3"></li>
+											</ol>
+
+											<!-- Sliding images statring here -->
+											<div class="carousel-inner">
+												<div class="item active">
+													<img src="https://image.ibb.co/nO0mt8/Anthony_West.png" alt="Anthony">
+													<div class="carousel-caption">
+														<h3>Anthony West</h3>
+														<p>Experienced sales expert </p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/mab1t8/John_Davidson.png" alt="currant">
+													<div class="carousel-caption">
+														<h3>John Davidson</h3>
+														<p>Experienced salesman and promotional model</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/bvVmt8/Michael_Drake.png" alt="Michael">
+													<div class="carousel-caption">
+														<h3>Michael Drake</h3>
+														<p>Experienced in Sales and Promotional modeling</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/gDPqLo/Jenna_Austin.png" alt="Jenna Austin">
+													<div class="carousel-caption">
+														<h3>Jenna Austin</h3>
+														<p>Experienced Sales and promotional model</p>
+													</div>
+												</div>
+
+											</div>
+
+											<!-- Next / Previous controls here -->
+											<a class="left carousel-control" href="#carousel-modal-demo" data-slide="prev">
+												<span class="icon-prev"></span>
+											</a>
+											<a class="right carousel-control" href="#carousel-modal-demo" data-slide="next">
+												<span class="icon-next"></span>
+											</a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ModalCarousel">
+						View Models
+					</button>
+					<img id="models">
+					<img src="https://image.ibb.co/hqb6ao/talent.png" height="" width="98%">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="profile-content">
+					<div class="container text-center">
+							<!-- Button trigger modal -->
+
+
+							<!-- Modal -->
+							<div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+
+										<!--The main div for carousel-->
+										<div id="carousel-modal-demo" class="carousel slide" data-ride="carousel" data-interval="2000">
+											<!-- Indicators -->
+											<ol class="carousel-indicators">
+												<li data-target="#carousel-modal-demo" data-slide-to="0" class="active"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="1"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="2"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="3"></li>
+											</ol>
+
+											<!-- Sliding images statring here -->
+											<div class="carousel-inner">
+												<div class="item active">
+													<img src="https://image.ibb.co/nO0mt8/Anthony_West.png" alt="Anthony">
+													<div class="carousel-caption">
+														<h3>Anthony West</h3>
+														<p>Experienced sales expert </p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/mab1t8/John_Davidson.png" alt="currant">
+													<div class="carousel-caption">
+														<h3>John Davidson</h3>
+														<p>Experienced salesman and promotional model</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/bvVmt8/Michael_Drake.png" alt="Michael">
+													<div class="carousel-caption">
+														<h3>Michael Drake</h3>
+														<p>Experienced in Sales and Promotional modeling</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/gDPqLo/Jenna_Austin.png" alt="Jenna Austin">
+													<div class="carousel-caption">
+														<h3>Jenna Austin</h3>
+														<p>Experienced Sales and promotional model</p>
+													</div>
+												</div>
+
+											</div>
+
+											<!-- Next / Previous controls here -->
+											<a class="left carousel-control" href="#carousel-modal-demo" data-slide="prev">
+												<span class="icon-prev"></span>
+											</a>
+											<a class="right carousel-control" href="#carousel-modal-demo" data-slide="next">
+												<span class="icon-next"></span>
+											</a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ModalCarousel">
+						View Security
+					</button>
+					<img id="models">
+					<img src="https://image.ibb.co/hSQcgT/security.png" height="" width="98%">
+				</div>
+			</div>
+					
+					<div class="col-sm-6">
+				<div class="profile-content">
+					<div class="container text-center">
+							<!-- Button trigger modal -->
+
+
+							<!-- Modal -->
+							<div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+
+										<!--The main div for carousel-->
+										<div id="carousel-modal-demo" class="carousel slide" data-ride="carousel" data-interval="2000">
+											<!-- Indicators -->
+											<ol class="carousel-indicators">
+												<li data-target="#carousel-modal-demo" data-slide-to="0" class="active"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="1"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="2"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="3"></li>
+											</ol>
+
+											<!-- Sliding images statring here -->
+											<div class="carousel-inner">
+												<div class="item active">
+													<img src="https://image.ibb.co/nO0mt8/Anthony_West.png" alt="Anthony">
+													<div class="carousel-caption">
+														<h3>Anthony West</h3>
+														<p>Experienced sales expert </p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/mab1t8/John_Davidson.png" alt="currant">
+													<div class="carousel-caption">
+														<h3>John Davidson</h3>
+														<p>Experienced salesman and promotional model</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/bvVmt8/Michael_Drake.png" alt="Michael">
+													<div class="carousel-caption">
+														<h3>Michael Drake</h3>
+														<p>Experienced in Sales and Promotional modeling</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/gDPqLo/Jenna_Austin.png" alt="Jenna Austin">
+													<div class="carousel-caption">
+														<h3>Jenna Austin</h3>
+														<p>Experienced Sales and promotional model</p>
+													</div>
+												</div>
+
+											</div>
+
+											<!-- Next / Previous controls here -->
+											<a class="left carousel-control" href="#carousel-modal-demo" data-slide="prev">
+												<span class="icon-prev"></span>
+											</a>
+											<a class="right carousel-control" href="#carousel-modal-demo" data-slide="next">
+												<span class="icon-next"></span>
+											</a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ModalCarousel">
+						View Bartenders
+					</button>
+					<img id="models">
+					<img src="https://image.ibb.co/m9n188/bartender.png" height="" width="98%">
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="profile-content">
+					<div class="container text-center">
+							<!-- Button trigger modal -->
+
+
+							<!-- Modal -->
+							<div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+
+										<!--The main div for carousel-->
+										<div id="carousel-modal-demo" class="carousel slide" data-ride="carousel" data-interval="2000">
+											<!-- Indicators -->
+											<ol class="carousel-indicators">
+												<li data-target="#carousel-modal-demo" data-slide-to="0" class="active"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="1"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="2"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="3"></li>
+											</ol>
+
+											<!-- Sliding images statring here -->
+											<div class="carousel-inner">
+												<div class="item active">
+													<img src="https://image.ibb.co/nO0mt8/Anthony_West.png" alt="Anthony">
+													<div class="carousel-caption">
+														<h3>Anthony West</h3>
+														<p>Experienced sales expert </p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/mab1t8/John_Davidson.png" alt="currant">
+													<div class="carousel-caption">
+														<h3>John Davidson</h3>
+														<p>Experienced salesman and promotional model</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/bvVmt8/Michael_Drake.png" alt="Michael">
+													<div class="carousel-caption">
+														<h3>Michael Drake</h3>
+														<p>Experienced in Sales and Promotional modeling</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/gDPqLo/Jenna_Austin.png" alt="Jenna Austin">
+													<div class="carousel-caption">
+														<h3>Jenna Austin</h3>
+														<p>Experienced Sales and promotional model</p>
+													</div>
+												</div>
+
+											</div>
+
+											<!-- Next / Previous controls here -->
+											<a class="left carousel-control" href="#carousel-modal-demo" data-slide="prev">
+												<span class="icon-prev"></span>
+											</a>
+											<a class="right carousel-control" href="#carousel-modal-demo" data-slide="next">
+												<span class="icon-next"></span>
+											</a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ModalCarousel">
+						View Servers
+					</button>
+					<img id="models">
+					<img src="https://image.ibb.co/i3qcgT/server.png" height="" width="98%">
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="profile-content">
+					<div class="container text-center">
+							<!-- Button trigger modal -->
+
+
+							<!-- Modal -->
+							<div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+
+										<!--The main div for carousel-->
+										<div id="carousel-modal-demo" class="carousel slide" data-ride="carousel" data-interval="2000">
+											<!-- Indicators -->
+											<ol class="carousel-indicators">
+												<li data-target="#carousel-modal-demo" data-slide-to="0" class="active"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="1"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="2"></li>
+												<li data-target="#carousel-modal-demo" data-slide-to="3"></li>
+											</ol>
+
+											<!-- Sliding images statring here -->
+											<div class="carousel-inner">
+												<div class="item active">
+													<img src="https://image.ibb.co/nO0mt8/Anthony_West.png" alt="Anthony">
+													<div class="carousel-caption">
+														<h3>Anthony West</h3>
+														<p>Experienced sales expert </p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/mab1t8/John_Davidson.png" alt="currant">
+													<div class="carousel-caption">
+														<h3>John Davidson</h3>
+														<p>Experienced salesman and promotional model</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/bvVmt8/Michael_Drake.png" alt="Michael">
+													<div class="carousel-caption">
+														<h3>Michael Drake</h3>
+														<p>Experienced in Sales and Promotional modeling</p>
+													</div>
+												</div>
+												<div class="item">
+													<img src="https://image.ibb.co/gDPqLo/Jenna_Austin.png" alt="Jenna Austin">
+													<div class="carousel-caption">
+														<h3>Jenna Austin</h3>
+														<p>Experienced Sales and promotional model</p>
+													</div>
+												</div>
+
+											</div>
+
+											<!-- Next / Previous controls here -->
+											<a class="left carousel-control" href="#carousel-modal-demo" data-slide="prev">
+												<span class="icon-prev"></span>
+											</a>
+											<a class="right carousel-control" href="#carousel-modal-demo" data-slide="next">
+												<span class="icon-next"></span>
+											</a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ModalCarousel">
+						Book Your Event!
+					</button>
+					<img id="models">
+					<img src="https://image.ibb.co/c5tmao/book.png" height="" width="98%">
+				</div>
+			</div>

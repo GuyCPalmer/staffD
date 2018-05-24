@@ -1,11 +1,14 @@
 {
   "name": "staffd",
   "version": "1.0.0",
-  "description": "Node Express Handlebars",
+  "description": "Staffed",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js"
+  },
+  "engines": {
+    "node": "8.9.4"
   },
   "repository": {
     "type": "git",

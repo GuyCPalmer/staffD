@@ -1,5 +1,5 @@
-module.exports = function(sequelize, DataTypes){
-    var users = sequelize.define("users",{
+module.exports = function (sequelize, DataTypes) {
+    var users = sequelize.define("users", {
         userId: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes){
             isEmail: true,
             unique: true,
             validate: {
-                len: [1,140]
+                len: [1, 140]
             }
         },
         email: {
@@ -37,7 +37,7 @@ module.exports = function(sequelize, DataTypes){
         updatedAt: {
             type: DataTypes.DATE,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-        }, 
+        },
         passwordResetToken: {
             type: DataTypes.STRING
         },

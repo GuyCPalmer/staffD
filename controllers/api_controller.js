@@ -66,38 +66,32 @@ module.exports = function (app) {
     });
   });
 
+  //get talent to display on the hire page, run get request based on "staff my event: type"
+  /*app.get("/api/talent/jobBar", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        res.json(dbTalent);
+      });
+  });*/
 
-app.post('api/events', function (req, res) {
-  db.events.create({
-      eventOwner: req.body.eventOwner,
-      eventDateTimeStart: req.body.eventstart,
-      eventDateTimeEnd: req.body.eventend,
-      locationAddress: req.body.address,
-      locationSpecialInst: req.body.instructions,
-      onsiteContact: req.body.contact
-    }).then(function (dbComp) {
-        res.json(dbComp);
-    });
-})
+  app.get("/api/talent/jobServer", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
 
-
-
-
- //get talent to display on the hire page, run get request based on "staff my event: type"
-  
- app.get("/api/talent:jobSales", function(req, res) {
-  db.talent.findAll({
-    where: {
-      jobSales: 1
-    }
-  })
-    .then(function(dbTalent) {
-      res.json(dbTalent);
-    });
+        res.json(dbTalent);
+      });
   });
-  
- app.get("/api/talent:jobServer", function(req, res) {
-  db.talent.findAll({
+
+  app.get("/api/talent/:jobSales", function (req, res) {
+    db.talent.findAll({
       where: {
         jobServer: 1
       }
