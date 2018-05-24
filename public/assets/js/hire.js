@@ -22,7 +22,7 @@ $(document).ready(function () {
         event.preventDefault();
     }
 
-    $(document).on("click", "#searchBtn", getTalent);
+    $(document).on("submit", "#talentSearch", getTalent);
 
     function getTalent(event) {
         if (tbar.is(':checked') == true) {

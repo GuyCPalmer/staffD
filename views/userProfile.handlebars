@@ -1,4 +1,5 @@
-{{!-- <div class="container profileInfo z-depth-3">
+{{!--
+<div class="container profileInfo z-depth-3">
   <div class="container">
     <div class="media">
       <h5 class="userName">{{user.talentName}}</h5>
@@ -21,46 +22,46 @@
     </div>
   </div>
 </div> --}}
-<div class="container">
 
+<div class="left-align pHeader">
+  <div class="col s4">
+    <h2 id="headers">Staff'D</h2>
+  </div>
+</div>
 
-  <div class="card-panel">
+<div class="card-panel profileContainer z-depth-3">
 
-    <div class="row">
+  <div class="row">
 
-      <div class="col s3">
-        <h5>Profile Picture</h5>
-        <img src="../assets/images/profile.jpg" alt="Generic placeholder image">
-      </div>
-
-      <div class="right-align">
-        <div class="col s6">
-          <h3 id="headers">Jon Duck's Profile {{user.talentName}}</h2>
-        </div>
-      </div>
-
-      <div class="right-align">
-        <div class="col s6"></div>
-      </div>
+    <div class="col s3 profilePic z-depth-3">
+      <h5>Name</h5>
+      <img src="../assets/images/profile.jpg" class="circle responsive profileImg" id="imgP" alt="Generic placeholder image">
     </div>
-
-
 
   </div>
 
-
-  <div class="card-panel">
+  <div class="card-panel profileContainer two z-depth-3">
     <div class="row">
+      <h5 class="userHeader">Contact & Work Info</h5>
+      <ul class="userWork">
+        <li class="work">Jobs that you are signed up for: {{user.jobs}}</li>
+        <li class="work">Phone Number: {{user.phone}}</li>
+        <li class="work">Email Address: {{user.email}}</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="card-panel bioCard z-depth-3">
+    <div class="row" id="bioText">
       <div class="col s">
-        <p>Jobs that you are signed up for: {{user.jobs}}</p>
-        <p>Phone Number: {{user.phone}}</p>
-        <p>Email Address: {{user.email}}</p>
+        <h5 class="userHeader">Bio:</h5>
         <p>Your Bio that will be presented to Employers: {{user.bio}}</p>
       </div>
     </div>
 
     <!-- Modal Trigger -->
-    <div class="row">
+    <div class="row uButtons">
 
       <a class="waves-effect waves-light btn modal-trigger" href="#update">update</a>
 
@@ -114,18 +115,13 @@
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
       </div>
     </div>
-
   </div>
-
-
 </div>
-
-</div>
-
-{{!-- TO DO LIST your licenses your certifiications jobs selected Update/Delete Methods --}}
-<script src="../assets/js/eventList.js" type="text/javascript"></script>
-<script>
-  $(document).ready(function () {
-    $('.modal').modal();
-  });
-</script>
+  
+  {{!-- TO DO LIST your licenses your certifiications jobs selected Update/Delete Methods --}}
+  <script src="../assets/js/eventList.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
+  </script>

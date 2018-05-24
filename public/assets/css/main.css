@@ -4,14 +4,110 @@
     border-radius: 0;
     background-color:black;
   }
+
+  #imgP {
+  border-color:#9d1de7;
+  border-style: solid;
+  border-width: 7.5px;
+  margin-bottom: 7.5px;
+  margin-left: 5px;
+  height: 90%;
+  width: 90%;
+}
+
+.pHeader {
+  width: 65%;
+  margin-left: 5%;
+}
+
+.bioCard {
+  padding-top: 5px;
+  width: 45%;
+  position:absolute;
+  top: 29%;
+  left: 25%;
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 5px;
+  margin-left: 2.5%;
+  color:#9d1de7;
+}
+
+.userWork {
+  list-style-type: disc;
+  color: #9d1de7;
+}
+.work {
+  margin-bottom:7.5px;
+  color:#9d1de7;
+}
+#bioText {
+  width: 100%;
+}
+
+.profilePic {
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 5px;
+  align-content:center;
   
+}
+
+.profileContainer {
+  width: 75%;
+  margin-left: 1.5%;
+  height:700px;
+  margin-bottom:7.5%;
+  border-radius: 5px;
+  background-color: black;
+  opacity:.75;
+}
+
+.userHeader{
+  margin-top: 0%;
+  
+}
+
+#deleteTalent {
+  margin-left: 5%;
+}
+
+.profileContainer.two {
+  padding-top: 5px;
+  width: 20%;
+  position:absolute;
+  top: 70%;
+  left: 1.5%;
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 5px;
+  height: auto;
+}
+
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
     height: 100%;
  }
 
+  
+
  ul.talent {
   list-style-type: none;
+}
+
+em {
+  color:#9d1de7;
+  font-family: 'Racing Sans One', cursive;
+
 }
 
 li.talent {
@@ -108,12 +204,16 @@ h2 {
   background-color: black;
   opacity: .75;
   border-radius: 5px;
+  font-family: 'Racing Sans One', cursive;
 }
 
-h3, h5 {
-color: white;
+h3, h5, h4, h1 {
+font-family: 'Racing Sans One', cursive;
+color: #9d1de7;
 text-shadow: 1px 1px 1px black;
 }
+
+
 
 .col .row {
   margin-left: 0px;
@@ -140,12 +240,7 @@ input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
   
-.profileImage {
-  border-style: solid;
-  border-radius: 5px;
-  border-color: white;
-  border-width: 2px;
-}
+
 
 .modal-content {
   width: 50%;
@@ -269,3 +364,7 @@ form {
   color: white;
   
 }
+
+div.row.uButtons {
+   padding-bottom: 5px;
+ }
