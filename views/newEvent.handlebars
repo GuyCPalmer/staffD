@@ -1,90 +1,72 @@
-
-<html>
- 
-  <body style="min-width: 300px">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="well well-lg text-center">
-          <span id="show_calendar_arrow" class="glyphicon glyphicon-chevron-down hidden-sm hidden-md hidden-lg"></span>
-          <span id="prev_year_arrow" class="glyphicon glyphicon-arrow-left"></span>
-          <span id="prev_month_arrow" class="glyphicon glyphicon-chevron-left"></span>
-          <span id="current_month_year"></span>
-          <span id="next_month_arrow" class="glyphicon glyphicon-chevron-right"></span>
-          <span id="next_year_arrow" class="glyphicon glyphicon-arrow-right"></span>
-
-          <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#task_modal">
-            Add Event
-          </button>
+<div class="container">
+    <div class="well well-sm">
+        <strong>Display</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
         </div>
-      </div>
-      <div class="row">
-        <div id="content">
-          <div id="cal_container" class="col-sm-7 col-xs-12 hidden-xs">
-            <div id="cal_div">
-              <div id="cal_days">
-                <span class="cal_days">Sun</span>
-                <span class="cal_days">Mon</span>
-                <span class="cal_days">Tue</span>
-                <span class="cal_days">Wed</span>
-                <span class="cal_days">Thu</span>
-                <span class="cal_days">Fri</span>
-                <span class="cal_days">Sat</span>
-              </div>
-              <div id="cal_dates">
-                
-              </div>
-            </div>
-            <div class="well well-sm hidden-sm hidden-md hidden-lg text-center" id="hide-calendar">Hide Calendar</div>
-          </div>
-          <div id="task_lists" class="col-sm-5 col-xs-12">
-            <div> Upcoming Events </div>
-            <ul id="list-grp" class="list-group">
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="task_modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Add Event Details</h4>
-            </div>
-              <div class="modal-body">
-
-              <p>Type of Event:</p>
-                <input type="text" id="task-title" style="width: 100%">
-                
-              <p>Date of Event:</p>
-                <input type="date" id="task-date" style="width: 100%">
-            
-                <p>Start Time:</p>
-                  <input type="text" id="task-start" style="width: 100%">
-
-              <p>End Time:</p>
-                  <input type="text" id="task-end" style="width: 100%">
-
-              <p>Location:</p>
-                  <input type="text" id="task-Location" style="width: 100%">
-              
-
-              <p>Location Specialist:</p>
-                  <input type="text" id="task-Specialist" style="width: 100%">
-            
-
-              <p>Location Contact:</p>
-                  <input type="text" id="task-Contact" style="width: 100%">
-
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="save_task">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
-</html>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        New Event</h4>
+                    <p class="group inner list-group-item-text">
+                       </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Get Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        New Event</h4>
+                    <p class="group inner list-group-item-text">
+                        </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Get Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        New Event</h4>
+                    <p class="group inner list-group-item-text">
+                      </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Get Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

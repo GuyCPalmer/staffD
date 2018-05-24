@@ -134,13 +134,10 @@ div .row .bio {
   border-radius: 3px;
 }
 
-
-
 input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
-  
-<<<<<<< HEAD
+
 .profileImage {
   border-style: solid;
   border-radius: 5px;
@@ -203,8 +200,6 @@ input[type=text].valid:not(.browser-default){
   padding: 6px 15px;
   margin-right: 15px;
 }
-=======
->>>>>>> 13822f2d2e97b2c95f077c6138c1473b90018581
 
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;
@@ -265,7 +260,12 @@ p {
   text-align: center;
 }
 #event {
-  padding-left: 15px;
+margin-left: 10%;
+shape-image-threshold: inherit;
+}
+
+#server {
+margin-left: 5%;
 }
 
 form {
