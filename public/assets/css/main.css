@@ -259,14 +259,6 @@ a:link {
 p {
   text-align: center;
 }
-#event {
-margin-left: 10%;
-shape-image-threshold: inherit;
-}
-
-#server {
-margin-left: 5%;
-}
 
 form {
   color: white;
