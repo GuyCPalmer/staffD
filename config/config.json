@@ -14,10 +14,8 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "",
-    "database": "staffd_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable":"mysql://ebjzc33eu2dvwuy8:dfbvx045nis8rls6@wm63be5w8m7gs25a.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/facgldi5a7o3os0y
+
+    "
   }
 }

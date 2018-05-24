@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Node Express Handlebars",
   "main": "server.js",
-  "engines":{
-    "node": "8.9.4"
-  },
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js"
+  },
+  "engines": {
+    "node": "8.9.4"
   },
   "repository": {
     "type": "git",
