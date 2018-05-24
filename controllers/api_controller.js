@@ -66,6 +66,7 @@ module.exports = function (app) {
     });
   });
 
+<<<<<<< HEAD
 //app.post('api/events', function (req, res) {
   //db.events.create({
       //eventOwner: req.body.eventOwner,
@@ -79,6 +80,19 @@ module.exports = function (app) {
     //});
 //})
 
+=======
+  //get talent to display on the hire page, run get request based on "staff my event: type"
+  /*app.get("/api/talent/jobBar", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        res.json(dbTalent);
+      });
+  });*/
+>>>>>>> f76a1617ff1dc5725b9155c6ba5a4ea620c7621e
 
 
  //get talent to display on the hire page, run get request based on "staff my event: type"
@@ -171,5 +185,30 @@ module.exports = function (app) {
 
 
 
+
+  app.get("/talent/:email", function (req, res) {
+    console.log(req.body.email, "Backend Request ");
+    //console.log(currentEmail);
+    db.talent.findOne({
+      where: {
+        email: req.params.email
+      }
+    })
+      .then(function (userData) {
+        console.log(userData);
+        res.json(userData);
+      });
+  });
+
+  app.get("/owners/:email", function (req, res) {
+    db.event_owners.findOne({
+      where: {
+        email: req.params.email
+      }
+    })
+      .then(function (ownerData) {
+        res.json(ownerData);
+      });
+  });
 
 };

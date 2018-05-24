@@ -13,13 +13,12 @@ module.exports = function(sequelize, DataTypes){
             }
         },
         phone: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            isEmail: true,
             validate:
                 {
                     len: [1, 140]
@@ -30,7 +29,7 @@ module.exports = function(sequelize, DataTypes){
             allowNull: false,
         },
         socSec: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         driverLic: {

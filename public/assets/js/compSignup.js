@@ -24,6 +24,8 @@ function insertComp(){
         };
 
         $.post('/api/event_owners', event_owners);
+
+        window.location.href='../signinNew';
     }
 
 });//end of document.ready
