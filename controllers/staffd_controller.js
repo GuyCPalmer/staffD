@@ -75,6 +75,10 @@ router.get("/hire", function (req, res, err) {
     });
 });
 
+router.get("/wait", function (req, res) {
+    res.render("wait", { layout: 'redirect.handlebars' });
+});
+
 router.get("/newEvent", function (req, res) {
     res.render("newEvent", { layout: 'main.handlebars' });
 });
