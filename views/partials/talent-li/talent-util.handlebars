@@ -1,13 +1,47 @@
 <li>
-    
-        <div class="col-sm-3">
-            <div class="span3 well">
+
+    <div class="col-sm-3">
+        <div class="span3 well">
+            <center>
+                <img src="https://image.ibb.co/mSw20c/IMG_4138.jpg" name="aboutme" width="140" height="140" class="img-circle">
+                <h5>{{talentName}}</h5>
+                <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+                    <em>View My Profile</em>
+                </a>
+            </center>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title" id="myModalLabel">More About Guy</h4>
+            </div>
+            <div class="modal-body">
                 <center>
                     <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                         <img src="https://image.ibb.co/mSw20c/IMG_4138.jpg" name="aboutme" width="80%" height="80%" class="img-circle">
                     </a>
-                    <h3>{{talentName}}</h3>
-                    <em>View My Profile</em>
+                    <h3 class="media-heading">Guy Palmer
+                        <small>Austin, TX</small>
+                    </h3>
+                    <span>
+                        <strong>Hire me as: </strong>
+                    </span>
+                    <span class="label label-warning"></span>
+                    <span class="label label-info">{{jobBar}}</span>
+                    <span class="label label-info">{{jobModel}}</span>
+                    <span class="label label-info">{{jobServer}}</span>
+                    <span class="label label-info">{{jobSecurity}}</span>
+                    <span class="label label-info">{{jobSales}}</span>
+                </center>
+                <hr>
+                <center>
+                    <p class="text-left">
+                        <strong>Bio: </strong>
+                        <br> {{bio}}</p>
+                    <br>
                 </center>
             </div>
         </div>
@@ -46,5 +80,6 @@
                 </div>
             </div>
         </div>
-    
+    </div>
+
 </li>

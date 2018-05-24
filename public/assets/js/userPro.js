@@ -1,10 +1,23 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-   /* $.get('/api/userProfile', function(req , res){
-        console.log(res, "Front end Call for user profile");
-        console.log(req);
-    }).then(function(req){
-        const userData = req;
-        console.log(userData);
-    })*/
+    function getUserData(email) {
+        $.get('/profile/' + email, function (data) {
+            console.log(data);
+        });
+    };
+
+    initApp = function (getUserData) {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                var displayName = user.displayName;
+                var email = user.email;
+                console.log(email);
+                getUserData(email);
+            };
+        });
+    };
+
+    initApp(getUserData);
+
 });

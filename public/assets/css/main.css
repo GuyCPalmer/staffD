@@ -134,12 +134,30 @@ div .row .bio {
   border-radius: 3px;
 }
 
-
-
 input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
-  
+
+.profileImage {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 2px;
+}
+
+
+.modal-dialog {
+  right: auto;
+    left: 0%;
+    width: 100%;
+    
+}
+.modal-content {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
 /*Dashboard*/
 /* Profile container */
 .profile {
@@ -247,12 +265,10 @@ a:link {
 
 p {
   text-align: center;
-}
-#event {
-  padding-left: 15px;
-}
+};
 
 form {
   color: white;
   
-}
+};
+
