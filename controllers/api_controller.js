@@ -66,7 +66,7 @@ module.exports = function (app) {
     });
   });
 
-<<<<<<< HEAD
+
 //app.post('api/events', function (req, res) {
   //db.events.create({
       //eventOwner: req.body.eventOwner,
@@ -80,26 +80,37 @@ module.exports = function (app) {
     //});
 //})
 
-=======
-  //get talent to display on the hire page, run get request based on "staff my event: type"
-  /*app.get("/api/talent/jobBar", function (req, res) {
-    db.talent.findAll({
-      where: {
-        jobBar: 1
-      }
-    })
-      .then(function (dbTalent) {
-        res.json(dbTalent);
-      });
-  });*/
->>>>>>> f76a1617ff1dc5725b9155c6ba5a4ea620c7621e
+
 
 
  //get talent to display on the hire page, run get request based on "staff my event: type"
-  app.get("/api/talent/jobBar/:jobBar", function(req, res) {
+  
+ app.get("/api/talent.jobSales", function(req, res) {
+  db.talent.findAll({
+    where: {
+      jobSales: 1
+    }
+  })
+    .then(function(dbTalent) {
+      res.json(dbTalent);
+    });
+  });
+  
+ app.get("/api/talent.jobServer", function(req, res) {
+  db.talent.findAll({
+      where: {
+        jobServer: 1
+      }
+  })
+    .then(function(dbTalent) {
+        res.json(dbTalent);
+    });
+  });
+  
+ app.get("/api/talent.jobBar", function(req, res) {
     db.talent.findAll({
         where: {
-          jobBar: req.params.true
+          jobBar: 1
         }
     })
       .then(function(dbTalent) {
@@ -107,32 +118,10 @@ module.exports = function (app) {
       });
   });
     
-  app.get("/api/talent/jobServer/:jobServer", function(req, res) {
-    db.talent.findAll({
-        where: {
-          jobBar: req.params.true
-        }
-    })
-      .then(function(dbTalent) {
-          res.json(dbTalent);
-      });
-    });
-    
-  app.get("/api/talent/jobSales/:jobSales", function(req, res) {
+  app.get("/api/talent.jobModel", function(req, res) {
     db.talent.findAll({
       where: {
-        jobBar: 1
-      }
-    })
-      .then(function(dbTalent) {
-        res.json(dbTalent);
-      });
-    });
-    
-  app.get("/api/talent/jobModel/:jobModel", function(req, res) {
-    db.talent.findAll({
-      where: {
-          jobBar: req.params.true
+          jobModel: 1
         }
       })
         .then(function(dbTalent) {
@@ -140,10 +129,10 @@ module.exports = function (app) {
         });
     });
     
-  app.get("/api/talent/jobSecurity/:jobSecurity", function(req, res) {
+  app.get("/api/talent.jobSecurity", function(req, res) {
     db.talent.findAll({
         where: {
-          jobBar: req.params.true
+          jobSecurity: 1
         }
       })
         .then(function(dbTalent) {

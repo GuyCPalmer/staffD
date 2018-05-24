@@ -66,6 +66,7 @@ router.get("/hire", function (req, res, err) {
             talent: talent_data
         };
         res.render("hire", talent_items);
+        console.log(talent_items);
     }).catch(err, function (err) {
         if (err) {
             console.log(err);
