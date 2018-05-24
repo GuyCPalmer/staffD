@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-$(document).ready(function(){
-
-   /* $.get('/api/userProfile', function(req , res){
-        console.log(res, "Front end Call for user profile");
-        console.log(req);
-    }).then(function(req){
-        const userData = req;
-        console.log(userData);
-    })*/
-=======
 $(document).ready(function () {
 
     function getUserData(email) {
@@ -32,5 +21,4 @@ $(document).ready(function () {
     initApp(getUserData);
 
 
->>>>>>> f6951e3e271fbe2b0ed51f728bf5d036fc025f65
 });
