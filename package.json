@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "Staffed",
   "main": "server.js",
-<<<<<<< HEAD
-=======
-  "engines": {
-    "node": "8.9.4"
-  },
->>>>>>> 166e40305aa33863484d93818790b21a439fee32
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js"
