@@ -12,3 +12,8 @@ $(document).on('click', '#updateTalent', function(){
 
     $.update()
 });
+
+
+$(document).ready(function(){
+
+});

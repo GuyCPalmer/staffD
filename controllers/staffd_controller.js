@@ -27,9 +27,9 @@ router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
-router.get("/userProfile", function (req, res) {
+/*router.get("/userProfile", function (req, res) {
     res.render("userProfile", { layout: 'homemain.handlebars' });
-});
+});*/
 
 router.get("/userProfile", function (req, res, err) {
     var userEmail = 'guycpalmer@yahoo.com';
@@ -72,6 +72,7 @@ router.get("/hire", function (req, res, err) {
             talent: talent_data
         };
         res.render("hire", talent_items);
+        console.log(talent_items);
     }).catch(err, function (err) {
         if (err) {
             console.log(err);

@@ -2,19 +2,21 @@
 <html lang="en">
 
 <head>
-	<title>Talent</title>
+	<title>Get Staff'd!</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Compiled and minified CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-
+	<!-- Compiled and minified JavaScript -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
 	<script>
 		// Initialize Firebase
 		var config = {
@@ -27,26 +29,25 @@
 		};
 		firebase.initializeApp(config);
 	</script>
+
 	<script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+
 	<script type="text/javascript">
-		// FirebaseUI config.
 		var uiConfig = {
-			//signInSuccessUrl: 'localhost:5000/wait',
+			
 			signInOptions: [
-				// Leave the lines as is for the providers you want to offer your users.
+			
 				firebase.auth.EmailAuthProvider.PROVIDER_ID,
 			],
-			// Terms of service url.
-			//credentialHelper: firebaseui.auth.CredentialHelper.NONE
 			
 		};
 
-		// Initialize the FirebaseUI Widget using Firebase.
 		var ui = new firebaseui.auth.AuthUI(firebase.auth());
-		// The start method will wait until the DOM is loaded.
+	
 		ui.start('#firebaseui-auth-container', uiConfig);
 	</script>
+
 </head>
 
 <nav class="navbar navbar-inverse">

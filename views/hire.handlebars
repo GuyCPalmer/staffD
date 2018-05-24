@@ -1,8 +1,55 @@
-<ul class="talent">
+<form class="col s12" id="talentSearch" action="submit">
+        <label>Position:</label>
+        <div class="row searchRow" id="thisRow">
+            <p class="job">
+                <label>
+                    <input type="checkbox" class="filled-in" name="Bartender" id="Bartender" />
+                    <span class="jobSpan" >Bartender |</span>
+                </label>
+            </p>
+            <p class="job">
+                <label>
+                    <input type="checkbox" class="filled-in" name="Server" id="Server" />
+                    <span class="jobSpan">Server |</span>
+                </label>
+            </p>
+            <p class="job">
+                <label>
+                    <input type="checkbox" class="filled-in" name="promoModel" id="promoModel" />
+                    <span class="jobSpan">Promo Model |</span>
+                </label>
+            </p>
+            <p class="job">
+                <label>
+                    <input type="checkbox" class="filled-in" name="Security" id="Security" />
+                    <span class="jobSpan">Security |</span>
+                </label>
+            </p>
+            <p class="job">
+                <label>
+                    <input type="checkbox" class="filled-in" name="Sales" id="Sales" />
+                    <span class="jobSpan">Sales |</span>
+                </label>
+            </p>
+            <a class="waves-effect waves-light btn" id="searchBtn" type="submit">
+                <i class="material-icons right" id="searchJob">search</i>Search</a>
+        </div>
+    </form>
 
-    {{#each talent}} {{>talent-li/talent-util}} {{/each}}
 
-</ul>
+<div class="row">
+    
+
+    <div class="container talentDiv">
+        <ul class="talent">
+
+            {{#each talent}} {{>talent-li/talent-util}} {{/each}}
+
+        </ul>
+
+    </div>
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 

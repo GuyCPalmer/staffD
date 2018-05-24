@@ -93,35 +93,47 @@ module.exports = function (app) {
   app.get("/api/talent/:jobSales", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: 1
+        jobServer: 1
       }
-    })
-      .then(function (dbTalent) {
+  })
+    .then(function(dbTalent) {
         res.json(dbTalent);
+    });
+  });
+  
+ app.get("/api/talent/:jobBar", function(req, res) {
+    db.talent.findAll({
+        where: {
+          jobBar: 1
+        }
+    })
+      .then(function(dbTalent) {
+          res.json(dbTalent);
       });
   });
-
-  app.get("/api/talent/:jobModel", function (req, res) {
+    
+  app.get("/api/talent/:jobModel", function(req, res) {
     db.talent.findAll({
       where: {
-        jobBar: 1
-      }
-    })
-      .then(function (dbTalent) {
-        res.json(dbTalent);
-      });
-  });
-
-  app.get("/api/talent/:jobSecurity", function (req, res) {
+          jobModel: 1
+        }
+      })
+        .then(function(dbTalent) {
+          res.json(dbTalent);
+        });
+    });
+    
+  app.get("/api/talent:jobSecurity", function(req, res) {
     db.talent.findAll({
-      where: {
-        jobBar: 1
-      }
-    })
-      .then(function (dbTalent) {
-        res.json(dbTalent);
-      });
-  });
+        where: {
+          jobSecurity: 1
+        }
+      })
+        .then(function(dbTalent) {
+          res.json(dbTalent);
+        });
+    });
+
 
   app.get("/talent/:email", function (req, res) {
     console.log(req.body.email, "Backend Request ");
