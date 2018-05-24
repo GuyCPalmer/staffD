@@ -27,9 +27,9 @@ router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
-/*router.get("/userProfile", function (req, res) {
+router.get("/userProfile", function (req, res) {
     res.render("userProfile", { layout: 'homemain.handlebars' });
-});*/
+});
 
 router.get("/userProfile", function (req, res, err) {
     var userEmail = 'guycpalmer@yahoo.com';
@@ -97,5 +97,7 @@ router.get("/contact", function (req, res) {
     res.render("contact", { layout: "homemain.handlebars" });
 });
 
-
+router.get("/dashboard", function (req, res) {
+    res.render("dashboard", { layout: "homemain.handlebars" });
+});
 module.exports = router;
