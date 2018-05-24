@@ -7,25 +7,14 @@ USE staffd_db;
 CREATE TABLE talent (
     talentId INT (10) AUTO_INCREMENT NOT NULL,
     talentName VARCHAR (45) NOT NULL,
-    phone INTEGER(20) NOT NULL,
+    phone VARCHAR NOT NULL,
     email VARCHAR (50) NOT NULL,
     talentAddress TEXT NOT NULL,
-    socSec INTEGER(20) NOT NULL,
+    socSec VARCHAR(50) NOT NULL,
     driverLic BOOLEAN,
-    driverLicNum INTEGER (20),
+    driverLicNum VARCHAR(50),
     tabc BOOLEAN,
-    photo BLOB NOT NULL,
-    otherFiles BLOB,
-    type SET ('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
-    tabcNum INTEGER(20),
-    jobType SET('Bartender', 'Server', 'Promo Model', 'Security', 'Sales') NOT NULL,
-    tabcNum INT,
-    jobBar BOOLEAN,
-    jobServer BOOLEAN,
-    jobSales BOOLEAN,
-    jobModel BOOLEAN,
-    jobSecurity BOOLEAN,
-    tabcNum INTEGER (20),
+    tabcNum VARCHAR(50),
     photo BLOB NOT NULL,
     otherFiles BLOB,
     jobBar BOOLEAN NOT NULL,
@@ -80,7 +69,26 @@ CREATE TABLE invites (
     inviteId INT (10) AUTO_INCREMENT NOT NULL,
     currentUserEmail VARCHAR (45) NOT NULL,
     selectedUserEmail VARCHAR (45) NOT NULL,
-    eventIdInvited VARCHAR (15) NOT NULL,
+    eventIdInvited INTEGER (15) NOT NULL,
     inviteMessage MEDIUMTEXT,
     PRIMARY KEY(inviteId)
 );
+
+CREATE TABLE users (
+    id int(10) unsigned NOT NULL AUTO_INCREMENT,
+    username VARCHAR(20) DEFAULT NULL,
+    email VARCHAR(100) DEFAULT NULL,
+    userTalent BOOLEAN,
+    password VARBINARY(60) DEFAULT NULL,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    passwordResetToken VARCHAR(255) DEFAULT NULL,
+    passwordResetExpires DATETIME DEFAULT NULL,
+    emailConfirmationToken VARCHAR(255) DEFAULT NULL,
+    isEmailConfirmed INTEGER(1) DEFAULT '0',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `users_username_unique` (`username`),
+    UNIQUE KEY `users_email_unique` (`email`)
+);
+
+ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
