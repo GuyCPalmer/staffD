@@ -1,35 +1,34 @@
-<div class="row">
-    <form class="col s12" id="talentSearch">
+<form class="col s12" id="talentSearch" action="submit">
         <label>Position:</label>
-        <div class="row">
+        <div class="row searchRow" id="thisRow">
             <p class="job">
                 <label>
                     <input type="checkbox" class="filled-in" name="Bartender" id="Bartender" />
-                    <span>Bartender |</span>
+                    <span class="jobSpan" >Bartender |</span>
                 </label>
             </p>
             <p class="job">
                 <label>
                     <input type="checkbox" class="filled-in" name="Server" id="Server" />
-                    <span>Server |</span>
+                    <span class="jobSpan">Server |</span>
                 </label>
             </p>
             <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" c name="promoModel" id="promoModel" />
-                    <span>Promo Model |</span>
+                    <input type="checkbox" class="filled-in" name="promoModel" id="promoModel" />
+                    <span class="jobSpan">Promo Model |</span>
                 </label>
             </p>
             <p class="job">
                 <label>
                     <input type="checkbox" class="filled-in" name="Security" id="Security" />
-                    <span>Security |</span>
+                    <span class="jobSpan">Security |</span>
                 </label>
             </p>
             <p class="job">
                 <label>
                     <input type="checkbox" class="filled-in" name="Sales" id="Sales" />
-                    <span>Sales |</span>
+                    <span class="jobSpan">Sales |</span>
                 </label>
             </p>
             <a class="waves-effect waves-light btn" id="searchBtn" type="submit">
@@ -37,15 +36,20 @@
         </div>
     </form>
 
-    <ul class="talent">
 
-        {{#each talent}} {{>talent-li/talent-util}} {{/each}}
+<div class="row">
+    
 
-    </ul>
+    <div class="container talentDiv">
+        <ul class="talent">
+
+            {{#each talent}} {{>talent-li/talent-util}} {{/each}}
+
+        </ul>
+
+    </div>
 
 </div>
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 

@@ -85,7 +85,7 @@ app.post('api/events', function (req, res) {
 
  //get talent to display on the hire page, run get request based on "staff my event: type"
   
- app.get("/api/talent.jobSales", function(req, res) {
+ app.get("/api/talent:jobSales", function(req, res) {
   db.talent.findAll({
     where: {
       jobSales: 1
@@ -96,7 +96,7 @@ app.post('api/events', function (req, res) {
     });
   });
   
- app.get("/api/talent.jobServer", function(req, res) {
+ app.get("/api/talent:jobServer", function(req, res) {
   db.talent.findAll({
       where: {
         jobServer: 1

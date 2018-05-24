@@ -14,7 +14,7 @@ $(document).ready(function () {
         }).then(function (data) {
             var filteredTalent = data; 
             //res.json(filteredTalent); 
-            console.log(filteredTalent);
+            console.log(filteredTalent, "This Data is an Object");
         });
     };
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
         event.preventDefault();
     }
 
-    $(document).on("submit", "#talentSearch", getTalent);
+    $(document).on("click", "#searchBtn", getTalent);
 
     function getTalent(event) {
         if (tbar.is(':checked') == true) {
