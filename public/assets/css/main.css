@@ -145,11 +145,18 @@ input[type=text].valid:not(.browser-default){
   border-width: 2px;
 }
 
+
+.modal-dialog {
+  right: auto;
+    left: 0%;
+    width: 100%;
+    
+}
 .modal-content {
-  width: 50%;
+  width: 100%;
   position: absolute;
-  left: 25%;
-  top: 20%;
+  left: 0%;
+  top: 0%;
 }
 /*Dashboard*/
 /* Profile container */
@@ -258,9 +265,10 @@ a:link {
 
 p {
   text-align: center;
-}
+};
 
 form {
   color: white;
   
-}
+};
+
