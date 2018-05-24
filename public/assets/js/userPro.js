@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     function getUserData(email) {
-        $.get('/profile/' + email, function(data){
+        $.get('/profile/' + email, function (data) {
             console.log(data);
         });
     };
@@ -19,6 +19,5 @@ $(document).ready(function () {
     };
 
     initApp(getUserData);
-
 
 });

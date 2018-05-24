@@ -85,7 +85,7 @@ module.exports = function (app) {
       }
     })
       .then(function (dbTalent) {
-        
+
         res.json(dbTalent);
       });
   });
