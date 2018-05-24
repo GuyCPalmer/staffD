@@ -49,7 +49,7 @@ router.get("/userProfile", function (req, res, err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve recieved your data...");
+            console.log("Shouldve Got you data...");
         }
     });
 });
@@ -77,7 +77,7 @@ router.get("/hire", function (req, res, err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve recieved your data...");
+            console.log("Shouldve Got you data...");
         }
     });
 });

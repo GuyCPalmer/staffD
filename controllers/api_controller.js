@@ -67,18 +67,18 @@ module.exports = function (app) {
   });
 
 
-//app.post('api/events', function (req, res) {
-  //db.events.create({
-      //eventOwner: req.body.eventOwner,
-      //eventDateTimeStart: req.body.eventstart,
-      //eventDateTimeEnd: req.body.eventend,
-      //locationAddress: req.body.address,
-      //locationSpecialInst: req.body.instructions,
-      //onsiteContact: req.body.contact
-    //}).then(function (dbComp) {
-        //res.json(dbComp);
-    //});
-//})
+app.post('api/events', function (req, res) {
+  db.events.create({
+      eventOwner: req.body.eventOwner,
+      eventDateTimeStart: req.body.eventstart,
+      eventDateTimeEnd: req.body.eventend,
+      locationAddress: req.body.address,
+      locationSpecialInst: req.body.instructions,
+      onsiteContact: req.body.contact
+    }).then(function (dbComp) {
+        res.json(dbComp);
+    });
+})
 
 
 
@@ -107,7 +107,7 @@ module.exports = function (app) {
     });
   });
   
- app.get("/api/talent.jobBar", function(req, res) {
+ app.get("/api/talent/:jobBar", function(req, res) {
     db.talent.findAll({
         where: {
           jobBar: 1
@@ -118,7 +118,7 @@ module.exports = function (app) {
       });
   });
     
-  app.get("/api/talent.jobModel", function(req, res) {
+  app.get("/api/talent/:jobModel", function(req, res) {
     db.talent.findAll({
       where: {
           jobModel: 1
@@ -129,7 +129,7 @@ module.exports = function (app) {
         });
     });
     
-  app.get("/api/talent.jobSecurity", function(req, res) {
+  app.get("/api/talent:jobSecurity", function(req, res) {
     db.talent.findAll({
         where: {
           jobSecurity: 1
