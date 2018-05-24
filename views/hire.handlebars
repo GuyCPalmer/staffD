@@ -7,31 +7,31 @@
         <div class="row">
             <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Bartender" id="Bartender" />
+                    <input type="checkbox" class="filled-in"  name="Bartender" id="Bartender" />
                     <span>Bartender |</span>
                 </label>
             </p>
             <p class="hireBox">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Server" id="Server" />
+                    <input type="checkbox" class="filled-in"  name="Server" id="Server" />
                     <span>Server |</span>
                 </label>
             </p>
             <p class="hireBox">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="promoModel" id="promoModel" />
+                    <input type="checkbox" class="filled-in" c name="promoModel" id="promoModel" />
                     <span>Promo Model |</span>
                 </label>
             </p>
             <p class="hireBox">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Security" id="Security" />
+                    <input type="checkbox" class="filled-in" name="Security" id="Security" />
                     <span>Security |</span>
                 </label>
             </p>
             <p class="hireBox">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Sales" id="Sales" />
+                    <input type="checkbox" class="filled-in"  name="Sales" id="Sales" />
                     <span>Sales |</span>
                 </label>
             </p>
@@ -41,9 +41,9 @@
     </form>
 </div>
 
-<ul class="talent">
+<ul class="filteredTalent">
 
-    {{#each talent}} {{>talent-li/talent-util}} {{/each}}
+    {{#each filteredTalent}} {{>talent-li/talent-util}} {{/each}}
 
 </ul>
 

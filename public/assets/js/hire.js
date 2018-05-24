@@ -12,7 +12,8 @@ $(document).ready(function () {
             console.log(req);
             console.log("/api/talent/:" + jobs);
         }).then(function (data) {
-            console.log(data);
+            var filteredTalent = data;  
+            console.log(filteredTalent);
         });
     };
 
