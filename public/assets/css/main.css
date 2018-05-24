@@ -4,14 +4,156 @@
     border-radius: 0;
     background-color:black;
   }
+
+  #searchBtn {
+    margin-left: 5%;
+  }
+
+  .jobSpan {
+    color:#9d1de7;
+  }
+
+  #talentSearch {
+    padding-bottom: 2%;
+    padding-top:2%;
+    background-color:black;
+    opacity: .75;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #9d1de7;
+  border-radius: 2px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  }
+
+   #thisRow {
+    padding-bottom: 5px;
+    padding-left: 30px;
+  }
+
+  .taldiv {
+    background-color: white;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 2px;
+  } 
+
+  #imgP {
+  border-color:#9d1de7;
+  border-style: solid;
+  border-width: 7.5px;
+  margin-bottom: 7.5px;
+  margin-left: 5px;
+  height: 90%;
+  width: 90%;
+}
+
+.pHeader {
+  width: 65%;
+  margin-left: 5%;
+}
+
+.bioCard {
+  padding-top: 5px;
+  width: 45%;
+  position:absolute;
+  top: 29%;
+  left: 25%;
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 2px;
+  margin-left: 2.5%;
+  color:#9d1de7;
+}
+
+.userWork {
+  list-style-type: disc;
+  color: #9d1de7;
+}
+.work {
+  margin-bottom:7.5px;
+  color:#9d1de7;
+}
+#bioText {
+  width: 100%;
+}
+
+.profilePic {
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 5px;
+  align-content:center;
   
+}
+
+.profileContainer {
+  width: 75%;
+  margin-left: 1.5%;
+  height:700px;
+  margin-bottom:7.5%;
+  border-radius: 5px;
+  background-color: black;
+  opacity:.75;
+}
+
+.userHeader{
+  margin-top: 0%;
+  
+}
+
+#deleteTalent {
+  margin-left: 5%;
+}
+
+.profileContainer.two {
+  padding-top: 5px;
+  width: 20%;
+  position:absolute;
+  top: 70%;
+  left: 1.5%;
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 5px;
+  height: auto;
+}
+
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
     height: 100%;
+    font-family: 'Racing Sans One', cursive;
+
  }
+
+ .talentDiv {
+  background-color: black;
+  opacity: .75;
+  border-style:solid;
+  border-width: 5px;
+  border-color: #9d1de7;
+  border-radius: 5px;
+  height: auto;
+  width:100%
+ } 
 
  ul.talent {
   list-style-type: none;
+}
+
+em {
+  color:#9d1de7;
+  font-family: 'Racing Sans One', cursive;
+
 }
 
 li.talent {
@@ -36,7 +178,7 @@ li.talent {
   }
 
   .slider {
-    margin-top: -4%;
+    margin-top: -5%;
   }
 
   .slider .indicators {
@@ -51,6 +193,7 @@ li.talent {
 
   .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
       color: white;
+      margin-bottom: 20px;
   }
   
   .btn-flat {
@@ -65,21 +208,26 @@ li.talent {
     width: 46.25%;
     margin-left: 2.5%;
     display: inline-flex;
-    
+    position: relative;
   }
 
+  #alpha {
+    margin-left: 8%;
+    width: 110%;
+  }
+
+  #beta {
+    width: 110%;
+    margin-left: 8%;    
+  }
+
+  .row {
+    padding-bottom: 10%;
+  }
   .job {
     display: inline;
     margin: 5px 5px 10px 10px;
-  }
-
-  .hireBox {
-    display: inline;
-    margin: 5px 5px 10px 10px;
-  }
-
-  .searchBtn {
-    margin-left: 25px;
+    color: #9d1de7;
   }
 
   .userForm {
@@ -98,13 +246,21 @@ li.talent {
   background-color: #9d1de7;
 }
 
-h2 {
+.header2 {
   color: #9d1de7;
   text-align: center;
   background-color: black;
   opacity: .75;
   border-radius: 5px;
+  font-family: 'Racing Sans One', cursive;
 }
+
+h3, h5, h4, h1, h2 {
+font-family: 'Racing Sans One', cursive;
+color: #9d1de7;
+text-shadow: 1px 1px 1px black;
+}
+
 
 
 .col .row {
@@ -129,28 +285,128 @@ div .row .bio {
 input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
-
-.profileInfo {
-  background-color: black;
-  opacity: .75;
-  border-radius: 5px;
+  
+.modal-content {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
 }
 
-.userInfo {
+/*Dashboard*/
+/* Profile container */
+.profile {
+  margin: 10px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+  box-shadow:1px 1px 10px rgba(0,0,0,0.3)
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top:5px;
+  margin-bottom: 7px;
+}
+
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 15px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+a:link {
   color: white;
 }
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #b65bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #b65bd1;
+  background-color: #f6f9fb;
+
+  margin-left: px;
+}
+
+.profile-content{box-shadow:1px 1px 10px rgba(0,0,0,0.3);}
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 200px;
+  margin-bottom:30px;
+}
+
+p {
+  text-align: center;
+};
+
+form {
+  color: white;
   
-.profileImage {
-  border-style: solid;
-  border-radius: 5px;
-  border-color: white;
-  border-width: 2px;
 }
 
-.modal-content {
-  width: 50%;
-  position: absolute;
-  left: 25%;
-  top: 20%;
-}
-
+div.row.uButtons {
+   padding-bottom: 5px;
+ }

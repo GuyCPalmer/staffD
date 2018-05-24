@@ -4,9 +4,19 @@ var router = express.Router();
 
 var db = require("../models");
 
+var authController = require('../controllers/auth_controller.js');
+
 // Create all our routes and set up logic within those routes where required.
 router.get("/signin", function (req, res) {
-    res.render("signin", { layout: 'homemain.handlebars' });
+    res.render("signin", { layout: 'signinmain.handlebars' });
+});
+
+router.get("/signinNew", function (req, res) {
+    res.render("signinNew", { layout: 'home.handlebars' });
+});
+
+router.get("/signupChoose", function (req, res) {
+    res.render("signupChoose", { layout: 'home.handlebars' });
 });
 
 router.get("/index", function (req, res) {
@@ -17,23 +27,29 @@ router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
+/*router.get("/userProfile", function (req, res) {
+    res.render("userProfile", { layout: 'homemain.handlebars' });
+});*/
+
 router.get("/userProfile", function (req, res, err) {
-    var userEmail = 'Duck126@hotmail.com';
+    var userEmail = 'guycpalmer@yahoo.com';
+    console.log(req.body);
     db.talent.findOne({
         where: {
             email: userEmail
         }
     }).then(function (user_data, err) {
+        console.log(user_data);
         var user_info = {
             user: user_data
-        }
+        };
         res.render('userProfile', { layout: 'homemain.handlebars', user: user_data });
         console.log(res);
     }).catch(err, function (err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve recieved your data...");
+            console.log("Shouldve Got you data...");
         }
     });
 });
@@ -56,13 +72,18 @@ router.get("/hire", function (req, res, err) {
             talent: talent_data
         };
         res.render("hire", talent_items);
+        console.log(talent_items);
     }).catch(err, function (err) {
         if (err) {
             console.log(err);
         } else {
-            console.log("Shouldve recieved your data...");
+            console.log("Shouldve Got you data...");
         }
     });
+});
+
+router.get("/wait", function (req, res) {
+    res.render("wait", { layout: 'redirect.handlebars' });
 });
 
 router.get("/newEvent", function (req, res) {
@@ -80,6 +101,7 @@ router.get("/contact", function (req, res) {
 router.get("/dashboard", function (req, res) {
     res.render("dashboard", { layout: "homemain.handlebars" });
 });
+
 
 
 module.exports = router;

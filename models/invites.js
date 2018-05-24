@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes){
         currentUserEmail: {
             type: DataTypes.STRING,
             allowNull: false,
+            isEmail: true,
             validate:
                 {
                     len: [1, 140]
@@ -16,6 +17,7 @@ module.exports = function(sequelize, DataTypes){
         selectedUserEmail: {
             type: DataTypes.STRING,
             allowNull: false,
+            isEmail: true,
             validate:
                 {
                     len: [1, 140]

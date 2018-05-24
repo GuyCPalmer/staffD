@@ -17,7 +17,7 @@ module.exports = function (app) {
       });
   });
 
-  app.post("/api/events", function(req, res){
+  app.post("/api/events", function (req, res) {
     db.events.create({
       eventOwner: req.body.eventOwner,
       eventDateTimeStart: req.body.eventDateTimeStart,
@@ -25,7 +25,7 @@ module.exports = function (app) {
       locationAddress: req.body.locationAddress,
       locationSpecialInst: req.body.locationSpecialInst,
       onsiteContact: req.body.onsiteContact
-    }).then(function(dbevents){
+    }).then(function (dbevents) {
       res.json(dbevents);
     });
   });
@@ -67,7 +67,7 @@ module.exports = function (app) {
   });
 
   //get talent to display on the hire page, run get request based on "staff my event: type"
-  app.get("/api/talent/jobBar", function (req, res) {
+  /*app.get("/api/talent/jobBar", function (req, res) {
     db.talent.findAll({
       where: {
         jobBar: 1
@@ -76,15 +76,16 @@ module.exports = function (app) {
       .then(function (dbTalent) {
         res.json(dbTalent);
       });
-  });
+  });*/
 
   app.get("/api/talent/jobServer", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobBar: 1
       }
     })
       .then(function (dbTalent) {
+
         res.json(dbTalent);
       });
   });
@@ -92,33 +93,70 @@ module.exports = function (app) {
   app.get("/api/talent/:jobSales", function (req, res) {
     db.talent.findAll({
       where: {
-        jobBar: req.params.true
+        jobServer: 1
+      }
+  })
+    .then(function(dbTalent) {
+        res.json(dbTalent);
+    });
+  });
+  
+ app.get("/api/talent/:jobBar", function(req, res) {
+    db.talent.findAll({
+        where: {
+          jobBar: 1
+        }
+    })
+      .then(function(dbTalent) {
+          res.json(dbTalent);
+      });
+  });
+    
+  app.get("/api/talent/:jobModel", function(req, res) {
+    db.talent.findAll({
+      where: {
+          jobModel: 1
+        }
+      })
+        .then(function(dbTalent) {
+          res.json(dbTalent);
+        });
+    });
+    
+  app.get("/api/talent:jobSecurity", function(req, res) {
+    db.talent.findAll({
+        where: {
+          jobSecurity: 1
+        }
+      })
+        .then(function(dbTalent) {
+          res.json(dbTalent);
+        });
+    });
+
+
+  app.get("/talent/:email", function (req, res) {
+    console.log(req.body.email, "Backend Request ");
+    //console.log(currentEmail);
+    db.talent.findOne({
+      where: {
+        email: req.params.email
       }
     })
-      .then(function (dbTalent) {
-        res.json(dbTalent);
+      .then(function (userData) {
+        console.log(userData);
+        res.json(userData);
       });
   });
 
-  app.get("/api/talent/:jobModel", function (req, res) {
-    db.talent.findAll({
+  app.get("/owners/:email", function (req, res) {
+    db.event_owners.findOne({
       where: {
-        jobBar: req.params.true
+        email: req.params.email
       }
     })
-      .then(function (dbTalent) {
-        res.json(dbTalent);
-      });
-  });
-
-  app.get("/api/talent/:jobSecurity", function (req, res) {
-    db.talent.findAll({
-      where: {
-        jobBar: req.params.true
-      }
-    })
-      .then(function (dbTalent) {
-        res.json(dbTalent);
+      .then(function (ownerData) {
+        res.json(ownerData);
       });
   });
 

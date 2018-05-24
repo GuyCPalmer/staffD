@@ -8,10 +8,13 @@ $(document).ready(function () {
     var tsales = $('#Sales');
 
     function outCall(event, jobs) {
-        $.get("/api/talent/" + jobs, function (req, res) {
+        $.get("/api/talent." + jobs, function (req, res) {
             console.log(req);
+            console.log("/api/talent/:" + jobs);
         }).then(function (data) {
-            console.log(data);
+            var filteredTalent = data; 
+            //res.json(filteredTalent); 
+            console.log(filteredTalent, "This Data is an Object");
         });
     };
 
@@ -25,6 +28,7 @@ $(document).ready(function () {
         if (tbar.is(':checked') == true) {
             var jobs = "jobBar";
             outCall(event, jobs);
+
         } else if (tserver.is(':checked') == true) {
             var jobs = "jobServer";
             outCall(event, jobs);
@@ -34,7 +38,7 @@ $(document).ready(function () {
         } else if (tsecurity.is(':checked') == true) {
             var jobs = "jobSecurity";
             outCall(event, jobs);
-        } else if (t.is(':checked') == true) {
+        } else if (tpromo.is(':checked') == true) {
             var jobs = "jobModel";
             outCall(event, jobs);
         } else {

@@ -7,6 +7,8 @@
   
  body {
     background-image: url(https://image.ibb.co/hydbBH/concrete_texture.png);
+    font-family: 'Racing Sans One', cursive;
+
  }
 
  ul {
@@ -54,6 +56,7 @@ footer {
   width: 100%;
 }
  
+
 #rating span {
   cursor: pointer;
   font-size: 50px;
@@ -74,58 +77,60 @@ footer {
 }
 
 /*calendar*/
-#header {
-  text-align: center;
-  vertical-align: middle;
+.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
 
-#cal_days {
-  width: 100%;
-  display: table;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  text-align: center;
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
 }
 
-
-.cal_days {
-  display: table-cell;
-  width: 14.28%;
-  padding: 5px;
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
 }
 
-#cal_dates {
-  width: 100%;
-  display: table;
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
 }
 
-
-.cal_dates {
-  display: table-cell;
-  width: 14.28%;
-  float: left;
-  height: 40px;
-  text-align: right;
-  padding: 10px;
+.item.list-group-item img
+{
+    float: left;
 }
-
-.cal_dates:hover {
-  background-color: #dddddd;
-  cursor: pointer;
+.item.list-group-item:after
+{
+    clear: both;
 }
-
-.disable-span, .disable-span:hover {
-  color: #bbbbbb; 
-}
-
-input {
-  margin: 10px 0px 10px 0px;
-}
-  
-.has-task {
-  background-color:lightgrey;
-}
-
-.btn-primary {
-  background-color:#9d1de7;
+.list-group-item-text
+{
+    margin: 0 0 11px;
 }

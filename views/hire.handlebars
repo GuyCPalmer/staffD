@@ -1,56 +1,56 @@
-<label>
-
-    Position:</label>
-
-<div class="row">
-    <form class="col s12">
-        <div class="row">
+<form class="col s12" id="talentSearch" action="submit">
+        <label>Position:</label>
+        <div class="row searchRow" id="thisRow">
             <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Bartender" id="Bartender" />
-                    <span>Bartender |</span>
+                    <input type="checkbox" class="filled-in" name="Bartender" id="Bartender" />
+                    <span class="jobSpan" >Bartender |</span>
                 </label>
             </p>
-            <p class="hireBox">
+            <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Server" id="Server" />
-                    <span>Server |</span>
+                    <input type="checkbox" class="filled-in" name="Server" id="Server" />
+                    <span class="jobSpan">Server |</span>
                 </label>
             </p>
-            <p class="hireBox">
+            <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="promoModel" id="promoModel" />
-                    <span>Promo Model |</span>
+                    <input type="checkbox" class="filled-in" name="promoModel" id="promoModel" />
+                    <span class="jobSpan">Promo Model |</span>
                 </label>
             </p>
-            <p class="hireBox">
+            <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Security" id="Security" />
-                    <span>Security |</span>
+                    <input type="checkbox" class="filled-in" name="Security" id="Security" />
+                    <span class="jobSpan">Security |</span>
                 </label>
             </p>
-            <p class="hireBox">
+            <p class="job">
                 <label>
-                    <input type="checkbox" class="filled-in" checked="checked" name="Sales" id="Sales" />
-                    <span>Sales |</span>
+                    <input type="checkbox" class="filled-in" name="Sales" id="Sales" />
+                    <span class="jobSpan">Sales |</span>
                 </label>
             </p>
-            <a class="waves-effect waves-light btn" id="searchBtn">
+            <a class="waves-effect waves-light btn" id="searchBtn" type="submit">
                 <i class="material-icons right" id="searchJob">search</i>Search</a>
         </div>
     </form>
+
+
+<div class="row">
+    
+
+    <div class="container talentDiv">
+        <ul class="talent">
+
+            {{#each talent}} {{>talent-li/talent-util}} {{/each}}
+
+        </ul>
+
+    </div>
+
 </div>
 
-<ul class="talent">
-
-    {{#each talent}} {{>talent-li/talent-util}} {{/each}}
-
-</ul>
-
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
 
 <script src="../assets/js/rating.js" type="text/javascript"></script>

@@ -1,26 +1,127 @@
+{{!--
 <div class="container profileInfo z-depth-3">
-
-  <div class="media">
-    <h5 class="userInfo">{{user.talentName}}</h5>
-    <img class="mr-3 profileImage" src="https://picsum.photos/200" alt="Generic placeholder image">
-    <div class="media-body">
-      <p class="userInfo">{{user.rating}}</p>
-      <p class="userInfo">{{user.email}}</p>
-      <ul class='userInfo'>
-        <li class="userInfo" alt="Bartender" value="{{user.InfoBar}}">Bartender</li>
-        <li class="userInfo" alt="Server" value="{{user.InfoServer}}">Server</li>
-        <li class="userInfo" alt="Sales" value="{{user.InfoSales}}">Sales</li>
-        <li class="userInfo" alt="Promo Model" value="{{user.InfoModel}}">Promo Model</li>
-        <li class="userInfo" alt="Security" value="{{user.InfoSecurity}}">Security</li>
-      </ul>
-      <p class="userInfo">{{user.previousEvents}}</p>
+  <div class="container">
+    <div class="media">
+      <h5 class="userName">{{user.talentName}}</h5>
+      <img class="mr-3 profileImage" src="https://picsum.photos/200" alt="Generic placeholder image">
+      <div class="media-body">
+        <p class="userInfo">Rating: 10/10</p>
+        <p class="userInfo"></p>
+        <ul class='userInfo'>
+          <li class="job" alt="Bartender" value="{{user.InfoBar}}">Bartender</li>
+          <li class="job" alt="Server" value="{{user.InfoServer}}">Server</li>
+          <li class="job" alt="Sales" value="{{user.InfoSales}}">Sales</li>
+          <li class="job" alt="Promo Model" value="{{user.InfoModel}}">Promo Model</li>
+          <li class="job" alt="Security" value="{{user.InfoSecurity}}">Security</li>
+        </ul>
+        <p class="userInfo">{{user.previousEvents}}</p>
+      </div>
+    </div>
+    <div class="col-s4">
+      <p class="userInfo">{{user.bio}}</p>
     </div>
   </div>
-  <div class="col-s4">
-    <p class="userInfo">{{user.bio}}</p>
+</div> --}}
+
+<div class="left-align pHeader">
+  <div class="col s4">
+    <h2 id="headers">Staff'D</h2>
   </div>
 </div>
 
-</div>
+<div class="card-panel profileContainer z-depth-3">
 
-<script src="../assets/js/eventList.js"  type="text/javascript" ></script>
+  <div class="row">
+
+    <div class="col s3 profilePic z-depth-3">
+      <h5>Name</h5>
+      <img src="../assets/images/profile.jpg" class="circle responsive profileImg" id="imgP" alt="Generic placeholder image">
+    </div>
+
+  </div>
+
+  <div class="card-panel profileContainer two z-depth-3">
+    <div class="row">
+      <h5 class="userHeader">Contact & Work Info</h5>
+      <ul class="userWork">
+        <li class="work">Jobs that you are signed up for: {{user.jobs}}</li>
+        <li class="work">Phone Number: {{user.phone}}</li>
+        <li class="work">Email Address: {{user.email}}</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="card-panel bioCard z-depth-3">
+    <div class="row" id="bioText">
+      <div class="col s">
+        <h5 class="userHeader">Bio:</h5>
+        <p>Your Bio that will be presented to Employers: {{user.bio}}</p>
+      </div>
+    </div>
+
+    <!-- Modal Trigger -->
+    <div class="row uButtons">
+
+      <a class="waves-effect waves-light btn modal-trigger" href="#update">update</a>
+
+      <a class="waves-effect btn-small red" id="deleteTalent">Delete Profile</a>
+
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="update" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <h1>Update Form</h1>
+
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="username" class="materialize-textarea"></textarea>
+                <label for="username">Name</label>
+              </div>
+            </div>
+          </form>
+
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="usernum" class="materialize-textarea"></textarea>
+                <label for="usernum">Telephone Number</label>
+              </div>
+            </div>
+          </form>
+
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="useremail" class="materialize-textarea"></textarea>
+                <label for="useremail">Email</label>
+              </div>
+            </div>
+          </form>
+
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="userbio" class="materialize-textarea"></textarea>
+                <label for="userbio">Your bio</label>
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  {{!-- TO DO LIST your licenses your certifiications jobs selected Update/Delete Methods --}}
+  <script src="../assets/js/eventList.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
+  </script>
