@@ -27,6 +27,7 @@ router.get("/", function (req, res) {
     res.render("home", { layout: 'homemain.handlebars' });
 });
 
+<<<<<<< HEAD
 router.get('/dashboard', function(req, res, err){
     var userEmail = 'Duck126@hotmail.com';
     db.talent.findOne({
@@ -46,17 +47,24 @@ router.get('/dashboard', function(req, res, err){
         }
     });
 }); 
+=======
+/*router.get("/userProfile", function (req, res) {
+    res.render("userProfile", { layout: 'homemain.handlebars' });
+});*/
+>>>>>>> f6951e3e271fbe2b0ed51f728bf5d036fc025f65
 
 router.get("/userProfile", function (req, res, err) {
-    var userEmail = 'Duck126@hotmail.com';
+    var userEmail = 'guycpalmer@yahoo.com';
+    console.log(req.body);
     db.talent.findOne({
         where: {
             email: userEmail
         }
     }).then(function (user_data, err) {
+        console.log(user_data);
         var user_info = {
             user: user_data
-        }
+        };
         res.render('userProfile', { layout: 'homemain.handlebars', user: user_data });
         console.log(res);
     }).catch(err, function (err) {
@@ -93,6 +101,10 @@ router.get("/hire", function (req, res, err) {
             console.log("Shouldve Got you data...");
         }
     });
+});
+
+router.get("/wait", function (req, res) {
+    res.render("wait", { layout: 'redirect.handlebars' });
 });
 
 router.get("/newEvent", function (req, res) {

@@ -66,6 +66,7 @@ module.exports = function (app) {
     });
   });
 
+<<<<<<< HEAD
         //get talent to display on the hire page, run get request based on "staff my event: type"
         app.get("/api/talent/jobBar/:jobBar", function(req, res) {
             db.talent.findAll({
@@ -122,4 +123,88 @@ module.exports = function (app) {
               });
           });
     
+=======
+  //get talent to display on the hire page, run get request based on "staff my event: type"
+  /*app.get("/api/talent/jobBar", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        res.json(dbTalent);
+      });
+  });*/
+
+  app.get("/api/talent/jobServer", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        
+        res.json(dbTalent);
+      });
+  });
+
+  app.get("/api/talent/:jobSales", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        res.json(dbTalent);
+      });
+  });
+
+  app.get("/api/talent/:jobModel", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        res.json(dbTalent);
+      });
+  });
+
+  app.get("/api/talent/:jobSecurity", function (req, res) {
+    db.talent.findAll({
+      where: {
+        jobBar: 1
+      }
+    })
+      .then(function (dbTalent) {
+        res.json(dbTalent);
+      });
+  });
+
+  app.get("/talent/:email", function (req, res) {
+    console.log(req.body.email, "Backend Request ");
+    //console.log(currentEmail);
+    db.talent.findOne({
+      where: {
+        email: req.params.email
+      }
+    })
+      .then(function (userData) {
+        console.log(userData);
+        res.json(userData);
+      });
+  });
+
+  app.get("/owners/:email", function (req, res) {
+    db.event_owners.findOne({
+      where: {
+        email: req.params.email
+      }
+    })
+      .then(function (ownerData) {
+        res.json(ownerData);
+      });
+  });
+
+>>>>>>> f6951e3e271fbe2b0ed51f728bf5d036fc025f65
 };
