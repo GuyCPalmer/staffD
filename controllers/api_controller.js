@@ -140,40 +140,6 @@ module.exports = function (app) {
         });
     });
 
-//update and delete
-   // app.get("api/users/:userName", function(req, res) {
-     // db.users.findAll({
-       // where: {
-        //userName: 2  //email: currentUser
-    //}
-  //});
-// SELECT * FROM post WHERE authorId = 2
-
-//app.get('api/users/')
-//Post.destroy({
-  //where: {
-    //status: 'inactive' //email: currentUser
-  //}
-//});
-// DELETE FROM post WHERE status = 'inactive';
-
-
-
-
-
-//Post.update({
-  //updatedAt: null,
-//}, {
-  //where: {
-    //deletedAt: {
-      //[Op.ne]: null
-    //}
-  //}
-//});
-// UPDATE post SET updatedAt = null WHERE deletedAt NOT NULL;
-
-
-
 
   app.get("/talent/:email", function (req, res) {
     console.log(req.body.email, "Backend Request ");
