@@ -7,7 +7,7 @@ $(document).ready(function () {
             if (data) {
                 window.location.href = '../dashboard';
             }
-        })
+        });
     }
 
     function getUserData(email, getCompanyData) {

@@ -6,6 +6,7 @@
 	<title>Talent</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -14,8 +15,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> {{!-- homemain --}}
-
 	<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
+	
 	<script>
 		// Initialize Firebase
 		var config = {
@@ -28,49 +30,9 @@
 		};
 		firebase.initializeApp(config);
 	</script>
-	<script type="text/javascript">
-
-
-		initApp = function () {
-			firebase.auth().onAuthStateChanged(function (user) {
-				if (user) {
-					// User is signed in.
-					var displayName = user.displayName;
-					var email = user.email;
-					var emailVerified = user.emailVerified;
-					var photoURL = user.photoURL;
-					var uid = user.uid;
-					var phoneNumber = user.phoneNumber;
-					var providerData = user.providerData;
-					user.getIdToken().then(function (accessToken) {
-						document.getElementById('sign-in-status').textContent = 'Signed in';
-						document.getElementById('sign-in').textContent = 'Sign out';
-						document.getElementById('account-details').textContent = JSON.stringify({
-							displayName: displayName,
-							email: email,
-							emailVerified: emailVerified,
-							phoneNumber: phoneNumber,
-							photoURL: photoURL,
-							uid: uid,
-							accessToken: accessToken,
-							providerData: providerData
-						}, null, '  ');
-					});
-				} else {
-					// User is signed out.
-					document.getElementById('sign-in-status').textContent = 'Signed out';
-					document.getElementById('sign-in').textContent = 'Sign in';
-					document.getElementById('account-details').textContent = 'null';
-				}
-			}, function (error) {
-				console.log(error);
-			});
-		};
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
 	
-		window.addEventListener('load', function () {
-			initApp()
-		});
-	</script>
 </head>
 
 <nav class="navbar navbar-inverse">
