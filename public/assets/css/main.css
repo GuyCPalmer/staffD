@@ -178,7 +178,7 @@ li.talent {
   }
 
   .slider {
-    margin-top: -4%;
+    margin-top: -5%;
   }
 
   .slider .indicators {
@@ -193,6 +193,7 @@ li.talent {
 
   .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
       color: white;
+      margin-bottom: 20px;
   }
   
   .btn-flat {
@@ -245,7 +246,7 @@ li.talent {
   background-color: #9d1de7;
 }
 
-h2 {
+.header2 {
   color: #9d1de7;
   text-align: center;
   background-color: black;
@@ -254,7 +255,7 @@ h2 {
   font-family: 'Racing Sans One', cursive;
 }
 
-h3, h5, h4, h1 {
+h3, h5, h4, h1, h2 {
 font-family: 'Racing Sans One', cursive;
 color: #9d1de7;
 text-shadow: 1px 1px 1px black;

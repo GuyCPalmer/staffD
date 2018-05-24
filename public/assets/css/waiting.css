@@ -1,0 +1,13 @@
+html { 
+    background: url(https://i2.wp.com/welovebudapest.com/en/wp-content/uploads/sites/2/2014/12/e94bc9e2f7691a75535aad818c3eae68.jpg?resize=1920%2C1080&ssl=1) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 5;
+  }
+
+  .redirectHeader {
+    font-family: 'Racing Sans One', cursive;
+    align-self: center;
+  }
