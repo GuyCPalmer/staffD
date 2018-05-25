@@ -32,7 +32,7 @@ router.get("/", function (req, res) {
 });*/
 
 router.get("/userProfile", function (req, res, err) {
-    var userEmail = 'guycpalmer@yahoo.com';
+    var userEmail = 'jeff@jam.com';
     console.log(req.body);
     db.talent.findOne({
         where: {
