@@ -414,3 +414,7 @@ form {
 div.row.uButtons {
    padding-bottom: 5px;
  }
+
+ div.modal-backdrop {
+  z-index: -1;
+ }
