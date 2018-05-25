@@ -286,6 +286,10 @@ input[type=text].valid:not(.browser-default){
   border-bottom-color: #9d1de7;
 }
   
+div.modal-backdrop {
+  z-index: -1;
+}
+
 .modal-content {
   width: 100%;
   position: absolute;

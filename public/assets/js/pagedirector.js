@@ -16,7 +16,8 @@ $(document).ready(function () {
             if (data) {
                 window.location.href = '../userProfile';
             } else {
-                getCompanyData(email);
+                // getCompanyData(email);
+                window.location.href = '../dashboard';
             }
         });
     }
