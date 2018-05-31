@@ -9,7 +9,8 @@ This app is designed to provide company's and individual event hosts the opportu
 # Company Dashoard:
 ![alt text](https://image.ibb.co/hUkaJJ/dashboard.png)
 
-# View Models:
-![alt text](https://image.ibb.co/m2hNyJ/Screen_Shot_2018_05_31_at_12_45_05_PM_2.png)
+About
+The data collected from the users is stored in a mysql database and the sight is hosted on Heroku. We still need to fix a few bugs but feel free to check it out for yourself! 
 
+[Staff'D: the original staffing app!](https://immense-island-47348.herokuapp.com/)
 
