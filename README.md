@@ -7,9 +7,9 @@ This app is designed to provide company's and individual event hosts the opportu
 ![alt text](https://image.ibb.co/kXcpdJ/firstpage.png)
 
 # Company Dashoard:
-![alt text](https://guypalmer.imgbb.com/)
+![alt text](https://image.ibb.co/hUkaJJ/dashboard.png)
 
 # View Models:
-![alt text](https://guypalmer.imgbb.com/)
+![alt text](https://image.ibb.co/m2hNyJ/Screen_Shot_2018_05_31_at_12_45_05_PM_2.png)
 
 
